@@ -19,17 +19,17 @@ Important constraints for agents consuming this site:
 
 ## Machine-readable
 
-- [Coverage matrix API (v0, unstable)](https://openrisk.vercel.app/api/v0/matrix.json): full protocol × feed coverage with verbatim feed data
+- [Coverage matrix API (v0, unstable)](https://openrisk-eth.vercel.app/api/v0/matrix.json): full protocol × feed coverage with verbatim feed data
 - [Repository](https://github.com/FarseenSh/openrisk): AGPL-3.0 code; git-native data layer under /data
 - [Daily Merkle roots](https://github.com/FarseenSh/openrisk/blob/main/data/provenance/roots.jsonl): reproduce via `pnpm merkle:verify <date>`
 
 ## Pages
 
-- [Coverage matrix](https://openrisk.vercel.app/): 20 seed protocols × 12 registry feeds
-- [Methodology](https://openrisk.vercel.app/methodology): what OpenRisk does and does not do; full feed registry with conflict disclosures
-- [Verify](https://openrisk.vercel.app/verify): reproduce the data root from a clone
-- [Corrections](https://openrisk.vercel.app/corrections): community-correction log (PRs are the write path)
-- [Feed health](https://openrisk.vercel.app/status): per-feed fetch status and provenance log
+- [Coverage matrix](https://openrisk-eth.vercel.app/): 20 seed protocols × 12 registry feeds
+- [Methodology](https://openrisk-eth.vercel.app/methodology): what OpenRisk does and does not do; full feed registry with conflict disclosures
+- [Verify](https://openrisk-eth.vercel.app/verify): reproduce the data root from a clone
+- [Corrections](https://openrisk-eth.vercel.app/corrections): community-correction log (PRs are the write path)
+- [Feed health](https://openrisk-eth.vercel.app/status): per-feed fetch status and provenance log
 
 ## Governance
 
