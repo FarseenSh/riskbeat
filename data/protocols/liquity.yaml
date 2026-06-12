@@ -27,7 +27,7 @@ tokens:
   - { symbol: LQTY, address: "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D" }
 stablecoins:
   - { symbol: LUSD, address: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0", pharos_id: "lusd-liquity" }
-  - { symbol: BOLD, address: "0x6440f144b7e50D6a8439336510312d2F54beB01D", pharos_id: null }
+  - { symbol: BOLD, address: "0x6440f144b7e50D6a8439336510312d2F54beB01D", pharos_id: "bold-liquity" }
 audits:
   - { firm: "Trail of Bits", year: "2021", scope: "V1" }
   - { firm: "Coinspect", year: "2021", scope: "V1" }

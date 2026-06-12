@@ -24,6 +24,9 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3.3.5
         version: 3.3.5
+      '@next/env':
+        specifier: ^16.2.9
+        version: 16.2.9
       '@types/js-yaml':
         specifier: ^4.0.9
         version: 4.0.9
@@ -456,6 +459,9 @@ packages:
 
   '@next/env@15.5.19':
     resolution: {integrity: sha512-sWWluFvcv5v3Fxznmf2ZfjyoVQt/64oCnYqS90inQWGzMPK1VjvekPiz3OPHKmFT30EnHrjlbyaHLt3M0vWabw==}
+
+  '@next/env@16.2.9':
+    resolution: {integrity: sha512-ki5VxxXfzD/9TDe13wyeTKIjQTAwBVpnr8KhRDUr8ltMUq1/NBpWNT5tiPoxiGl+PHM4X2ahSOiPk6iAimIzPg==}
 
   '@next/eslint-plugin-next@15.5.19':
     resolution: {integrity: sha512-Ctwb4qYuMbHN/1oXLlTdMchwG8h8Xzwq+wGZZMgF3o6+uwyBKAI2c96bdOsl+C62PaUD0Jkh+QpNkhUeDlam0Q==}
@@ -2228,6 +2234,8 @@ snapshots:
     optional: true
 
   '@next/env@15.5.19': {}
+
+  '@next/env@16.2.9': {}
 
   '@next/eslint-plugin-next@15.5.19':
     dependencies:

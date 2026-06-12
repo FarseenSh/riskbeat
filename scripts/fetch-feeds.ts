@@ -8,6 +8,9 @@
  * fetched_at (stale, never invented). Exit code stays 0 unless every feed
  * fails (so one flaky upstream never breaks the nightly commit of the rest).
  */
+import nextEnv from "@next/env";
+nextEnv.loadEnvConfig(process.cwd());
+
 import { loadProtocols } from "@/lib/registry";
 import {
   appendNightlyLog,

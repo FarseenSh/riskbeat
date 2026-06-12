@@ -6,7 +6,8 @@
  * Endpoints (per pharos.watch/openapi.json):
  *   /api/report-cards    → cards[] with overallGrade ("A+".."F"|"NR") +
  *                          per-dimension grades
- *   /api/stress-signals  → DEWS bands (Calm/Watch/Alert/Warning/Danger)
+ *   /api/stress-signals  → DEWS bands (CALM/WATCH/ALERT/WARNING/DANGER),
+ *                          keyed by coin id
  *   /api/stablecoins     → id registry, used to confirm coin ids
  *
  * GRACEFUL DEGRADATION: without PHAROS_API_KEY (or on 401) the fetcher
@@ -22,7 +23,7 @@ import type {
 } from "@/lib/types";
 
 const BASE = "https://api.pharos.watch";
-const DEWS_BANDS = new Set(["Calm", "Watch", "Alert", "Warning", "Danger"]);
+const DEWS_BANDS = new Set(["CALM", "WATCH", "ALERT", "WARNING", "DANGER"]);
 
 interface ReportCard {
   id?: string;
@@ -36,27 +37,18 @@ interface ReportCard {
 function pickDews(
   signals: unknown,
   coinId: string,
-  symbol: string,
 ): { band: PharosDewsBand | null; score: number | null } {
-  // Shape is defensive by design: the DEWS payload is only reachable with a
-  // key, so we accept {scores:[]}|{coins:[]}|{signals:[]}|[] and match by
-  // id or symbol.
-  const list: Record<string, unknown>[] = Array.isArray(signals)
-    ? (signals as Record<string, unknown>[])
-    : ((signals as Record<string, unknown[]>)?.scores ??
-        (signals as Record<string, unknown[]>)?.coins ??
-        (signals as Record<string, unknown[]>)?.signals ??
-        []) as Record<string, unknown>[];
-  const hit = list.find(
-    (s) =>
-      String(s.id ?? "").toLowerCase() === coinId.toLowerCase() ||
-      String(s.symbol ?? "").toLowerCase() === symbol.toLowerCase(),
-  );
+  // Observed live shape: { signals: { "<coin-id>": { score, band, … } } }
+  // with UPPERCASE bands. Defensive: anything unexpected → nulls, never throw.
+  const byId = (signals as { signals?: Record<string, unknown> })?.signals;
+  const hit =
+    byId && typeof byId === "object" && !Array.isArray(byId)
+      ? (byId[coinId] as Record<string, unknown> | undefined)
+      : undefined;
   if (!hit) return { band: null, score: null };
-  const rawBand = String(hit.band ?? hit.dews_band ?? hit.level ?? "");
+  const rawBand = String(hit.band ?? "");
   const band = (DEWS_BANDS.has(rawBand) ? rawBand : null) as PharosDewsBand | null;
-  const rawScore = hit.score ?? hit.dews_score ?? hit.value;
-  return { band, score: typeof rawScore === "number" ? rawScore : null };
+  return { band, score: typeof hit.score === "number" ? hit.score : null };
 }
 
 export async function fetchPharos(
@@ -103,7 +95,7 @@ export async function fetchPharos(
           String(c.symbol ?? "").toLowerCase() === coin.symbol.toLowerCase(),
       );
       if (!card?.overallGrade) continue;
-      const dews = pickDews(signals, coin.pharos_id, coin.symbol);
+      const dews = pickDews(signals, coin.pharos_id);
       const dimensions: PharosDatum["dimensions"] = {};
       for (const [dim, v] of Object.entries(card.dimensions ?? {})) {
         dimensions[dim] = {

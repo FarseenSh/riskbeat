@@ -114,7 +114,8 @@ export interface PhilidorDatum {
 
 /* ————————————————————————— Pharos ————————————————————————— */
 
-export type PharosDewsBand = "Calm" | "Watch" | "Alert" | "Warning" | "Danger";
+/** Verbatim band vocabulary as served by /api/stress-signals (observed live). */
+export type PharosDewsBand = "CALM" | "WATCH" | "ALERT" | "WARNING" | "DANGER";
 
 export interface PharosDatum {
   feed_key: "pharos";
