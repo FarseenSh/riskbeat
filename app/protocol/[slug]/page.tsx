@@ -68,19 +68,32 @@ export default async function ProtocolPage({
     ? tvlPointFor(proto, tvlSync, tvlStale)
     : { value: null, kind: "tvl" as const, as_of: "", is_stale: true, per_version: [] };
 
-  // Live Safe reads for THIS protocol with snapshot fallback.
+  // Live Safe reads for THIS protocol with snapshot fallback (one retry —
+  // the Safe API rate-limits when many pages build at once).
   let liveSafes: Record<string, SafeStatus> = {};
   let safeFallbackNote: string | null = null;
-  try {
-    const live = await fetchSafeStatuses([proto]);
-    liveSafes = live.by_address;
-    const anyLive = Object.values(liveSafes).some((s) => !s.is_stale);
-    if (!anyLive && proto.governance.safes.length > 0)
-      throw new Error("all stale");
-  } catch {
-    liveSafes = fallbackSafes()?.by_address ?? {};
-    if (proto.governance.safes.length > 0)
-      safeFallbackNote = "Safe API fetch failed — showing archived data";
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const live = await fetchSafeStatuses([proto]);
+      liveSafes = live.by_address;
+      const anyLive = Object.values(liveSafes).some((s) => !s.is_stale);
+      if (!anyLive && proto.governance.safes.length > 0)
+        throw new Error("all stale");
+      safeFallbackNote = null;
+      break;
+    } catch {
+      if (attempt === 0) {
+        await new Promise((r) => setTimeout(r, 1200));
+        continue;
+      }
+      liveSafes = fallbackSafes()?.by_address ?? {};
+      if (proto.governance.safes.length > 0) {
+        const asOf = siteData.safe_snapshot?.as_of?.slice(0, 10);
+        safeFallbackNote = asOf
+          ? `governance snapshot of ${asOf} — live refresh unavailable right now`
+          : "governance snapshot — live refresh unavailable right now";
+      }
+    }
   }
 
   const coverage = siteData.coverage[proto.slug];

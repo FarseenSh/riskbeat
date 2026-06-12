@@ -89,6 +89,7 @@ export default function RootLayout({
               </div>
               <nav className="site-nav">
                 <Link href="/">Matrix</Link>
+                <Link href="/divergence">Divergence</Link>
                 <Link href="/methodology">Methodology</Link>
                 <Link href="/corrections">Corrections</Link>
                 <Link href="/verify">Verify</Link>

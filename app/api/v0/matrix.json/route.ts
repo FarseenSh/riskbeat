@@ -22,6 +22,8 @@ export function GET() {
     license:
       "Code AGPL-3.0; compiled data outputs additionally CC0-1.0 to the extent of our rights; verbatim feed values remain attributable to their publishers (see README).",
     provenance_root: siteData.provenance.latest_root,
+    provenance_root_note:
+      "file_count is the number of content-addressed cache files under the day's Merkle tree (feed, TVL and governance snapshots), not the protocol count. Full root history: /api/v0/provenance-root.json",
     charter:
       "No composite scoring — feeds are never combined. https://github.com/FarseenSh/openrisk/blob/main/CHARTER.md",
     feeds: siteData.feeds.map((f) => ({
