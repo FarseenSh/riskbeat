@@ -1,0 +1,41 @@
+# Sources: 0x docs (docs.0xprotocol.org addresses page), 0x forum, DefiLlama
+# (2026-06-12 pull). ZEIP-95 on-chain governance migration deployment is
+# unconfirmed in official sources as of review date — recorded as a gap.
+slug: 0x-matcha
+name: 0x / Matcha
+display_name: "0x / Matcha (Ethereum)"
+chain: ethereum
+category: swap-aggregator
+website: "https://0x.org"
+description: "0x protocol's swap infrastructure and the Matcha trading front-end. Volume shown instead of TVL."
+defillama:
+  versions:
+    - { label: "0x", slug: "0x", id: 2116 }
+    - { label: "Matcha", slug: "matcha", id: 7555 }
+  volume_only: true
+  volume_names: ["0x Aggregator"]
+governance:
+  model: token-dao
+  note: "ZRX-token governance. The documented on-chain governor is the legacy ZeroExGovernor (2-of-4, deployed ~2018). ZEIP-95 (2023) proposed a Security Council + new governors; no mainnet deployment record for them was found in official sources as of 2026-06-12 — recorded as a gap, not guessed."
+  governance_contract:
+    label: "ZeroExGovernor (legacy)"
+    address: "0x618F9C67CE7Bf1a50afa1E7e0238422601b0ff6e"
+  safes: []
+  timelock: null
+  forum_url: "https://forum.0xprotocol.org"
+addresses:
+  - { label: "Exchange Proxy (V4)", address: "0xDef1C0ded9bec7F1a1670819833240f027b25EfF" }
+tokens:
+  - { symbol: ZRX, address: "0xE41d2489571d322189246DaFA5ebDe1F4699F498" }
+stablecoins: []
+audits:
+  - { firm: "Trail of Bits", year: "2021", scope: "Exchange V4" }
+  - { firm: "Consensys Diligence", year: "2021–2022" }
+feeds: {}
+hack_match:
+  ids: [2116, 7555, 4628]
+  name_patterns: ["^0x ", "^Matcha"]
+notes:
+  - "January 2026 Matcha unlimited-approval exploit appears verbatim in the incident feed."
+last_manual_review: "2026-06-12"
+added_by: core-team

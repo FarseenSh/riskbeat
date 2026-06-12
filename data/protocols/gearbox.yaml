@@ -1,0 +1,46 @@
+# Sources: Gearbox docs (docs.gearbox.finance, dev.gearbox.fi), DefiLlama
+# (2026-06-12 pull), Safe Transaction Service (thresholds live-verified
+# 2026-06-12). GEAR token address omitted pending checksum verification.
+slug: gearbox
+name: Gearbox
+display_name: "Gearbox (Ethereum)"
+chain: ethereum
+category: lending
+website: "https://gearbox.fi"
+description: "Composable leverage protocol: passive lending pools fund credit accounts that operate across integrated DeFi protocols."
+defillama:
+  versions:
+    - { label: "V3", slug: "gearbox", id: 1108 }
+  volume_only: false
+governance:
+  model: token-dao
+  note: "GEAR-token DAO governance. The Technical Guard multisig can execute emergency actions (pausing); the Treasury Guard manages treasury operations. Risk parameters are set via DAO governance — see the analyst note for the protocol's risk-provider history."
+  safes:
+    - label: "Technical Guard"
+      address: "0xA7D5DDc1b8557914F158076b228AA91eF613f1D5"
+      role: "Emergency/technical multisig (pause powers)"
+      threshold: 6
+      owners: 12
+    - label: "Treasury Guard"
+      address: "0x7b065Fcb0760dF0CEA8CFd144e08554F3CeA73D1"
+      role: "Treasury operations multisig"
+      threshold: 5
+      owners: 10
+  timelock: null
+  forum_url: "https://gov.gearbox.fi"
+addresses:
+  - { label: "AddressProvider V3", address: "0xF7f0a609BfAb9a0A98786951ef10e5FE26cC1E38" }
+tokens: []
+stablecoins: []
+audits:
+  - { firm: "ChainSecurity", year: "2024", scope: "V3" }
+  - { firm: "Sigma Prime", year: "2022" }
+  - { firm: "Consensys Diligence", year: "2023" }
+feeds: {}
+hack_match:
+  ids: [1108]
+  name_patterns: ["^Gearbox"]
+notes:
+  - "Listed since June 2026 — not yet assessed by any rating-producing feed in the registry. This is a statement about feed coverage, not about the protocol: coverage gaps are data."
+last_manual_review: "2026-06-12"
+added_by: core-team

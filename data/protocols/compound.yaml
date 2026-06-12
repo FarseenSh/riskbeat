@@ -1,0 +1,48 @@
+# Sources: Compound docs, DefiLlama (2026-06-12 pull), Safe Transaction
+# Service (guardian threshold live-verified 2026-06-12: reads 5/9 — older
+# references say 4/8; the live on-chain value is recorded here).
+slug: compound
+name: Compound
+display_name: "Compound (Ethereum)"
+chain: ethereum
+category: lending
+website: "https://compound.finance"
+description: "Blue-chip lending markets: single-borrowable-asset Comets (V3) alongside the legacy V2 pool, governed by COMP token voting."
+defillama:
+  versions:
+    - { label: "V3", slug: "compound-v3", id: 2088 }
+    - { label: "V2", slug: "compound-v2", id: 114 }
+  volume_only: false
+governance:
+  model: governor-timelock
+  note: "COMP-token Governor Bravo with a Timelock as admin of all protocol contracts. The Community Multisig holds pause-guardian and proposal-guardian powers."
+  governance_contract:
+    label: "Timelock (admin of protocol contracts)"
+    address: "0x6d903f6003cca6255D85CcA4D3B5E5146dC33925"
+  safes:
+    - label: "Community Multisig"
+      address: "0xbbf3f1421D886E9b2c5D716B5192aC998af2012c"
+      role: "Pause Guardian / Proposal Guardian"
+      threshold: 5
+      owners: 9
+  timelock: "2-day Timelock"
+  forum_url: "https://www.comp.xyz"
+addresses:
+  - { label: "cUSDCv3 Comet", address: "0xc3d688B66703497DAA19211EEdff47f25384cdc3" }
+  - { label: "V2 Comptroller", address: "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B" }
+tokens:
+  - { symbol: COMP, address: "0xc00e94Cb662C3520282E6f5717214004A7f26888" }
+stablecoins: []
+audits:
+  - { firm: "OpenZeppelin", year: "2019/2022", scope: "V2 / V3" }
+  - { firm: "Trail of Bits", year: "2022", scope: "V3" }
+  - { firm: "Certora", year: "2022–2023", scope: "V3 formal verification" }
+feeds:
+  defiscan: { ids: ["compound-v2", "compound-v3"] }
+  philidor: { protocol_id: "compound", relation: markets }
+  defisphere: { sphere_protocols: ["compound_v3"] }
+hack_match:
+  ids: [114, 2088]
+  name_patterns: ["^Compound( V|$)"]
+last_manual_review: "2026-06-12"
+added_by: core-team

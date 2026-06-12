@@ -1,0 +1,58 @@
+# Sources: Euler docs (docs.euler.finance), Euler forum, DefiLlama
+# (2026-06-12 pull), Safe Transaction Service (thresholds live-verified
+# 2026-06-12; DAO treasury reads 4/8 live vs 4/9 in older references).
+slug: euler
+name: Euler
+display_name: "Euler V2 (Ethereum)"
+chain: ethereum
+category: lending
+website: "https://euler.finance"
+description: "Modular lending platform: the Ethereum Vault Connector (EVC) composes isolated EVK vaults — a different risk architecture than monolithic V1."
+defillama:
+  versions:
+    - { label: "V2", slug: "euler-v2", id: 5044 }
+  volume_only: false
+governance:
+  model: governor-timelock
+  note: "EUL-token DAO with on-chain Governor + Timelock. The Euler Foundation operational Safe holds pause-guardian-type roles; docs reference an ops multisig for UNPAUSE_ADMIN_ROLE without publishing a distinct address beyond the operational wallet listed here."
+  governance_contract:
+    label: "Euler DAO Governor"
+    address: "0xd8E2114f6bCbaee83CDEB1bD6650a28BBcF144D5"
+  safes:
+    - label: "DAO Treasury"
+      address: "0xcAD001c30E96765aC90307669d578219D4fb1DCe"
+      role: "DAO treasury (proposer role)"
+      threshold: 4
+      owners: 8
+    - label: "Foundation Treasury"
+      address: "0xC7C5aFDB61e08BE3e2FB09098412b5706EB5c550"
+      role: "Foundation active treasury"
+      threshold: 4
+      owners: 7
+    - label: "Foundation Ops"
+      address: "0x0e33089449606CDE00Ad767d66C28Cf4cfCF0bF5"
+      role: "Operational wallet (pause-guardian-type roles)"
+      threshold: 3
+      owners: 5
+  timelock: "DAO Timelock"
+  forum_url: "https://forum.euler.finance"
+addresses:
+  - { label: "EVC", address: "0x0C9a3dd6b8F28529d72d7f9cE918D493519EE383" }
+  - { label: "eVault Factory", address: "0x29a56a1b8214D9Cf7c5561811750D5cBDb45CC8e" }
+  - { label: "DAO Timelock", address: "0xd4Ee8939a537D943a4E46E7Ae04069C9451d724F" }
+tokens:
+  - { symbol: EUL, address: "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b" }
+stablecoins: []
+audits:
+  - { firm: "Spearbit", year: "2024", scope: "V2" }
+  - { firm: "ChainSecurity", year: "2024", scope: "V2" }
+  - { firm: "Certora", year: "2024", scope: "V2" }
+feeds: {}
+hack_match:
+  ids: [5044, 1183]
+  name_patterns: ["^Euler"]
+notes:
+  - "Ethereum TVL declined from roughly $890M (April 2026) to roughly $127M (June 2026) with no published incident or governance action identified at review time — flagged for analyst review, see data/assessments/euler.md."
+  - "The March 2023 $197M exploit hit Euler V1 (since wound down) and was followed by a full recovery of funds; V2 is a separate modular architecture."
+last_manual_review: "2026-06-12"
+added_by: core-team

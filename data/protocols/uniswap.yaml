@@ -1,0 +1,51 @@
+# Sources: Uniswap docs + governance, DefiLlama (2026-06-12 pull), Safe
+# Transaction Service (UAC threshold live-verified 2026-06-12).
+slug: uniswap
+name: Uniswap
+display_name: "Uniswap (Ethereum)"
+chain: ethereum
+category: dex
+website: "https://uniswap.org"
+description: "The benchmark AMM family: immutable V2/V3 cores, V4's singleton PoolManager with per-pool hooks, governed by UNI token + 2-day timelock."
+defillama:
+  versions:
+    - { label: "V3", slug: "uniswap-v3", id: 2198 }
+    - { label: "V2", slug: "uniswap-v2", id: 2197 }
+    - { label: "V4", slug: "uniswap-v4", id: 5690 }
+  volume_only: false
+governance:
+  model: governor-timelock
+  note: "UNI-token Governor with a 2-day Timelock; core pool contracts are non-upgradeable (governance controls fee switches and treasury). The Accountability Committee Safe handles disbursement operations, not protocol admin."
+  governance_contract:
+    label: "Governance Timelock"
+    address: "0x1a9C8182C09F50C8318d769245beA52c32BE35BC"
+  safes:
+    - label: "Accountability Committee (UAC)"
+      address: "0xEBCCf1ce13F63c6B98811F03964F51fC43cef851"
+      role: "Operations/disbursements (not protocol admin)"
+      threshold: 3
+      owners: 5
+  timelock: "2-day Timelock"
+  forum_url: "https://gov.uniswap.org"
+addresses:
+  - { label: "V3 Factory", address: "0x1F98431c8aD98523631AE4a59f267346ea31F984" }
+  - { label: "V4 PoolManager", address: "0x000000000004444c5dc75cB358380D2e3dE08A90" }
+tokens:
+  - { symbol: UNI, address: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984" }
+stablecoins: []
+audits:
+  - { firm: "Trail of Bits", year: "2021", scope: "V3" }
+  - { firm: "ABDK", year: "2021", scope: "V3" }
+  - { firm: "OpenZeppelin", year: "2021", scope: "V3" }
+  - { firm: "Certora", year: "2024", scope: "V4" }
+feeds:
+  defiscan: { ids: ["uniswap-v2", "uniswap-v3"] }
+  defipunkd: { slugs: ["uniswap-v4"] }
+  philidor: { protocol_id: "uniswap", relation: markets }
+hack_match:
+  ids: [2196, 2197, 2198, 5690]
+  name_patterns: ["^Uniswap"]
+notes:
+  - "V4 hooks introduce per-pool third-party code risk — a property feeds assess at the version level (see the DeFiPunk'd v4 assessment)."
+last_manual_review: "2026-06-12"
+added_by: core-team

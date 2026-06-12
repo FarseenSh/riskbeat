@@ -1,0 +1,45 @@
+# Sources: Liquity docs (docs.liquity.org), DefiLlama (2026-06-12 pull),
+# Etherscan. V2 addresses checksummed from docs (originals lowercase).
+slug: liquity
+name: Liquity
+display_name: "Liquity (Ethereum)"
+chain: ethereum
+category: cdp
+website: "https://liquity.org"
+description: "Immutable, governance-minimized CDP stablecoin protocols: V1 (LUSD) has no admin keys; V2 (BOLD) keeps an immutable core with LQTY-directed incentives."
+defillama:
+  versions:
+    - { label: "V1", slug: "liquity-v1", id: 270 }
+    - { label: "V2", slug: "liquity-v2", id: 5656 }
+  volume_only: false
+governance:
+  model: immutable
+  note: "V1 is fully immutable — no admin keys, no upgradeability, no pause. V2's core is immutable; LQTY staking routes protocol incentives only (the single governance surface, address below). No admin Safe exists for either version."
+  safes: []
+  timelock: null
+  forum_url: null
+addresses:
+  - { label: "V1 TroveManager", address: "0xA39739EF8b0231DbFA0DcdA07d7e29faAbCf4bb2" }
+  - { label: "V1 BorrowerOperations", address: "0x24179CD81c9e782A4096035f7eC97fB8B783e007" }
+  - { label: "V2 BorrowerOperations (WETH branch)", address: "0x372ABD1810eAF23Cb9D941BbE7596DFb2c46BC65" }
+  - { label: "V2 incentives governance (LQTY)", address: "0x807DEf5E7d057DF05C796F4bc75C3Fe82Bd6EeE1" }
+tokens:
+  - { symbol: LQTY, address: "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D" }
+stablecoins:
+  - { symbol: LUSD, address: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0", pharos_id: "lusd-liquity" }
+  - { symbol: BOLD, address: "0x6440f144b7e50D6a8439336510312d2F54beB01D", pharos_id: null }
+audits:
+  - { firm: "Trail of Bits", year: "2021", scope: "V1" }
+  - { firm: "Coinspect", year: "2021", scope: "V1" }
+  - { firm: "Spearbit", year: "2024", scope: "V2" }
+feeds:
+  defiscan: { ids: ["liquity"] }
+  defipunkd: { slugs: ["liquity-v1"] }
+  defisphere: { sphere_protocols: ["liquity_v2", "liquity"] }
+hack_match:
+  ids: [270, 5656]
+  name_patterns: ["^Liquity"]
+notes:
+  - "V2 relaunched in 2025 after a Stability Pool issue in the initial release — analyst verification of the exact nature is tracked in assessments."
+last_manual_review: "2026-06-12"
+added_by: core-team

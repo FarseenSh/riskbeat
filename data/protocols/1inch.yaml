@@ -1,0 +1,42 @@
+# Sources: 1inch governance docs (gov.1inch.community), DefiLlama
+# (2026-06-12 pull), Safe Transaction Service (treasury live-verified
+# 2026-06-12: 7/12).
+slug: 1inch
+name: 1inch
+display_name: "1inch (Ethereum)"
+chain: ethereum
+category: swap-aggregator
+website: "https://1inch.io"
+description: "DEX aggregation and intent-based Fusion swaps routed across Ethereum liquidity. Volume shown instead of TVL (listed TVL reflects staking only)."
+defillama:
+  versions:
+    - { label: "Aggregator", slug: "1inch", id: 189 }
+  volume_only: true
+  volume_names: ["1inch"]
+governance:
+  model: token-dao
+  note: "1INCH-token DAO governed via Snapshot; the DAO treasury Safe is the principal on-chain asset holder. Router contracts are non-upgradeable; new versions deploy alongside old ones."
+  safes:
+    - label: "DAO Treasury"
+      address: "0x7951c7ef839e26F63DA87a42C9a87986507f1c07"
+      role: "DAO treasury Safe"
+      threshold: 7
+      owners: 12
+  timelock: null
+  forum_url: "https://gov.1inch.io"
+addresses:
+  - { label: "AggregationRouterV6", address: "0x111111125421cA6dc452d289314280a0f8842A65" }
+tokens:
+  - { symbol: 1INCH, address: "0x111111111117dC0aa78b770fA6A738034120C302" }
+stablecoins: []
+audits:
+  - { firm: "Trail of Bits", year: "2023", scope: "Router V5" }
+  - { firm: "SlowMist", year: "2023", scope: "Fusion V2" }
+feeds: {}
+hack_match:
+  ids: [189]
+  name_patterns: ["^1inch"]
+notes:
+  - "March 2025 Fusion V1 resolver exploit (~$5M, mostly recovered) appears verbatim in the incident feed."
+last_manual_review: "2026-06-12"
+added_by: core-team

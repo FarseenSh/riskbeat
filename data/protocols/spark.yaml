@@ -1,0 +1,58 @@
+# Sources: Spark/Sky docs + governance forum, DefiLlama (2026-06-12 pull),
+# Safe Transaction Service (thresholds live-verified 2026-06-12).
+slug: spark
+name: Spark
+display_name: "Spark (Ethereum)"
+chain: ethereum
+category: lending
+website: "https://spark.fi"
+description: "Sky-ecosystem lending and savings protocol: SparkLend (Aave V3 fork), Spark Savings (sUSDS) and the Spark Liquidity Layer."
+defillama:
+  versions:
+    - { label: "SparkLend", slug: "sparklend", id: 2929 }
+    - { label: "Savings", slug: "spark-savings", id: 6716 }
+    - { label: "Liquidity Layer", slug: "spark-liquidity-layer", id: 5989 }
+  volume_only: false
+governance:
+  model: token-dao
+  note: "Spark is a Sky-ecosystem sub-protocol: protocol changes pass through Sky (ex-MakerDAO) governance and execute via the Sky MCD Pause Proxy — there is no Spark-owned admin Safe over the protocol. The Freezer Mom multisig holds emergency market-freeze powers on SparkLend."
+  governance_contract:
+    label: "Sky MCD Pause Proxy (execution)"
+    address: "0xBE8E3e3618f7474F8cB1d074A26afFef007E98FB"
+  safes:
+    - label: "Freezer Mom"
+      address: "0x44efFc473e81632B12486866AA1678edbb7BEeC3"
+      role: "Emergency freeze multisig (SparkLend markets)"
+      threshold: 3
+      owners: 5
+    - label: "SPK company multisig"
+      address: "0x6FE588FDCC6A34207485cc6e47673F59cCEDF92B"
+      role: "Spark company operations (not protocol admin)"
+      threshold: 4
+      owners: 7
+  timelock: "Sky governance GSM delay (executes via MCD Pause Proxy)"
+  forum_url: "https://forum.sky.money"
+addresses:
+  - { label: "SparkLend Pool", address: "0xC13e21B648A5Ee794902342038FF3aDAB66BE987" }
+tokens:
+  - { symbol: SKY, address: "0x56072C95FAA701256059aa122697B133aDEd9279" }
+  - { symbol: SPK, address: "0xc20059e0317DE91738d13af027DfC4a50781b066" }
+stablecoins:
+  - { symbol: USDS, address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F", pharos_id: "usds-sky" }
+  - { symbol: DAI, address: "0x6B175474E89094C44Da98b954EedeAC495271d0F", pharos_id: "dai-makerdao" }
+audits:
+  - { firm: "ChainSecurity", year: "2023" }
+  - { firm: "OpenZeppelin", year: "2023" }
+feeds:
+  defiscan: { ids: ["spark"] }
+  defipunkd: { slugs: ["sparklend"] }
+  philidor: { protocol_id: "spark", relation: markets }
+  defisphere: { sphere_protocols: ["sparklend"] }
+hack_match:
+  ids: [2929, 6716, 5989]
+  name_patterns: ["^Spark(Lend)?$", "^Spark "]
+notes:
+  - "Block Analitica provides ongoing risk analysis for Spark — disclosed on the DeFi Sphere feed entry (same publisher)."
+  - "Sky governance is migrating under Endgame; execution path re-verified at review date."
+last_manual_review: "2026-06-12"
+added_by: core-team

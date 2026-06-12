@@ -1,0 +1,47 @@
+# Sources: Balancer docs (docs.balancer.fi), DefiLlama (2026-06-12 pull),
+# Safe Transaction Service (thresholds live-verified 2026-06-12).
+slug: balancer
+name: Balancer
+display_name: "Balancer (Ethereum)"
+chain: ethereum
+category: dex
+website: "https://balancer.fi"
+description: "Programmable-liquidity AMM: weighted/boosted pools on the V2 vault architecture and the rebuilt V3 vault."
+defillama:
+  versions:
+    - { label: "V3", slug: "balancer-v3", id: 5491 }
+    - { label: "V2", slug: "balancer-v2", id: 2611 }
+  volume_only: false
+governance:
+  model: hybrid
+  note: "veBAL Snapshot voting executed by the DAO multisig — no on-chain timelock between vote and execution. November 2025 composable-stable-pool exploit (V2) appears verbatim in the incident feed."
+  safes:
+    - label: "DAO Multisig"
+      address: "0x10A19e7eE7d7F8a52822f6817de8ea18204F2e4f"
+      role: "Protocol authority (executes Snapshot outcomes)"
+      threshold: 6
+      owners: 11
+    - label: "Treasury"
+      address: "0x0EFcCBb9E2C09Ea29551879bd9Da32362b32fc89"
+      role: "Treasury operations"
+      threshold: 5
+      owners: 7
+  timelock: "none (Snapshot vote → multisig execution)"
+  forum_url: "https://forum.balancer.fi"
+addresses:
+  - { label: "V2 Vault", address: "0xBA12222222228d8Ba445958a75a0704d566BF2C8" }
+  - { label: "V3 Vault", address: "0xbA1333333333a1BA1108E8412f11850A5C319bA9" }
+tokens:
+  - { symbol: BAL, address: "0xba100000625a3754423978a60c9317c58a424e3D" }
+stablecoins: []
+audits:
+  - { firm: "Trail of Bits", year: "2021", scope: "V2" }
+  - { firm: "Certora", year: "2021", scope: "V2" }
+  - { firm: "Spearbit", year: "2024", scope: "V3" }
+feeds:
+  defipunkd: { slugs: ["balancer-v3"] }
+hack_match:
+  ids: [2611, 5491]
+  name_patterns: ["^Balancer"]
+last_manual_review: "2026-06-12"
+added_by: core-team

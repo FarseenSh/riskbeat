@@ -1,0 +1,46 @@
+# Sources: Curve docs (docs.curve.finance), DefiLlama (2026-06-12 pull),
+# Safe Transaction Service (Emergency DAO threshold live-verified 2026-06-12).
+slug: curve
+name: Curve
+display_name: "Curve (Ethereum)"
+chain: ethereum
+category: dex
+website: "https://curve.finance"
+description: "Stable-asset AMM and the crvUSD stablecoin with LlamaLend soft-liquidation lending, governed by the veCRV Aragon DAO."
+defillama:
+  versions:
+    - { label: "DEX", slug: "curve-dex", id: 3 }
+    - { label: "LlamaLend", slug: "curve-llamalend", id: 4321 }
+  volume_only: false
+governance:
+  model: aragon-dao
+  note: "veCRV-weighted Aragon DAO; votes execute via the Aragon Agent. The Emergency DAO multisig is the highest-authority mainnet multisig and can kill non-factory pools and gauges."
+  safes:
+    - label: "Emergency DAO"
+      address: "0x467947EE34aF926cF1DCac093870f613C96B1E0c"
+      role: "Emergency multisig (kill non-factory pools/gauges)"
+      threshold: 5
+      owners: 9
+  timelock: null
+  forum_url: "https://gov.curve.finance"
+addresses:
+  - { label: "Address Provider", address: "0x0000000022D53366457F9d5E68Ec105046FC4383" }
+  - { label: "crvUSD Controller Factory", address: "0xC9332fdCB1C491Dcc683bAe86Fe3cb70360738BC" }
+tokens:
+  - { symbol: CRV, address: "0xD533a949740bb3306d119CC777fa900bA034cd52" }
+stablecoins:
+  - { symbol: crvUSD, address: "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E", pharos_id: "crvusd-curve" }
+audits:
+  - { firm: "Trail of Bits", year: "2021" }
+  - { firm: "ChainSecurity", year: "2023", scope: "crvUSD" }
+  - { firm: "MixBytes", year: "2023–2024" }
+feeds:
+  defiscan: { ids: ["curve-finance"] }
+  defipunkd: { slugs: ["curve-dex", "curve-llamalend", "crvusd"] }
+hack_match:
+  ids: [3, 4321]
+  name_patterns: ["^Curve "]
+notes:
+  - "July 2023 Vyper-compiler exploit and March 2026 LlamaLend donation attack appear verbatim in the incident feed."
+last_manual_review: "2026-06-12"
+added_by: core-team

@@ -1,0 +1,40 @@
+# Sources: Morpho docs (docs.morpho.org), Safe Transaction Service
+# (threshold live-verified 2026-06-12).
+slug: morpho-vaults
+name: Morpho Vaults
+display_name: "Morpho Vaults (MetaMorpho)"
+chain: ethereum
+category: yield
+website: "https://morpho.org"
+description: "Curated vaults (MetaMorpho) allocating deposits across Morpho Blue markets. Risk is delegated per-vault to named curators — a different risk object than the base protocol."
+defillama:
+  versions: []
+  volume_only: false
+  tvl_note: "No standalone DefiLlama listing — MetaMorpho vault TVL is tracked inside the Morpho family. Per-vault TVL appears verbatim on the Philidor feed card."
+governance:
+  model: safe-multisig
+  note: "Vault risk is delegated to named curators; curator/guardian Safes and timelocks are configured per vault and are not listed at protocol level. Protocol-level authority is the Morpho DAO multisig. Vaults V2 timelocks default to 0s unless the curator configures them."
+  safes:
+    - label: "Morpho DAO multisig"
+      address: "0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa"
+      role: "Protocol-level authority (factories, registries)"
+      threshold: 5
+      owners: 9
+  timelock: "Per-vault, curator-configured (V2 default 0s)"
+  forum_url: "https://forum.morpho.org"
+addresses:
+  - { label: "MetaMorpho Factory v1.1", address: "0x1897A8997241C1cD4bD0698647e4EB7213535c24" }
+tokens: []
+stablecoins: []
+audits:
+  - { firm: "ChainSecurity", year: "2023", scope: "MetaMorpho" }
+  - { firm: "Certora", year: "2024", scope: "MetaMorpho" }
+feeds:
+  philidor: { protocol_id: "morpho", relation: native }
+hack_match:
+  ids: []
+  name_patterns: ["MetaMorpho"]
+notes:
+  - "When a vault loses money it is usually a curator-allocation event, not a protocol hack — feeds that assess the protocol and feeds that assess vaults are answering different questions."
+last_manual_review: "2026-06-12"
+added_by: core-team

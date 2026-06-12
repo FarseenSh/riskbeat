@@ -1,0 +1,44 @@
+# Sources: Fluid public contracts repo (github.com/Instadapp/fluid-contracts-public),
+# DefiLlama (2026-06-12 pull), Etherscan. Team multisig is an Instadapp Avocado
+# smart account — NOT a Gnosis Safe, so no Safe-API threshold verification.
+slug: fluid
+name: Fluid
+display_name: "Fluid (Instadapp)"
+chain: ethereum
+category: lending
+website: "https://fluid.io"
+description: "Instadapp's unified liquidity layer combining lending, a DEX and vault products on one collateral base."
+defillama:
+  versions:
+    - { label: "Lending", slug: "fluid-lending", id: 4167 }
+    - { label: "DEX", slug: "fluid-dex", id: 5317 }
+    - { label: "Lite", slug: "fluid-lite", id: 4742 }
+  volume_only: false
+governance:
+  model: hybrid
+  note: "FLUID-token (ex-INST) governance with Instadapp team execution. Upgrades flow through the InstaTimelock; the team multisig (an Avocado smart account, reported 7-of-14 as of May 2026) acts as timelock guardian and fee collector. Not a Gnosis Safe — thresholds are not verifiable via the Safe Transaction Service and are reported from the protocol's public source code."
+  governance_contract:
+    label: "InstaTimelock (upgrade timelock)"
+    address: "0x2386DC45AdDed673317eF068992F19421B481F4c"
+  safes: []
+  timelock: "InstaTimelock (team-multisig guardian)"
+  forum_url: "https://gov.instadapp.io"
+addresses:
+  - { label: "Fluid Liquidity (proxy)", address: "0x52Aa899454998Be5b000Ad077a46Bbe360F4e497" }
+  - { label: "Team multisig (Avocado, reported 7/14)", address: "0x4F6F977aCDD1177DCD81aB83074855EcB9C2D49e" }
+tokens:
+  # symbol() live-reads "FLUID" (2026-06-12) — the former INST token, renamed
+  # with the Instadapp → Fluid rebrand.
+  - { symbol: FLUID, address: "0x6f40d4A6237C257fff2dB00FA0510DeEECd303eb" }
+stablecoins: []
+audits:
+  - { firm: "Spearbit", year: "2023–2024" }
+  - { firm: "Trail of Bits", year: "2023" }
+  - { firm: "Certora", year: "2024" }
+feeds:
+  defisphere: { sphere_protocols: ["fluid"] }
+hack_match:
+  ids: [4167, 5317, 4742]
+  name_patterns: ["^Fluid"]
+last_manual_review: "2026-06-12"
+added_by: core-team

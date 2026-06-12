@@ -1,0 +1,46 @@
+# Sources: Aave docs + governance, DefiLlama (2026-06-12 pull), Etherscan.
+slug: aave
+name: Aave
+display_name: "Aave (Ethereum)"
+chain: ethereum
+category: lending
+website: "https://aave.com"
+description: "The largest Ethereum lending market family (V2/V3/V4) with the GHO stablecoin, governed fully on-chain."
+defillama:
+  versions:
+    - { label: "V3", slug: "aave-v3", id: 1599 }
+    - { label: "V2", slug: "aave-v2", id: 111 }
+    - { label: "V4", slug: "aave-v4", id: 7594 }
+  volume_only: false
+governance:
+  model: governor-timelock
+  note: "Fully on-chain Governance V3: AAVE-token voting with timelocked payload executors. No admin Safe holds protocol-level powers over funds."
+  governance_contract:
+    label: "Aave Governance V3"
+    address: "0x9AEE0B04504CeF83A65AC3f0e838D0593BCb2BC7"
+  safes: []
+  timelock: "Timelocked payload executors (per-level delays)"
+  forum_url: "https://governance.aave.com"
+addresses:
+  - { label: "V3 Pool (proxy)", address: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2" }
+  - { label: "PoolAddressesProvider", address: "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e" }
+  - { label: "Executor (ACL admin)", address: "0xEE56e2B3D491590B5b31738cC34d5232F378a8D5" }
+tokens:
+  - { symbol: AAVE, address: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9" }
+stablecoins:
+  - { symbol: GHO, address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f", pharos_id: "gho-aave" }
+audits:
+  - { firm: "Trail of Bits", year: "multiple" }
+  - { firm: "OpenZeppelin", year: "2022", scope: "V3" }
+  - { firm: "Certora", year: "ongoing", scope: "formal verification" }
+  - { firm: "SigmaPrime", year: "2025", scope: "V4" }
+feeds:
+  defiscan: { ids: ["aave"] }
+  defipunkd: { slugs: ["aave", "aave-v3"] }
+  philidor: { protocol_id: "aave", relation: markets }
+  defisphere: { sphere_protocols: ["aave_v3", "aave_v3_core", "aave_v3_horizon"] }
+hack_match:
+  ids: [111, 1599, 7594]
+  name_patterns: ["^Aave"]
+last_manual_review: "2026-06-12"
+added_by: core-team

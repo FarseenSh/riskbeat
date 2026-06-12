@@ -1,0 +1,44 @@
+# Sources: Yearn docs (docs.yearn.fi), DefiLlama (2026-06-12 pull), Safe
+# Transaction Service (ychad threshold live-verified 2026-06-12), Etherscan.
+slug: yearn
+name: Yearn
+display_name: "Yearn (Ethereum)"
+chain: ethereum
+category: yield
+website: "https://yearn.fi"
+description: "The original yield-vault protocol: V2 and V3 vaults route deposits through curated strategies."
+defillama:
+  versions:
+    - { label: "Yearn", slug: "yearn-finance", id: 113 }
+  volume_only: false
+governance:
+  model: hybrid
+  note: "veYFI Snapshot voting executed by ychad (the protocol admin multisig, ENS ychad.eth) with no timelock between vote and execution."
+  safes:
+    - label: "ychad"
+      address: "0xFEB4acf3df3cDEA7399794D0869ef76A6EfAff52"
+      role: "Protocol admin multisig (ychad.eth, no timelock)"
+      threshold: 6
+      owners: 9
+  timelock: "none (ychad executes directly)"
+  forum_url: "https://gov.yearn.fi"
+addresses:
+  - { label: "V2 Vault Registry", address: "0x50c1a2eA0a861A967D9d0FFE2AE4012c2E053804" }
+  - { label: "V3 Registry", address: "0xd40ecF29e001c76Dcc4cC0D9cd50520CE845B038" }
+  - { label: "V3 Release Registry", address: "0x0377b4daDDA86C89A0091772B79ba67d0E5F7198" }
+tokens:
+  - { symbol: YFI, address: "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e" }
+stablecoins: []
+audits:
+  - { firm: "ChainSecurity", year: "2021–2023" }
+  - { firm: "Spearbit", year: "2023" }
+  - { firm: "yAcademy", year: "2023", scope: "V3" }
+feeds:
+  philidor: { protocol_id: "yearn", relation: native }
+hack_match:
+  ids: [113, 3973]
+  name_patterns: ["^Yearn"]
+notes:
+  - "Multiple historical exploits (2021, 2023, 2024–2025 incl. yETH) appear verbatim in the incident feed."
+last_manual_review: "2026-06-12"
+added_by: core-team

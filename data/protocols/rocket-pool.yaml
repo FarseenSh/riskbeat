@@ -1,0 +1,40 @@
+# Sources: Rocket Pool docs (docs.rocketpool.net), DefiLlama (2026-06-12
+# pull), Etherscan. The oDAO is a native on-chain DAO (RocketDAONodeTrusted)
+# — no Safe multisig overlay exists, recorded as such rather than guessed.
+slug: rocket-pool
+name: Rocket Pool
+display_name: "Rocket Pool (Ethereum)"
+chain: ethereum
+category: liquid-staking
+website: "https://rocketpool.net"
+description: "Decentralized liquid staking (rETH) with permissionless node operators, governed through the RocketStorage upgrade registry, pDAO and the oDAO oracle federation."
+defillama:
+  versions:
+    - { label: "Rocket Pool", slug: "rocket-pool", id: 900 }
+  volume_only: false
+governance:
+  model: registry
+  note: "Upgrades flow through the RocketStorage contract registry. RPIP-60 (Feb 2026) added a 7-day upgrade delay with pDAO veto. The oDAO operates as a native on-chain DAO (RocketDAONodeTrusted) — no separate Safe multisig exists."
+  governance_contract:
+    label: "RocketStorage (upgrade registry)"
+    address: "0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46"
+  safes: []
+  timelock: "7-day upgrade delay + pDAO veto (RPIP-60)"
+  forum_url: "https://dao.rocketpool.net"
+addresses:
+  - { label: "rETH", address: "0xae78736Cd615f374D3085123A210448E74Fc6393" }
+tokens:
+  - { symbol: RPL, address: "0xD33526068D116cE69F19A9ee46F0bd304F21A51f" }
+stablecoins: []
+audits:
+  - { firm: "Trail of Bits", year: "2021" }
+  - { firm: "Consensys Diligence", year: "2023", scope: "Atlas" }
+  - { firm: "Sigma Prime", year: "2024", scope: "Houston" }
+  - { firm: "Cantina / Bailsec / Sigma Prime", year: "2025–2026", scope: "Saturn I" }
+feeds:
+  defipunkd: { slugs: ["rocket-pool"] }
+hack_match:
+  ids: [900]
+  name_patterns: ["^Rocket Pool"]
+last_manual_review: "2026-06-12"
+added_by: core-team

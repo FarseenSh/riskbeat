@@ -1,0 +1,40 @@
+# Sources: CoW docs (docs.cow.fi), DefiLlama (2026-06-12 pull), Safe
+# Transaction Service (treasury threshold live-verified 2026-06-12).
+slug: cow-swap
+name: CoW Swap
+display_name: "CoW Swap (Ethereum)"
+chain: ethereum
+category: swap-aggregator
+website: "https://cow.fi"
+description: "Batch-auction trading protocol with MEV protection: solvers compete to settle intents at uniform clearing prices. Volume shown instead of TVL."
+defillama:
+  versions:
+    - { label: "CoW Protocol", slug: "cowswap", id: 2643 }
+  volume_only: true
+  volume_names: ["CoWSwap"]
+governance:
+  model: token-dao
+  note: "COW-token DAO governed via Snapshot with oSnap optimistic on-chain execution (3-day window). Settlement contract powers are limited to solver management."
+  safes:
+    - label: "DAO Treasury"
+      address: "0xcA771eda0c70aA7d053aB1B25004559B918FE662"
+      role: "Treasury Safe"
+      threshold: 3
+      owners: 5
+  timelock: "oSnap optimistic execution (3-day)"
+  forum_url: "https://forum.cow.fi"
+addresses:
+  - { label: "GPv2Settlement", address: "0x9008D19f58AAbD9eD0D60971565AA8510560ab41" }
+tokens:
+  - { symbol: COW, address: "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB" }
+stablecoins: []
+audits:
+  - { firm: "G0 Group", year: "2021" }
+  - { firm: "Runtime Verification", year: "2022" }
+  - { firm: "Ackee", year: "2024", scope: "CoW AMM" }
+feeds: {}
+hack_match:
+  ids: [2643]
+  name_patterns: ["^CoW"]
+last_manual_review: "2026-06-12"
+added_by: core-team

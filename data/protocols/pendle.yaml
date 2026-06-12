@@ -1,0 +1,44 @@
+# Sources: Pendle deployments (github.com/pendle-finance/pendle-core-v2-public),
+# Etherscan (PENDLE token constructor governance param), Safe Transaction
+# Service (threshold live-verified 2026-06-12: 3/5).
+slug: pendle
+name: Pendle
+display_name: "Pendle (Ethereum)"
+chain: ethereum
+category: yield
+website: "https://pendle.finance"
+description: "Yield tokenization: splits yield-bearing assets into principal and yield tokens tradable on a specialized AMM."
+defillama:
+  versions:
+    - { label: "V2", slug: "pendle", id: 382 }
+  volume_only: false
+governance:
+  model: hybrid
+  note: "vePENDLE voting signals plus a team governance multisig that holds admin roles (market deployment, emergency pause, router parameters). Older references describe a 2/4 configuration; the live Safe reads 3/5 as of 2026-06-12."
+  safes:
+    - label: "Governance multisig"
+      address: "0x8119EC16F0573B7dAc7C0CB94EB504FB32456ee1"
+      role: "Admin roles: market deploys, pauses, router params"
+      threshold: 3
+      owners: 5
+  timelock: null
+  forum_url: null
+addresses:
+  - { label: "Router V4", address: "0x888888888889758F76e7103c6CbF23ABbF58F946" }
+tokens:
+  - { symbol: PENDLE, address: "0x808507121B80c02388fAd14726482e061B8da827" }
+stablecoins: []
+audits:
+  - { firm: "Ackee", year: "2023" }
+  - { firm: "ChainSecurity", year: "2023", scope: "SY" }
+  - { firm: "Dedaub", year: "2023" }
+feeds:
+  defiscan: { ids: ["pendle"] }
+  defipunkd: { slugs: ["pendle"] }
+hack_match:
+  ids: [382]
+  name_patterns: ["^Pendle"]
+notes:
+  - "The September 2024 Penpie exploit hit a third-party protocol built on Pendle, not Pendle core — it appears on Penpie's record, not here."
+last_manual_review: "2026-06-12"
+added_by: core-team

@@ -1,0 +1,48 @@
+# Sources: Mellow docs (docs.mellow.finance), Lido research forum (Mellow
+# alliance proposal), DefiLlama (2026-06-12 pull), Safe Transaction Service
+# (thresholds live-verified 2026-06-12).
+slug: mellow
+name: Mellow
+display_name: "Mellow (Ethereum)"
+chain: ethereum
+category: yield
+website: "https://mellow.finance"
+description: "Curator-driven vault infrastructure (restaking and yield vaults); risk delegation to named curators is the core design."
+defillama:
+  versions:
+    - { label: "Core", slug: "mellow-core", id: 7330 }
+    - { label: "Restaking", slug: "mellow-restaking", id: 4756 }
+  volume_only: false
+governance:
+  model: safe-multisig
+  note: "Curator-driven; the Mellow Association controls upgrades. For the Mellow×Lido vault stack, the ProxyVaultAdmin Safe holds upgrade authority and a same-signer Safe holds curator permissions (both 5/8, Lido+Mellow joint, per the Lido research forum). A single protocol-wide upgrade Safe beyond these is not published."
+  safes:
+    - label: "ProxyVaultAdmin (Mellow×Lido vaults)"
+      address: "0x81698f87C6482bF1ce9bFcfC0F103C4A0Adf0Af0"
+      role: "Vault implementation upgrade admin"
+      threshold: 5
+      owners: 8
+    - label: "VaultAdmin (curator permissions)"
+      address: "0x9437B2a8cF3b69D782a61f9814baAbc172f72003"
+      role: "Curator permission management"
+      threshold: 5
+      owners: 8
+  timelock: null
+  forum_url: null
+addresses:
+  - { label: "ProtocolGovernance (ALM legacy)", address: "0xDc9C17662133fB865E7bA3198B67c53a617B2153" }
+tokens: []
+stablecoins: []
+audits:
+  - { firm: "ChainSecurity", year: "2024" }
+  - { firm: "Statemind", year: "2024" }
+  - { firm: "OpenZeppelin", year: "2024" }
+  - { firm: "Sherlock (contest)", year: "2024" }
+feeds: {}
+hack_match:
+  ids: [7330, 4756, 2613, 3653]
+  name_patterns: ["^Mellow"]
+notes:
+  - "TVL is down sharply from its 2024 restaking peak (points-program unwind) — a market observation recorded by the TVL layer, not a rating."
+last_manual_review: "2026-06-12"
+added_by: core-team

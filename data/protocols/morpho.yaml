@@ -1,0 +1,45 @@
+# Sources: Morpho docs (docs.morpho.org), DefiLlama (2026-06-12 pull),
+# Safe Transaction Service (threshold live-verified 2026-06-12).
+slug: morpho
+name: Morpho
+display_name: "Morpho Blue (Ethereum)"
+chain: ethereum
+category: lending
+website: "https://morpho.org"
+description: "Immutable base lending primitive (Morpho Blue): isolated markets created permissionlessly. The curated-vault layer on top is tracked separately as Morpho Vaults."
+defillama:
+  versions:
+    - { label: "Blue", slug: "morpho-blue", id: 4025 }
+  volume_only: false
+governance:
+  model: hybrid
+  note: "Morpho Blue's core singleton is non-upgradeable; its owner() is the Morpho DAO 5/9 multisig, which governs fee switches and periphery registries. There is no protocol-level guardian by design — 'guardian' is a per-vault MetaMorpho role (see Morpho Vaults). MORPHO token voting is executed via the DAO multisig."
+  safes:
+    - label: "Morpho DAO multisig"
+      address: "0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa"
+      role: "owner() of Morpho Blue — fees + periphery (no upgrade powers; core immutable)"
+      threshold: 5
+      owners: 9
+  timelock: null
+  forum_url: "https://forum.morpho.org"
+addresses:
+  - { label: "Morpho Blue (singleton)", address: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb" }
+  - { label: "MetaMorpho Factory v1.1", address: "0x1897A8997241C1cD4bD0698647e4EB7213535c24" }
+  - { label: "MetaMorpho Factory v1.0", address: "0xA9c3D3a366466Fa809d1Ae982Fb2c46E5fC41101" }
+tokens:
+  - { symbol: MORPHO, address: "0x58D97B57BB95320F9a05dC918Aef65434969c2B2" }
+stablecoins: []
+audits:
+  - { firm: "Spearbit", year: "2023" }
+  - { firm: "ChainSecurity", year: "2023" }
+  - { firm: "Certora", year: "2023–2024", scope: "formal verification" }
+feeds:
+  defiscan: { ids: ["morpho"] }
+  defipunkd: { slugs: ["morpho", "morpho-blue"] }
+  philidor: { protocol_id: "morpho", relation: markets }
+  defisphere: { sphere_protocols: ["morpho"] }
+hack_match:
+  ids: [4025]
+  name_patterns: ["Morpho"]
+last_manual_review: "2026-06-12"
+added_by: core-team

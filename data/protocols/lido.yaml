@@ -1,0 +1,56 @@
+# Sources: Lido docs (docs.lido.fi), research.lido.fi, DefiLlama
+# (2026-06-12 pull), Safe Transaction Service (thresholds live-verified
+# 2026-06-12).
+slug: lido
+name: Lido
+display_name: "Lido (Ethereum)"
+chain: ethereum
+category: liquid-staking
+website: "https://lido.fi"
+description: "The largest Ethereum liquid-staking protocol (stETH/wstETH): curated node-operator set plus the permissionless CSM module, governed by the LDO Aragon DAO with Dual Governance."
+defillama:
+  versions:
+    - { label: "Lido", slug: "lido", id: 182 }
+  volume_only: false
+governance:
+  model: aragon-dao
+  note: "LDO Aragon DAO; the Aragon Agent contract is protocol admin. Dual Governance gives stETH holders a dynamic-timelock brake (rage-quit) on DAO decisions. GateSeal committee holds emergency pause; TMC manages treasury."
+  governance_contract:
+    label: "Aragon Agent (protocol admin)"
+    address: "0x3e40D73EB977Dc6a537aF587D48316feE66E9C8c"
+  safes:
+    - label: "GateSeal committee"
+      address: "0x8772E3a2D86B9347A2688f9bc1808A6d8917760C"
+      role: "Emergency pause (one-shot gate seals)"
+      threshold: 3
+      owners: 6
+    - label: "Treasury Management Committee"
+      address: "0xa02FC823cCE0D016bD7e17ac684c9abAb2d6D647"
+      role: "Treasury operations"
+      threshold: 4
+      owners: 7
+  timelock: "Dual Governance dynamic timelock (stETH-holder brake)"
+  forum_url: "https://research.lido.fi"
+addresses:
+  - { label: "stETH", address: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84" }
+  - { label: "LidoLocator", address: "0xC1d0b3DE6792Bf6b4b37EccdcC24e45978Cfd2Eb" }
+  - { label: "StakingRouter", address: "0xFdDf38947aFB03C621C71b06C9C70bce73f12999" }
+tokens:
+  - { symbol: LDO, address: "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32" }
+  - { symbol: wstETH, address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0" }
+stablecoins: []
+audits:
+  - { firm: "Sigma Prime", year: "2023", scope: "V2" }
+  - { firm: "MixBytes", year: "2023" }
+  - { firm: "ChainSecurity", year: "2024", scope: "Dual Governance" }
+  - { firm: "Certora", year: "2024–2025" }
+feeds:
+  defiscan: { ids: ["lido-v2"] }
+  defipunkd: { slugs: ["lido"] }
+hack_match:
+  ids: [182]
+  name_patterns: ["^Lido"]
+notes:
+  - "stETH is a liquid-staking token, not a stablecoin — the Pharos column renders not-applicable for Lido, which is a scope fact, not a coverage gap."
+last_manual_review: "2026-06-12"
+added_by: core-team
