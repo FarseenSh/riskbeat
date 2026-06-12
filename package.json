@@ -13,18 +13,14 @@
     "node": ">=20"
   },
   "packageManager": "pnpm@11.6.0",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp",
-      "unrs-resolver"
-    ]
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "codegen": "tsx scripts/codegen-feedkey.ts",
+    "codegen:check": "tsx scripts/codegen-feedkey.ts --check",
+    "validate": "tsx scripts/validate-schemas.ts"
   },
   "dependencies": {
     "marked": "^15.0.0",

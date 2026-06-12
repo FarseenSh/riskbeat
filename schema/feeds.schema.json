@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/FarseenSh/openrisk/schema/feeds.schema.json",
+  "title": "OpenRisk feed registry",
+  "type": "object",
+  "required": ["feeds"],
+  "additionalProperties": false,
+  "properties": {
+    "feeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/feed" }
+    }
+  },
+  "definitions": {
+    "feed": {
+      "type": "object",
+      "required": [
+        "key",
+        "display_name",
+        "url",
+        "source_url",
+        "license",
+        "access_method",
+        "machine_readable",
+        "api_key_required",
+        "automation_tier",
+        "status",
+        "provenance_tag",
+        "methodology",
+        "rating_vocabulary",
+        "rating_kind",
+        "inline_label",
+        "scope_note",
+        "conflict_of_interest"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "display_name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "source_url": { "type": "string", "format": "uri" },
+        "license": { "type": "string" },
+        "access_method": {
+          "enum": ["github_raw", "rest_api", "scrape", "manual"]
+        },
+        "machine_readable": { "type": "boolean" },
+        "api_key_required": { "type": "boolean" },
+        "automation_tier": { "enum": ["full", "partial", "manual-only"] },
+        "status": { "enum": ["active", "partial", "manual", "deprecated"] },
+        "provenance_tag": {
+          "enum": ["onchain", "feed", "curated", "self-reported"]
+        },
+        "methodology": { "type": "string", "minLength": 1 },
+        "rating_vocabulary": { "type": "string", "minLength": 1 },
+        "rating_kind": { "type": "string", "pattern": "^[a-z-]+$" },
+        "inline_label": { "type": "boolean" },
+        "scope_note": { "type": "string" },
+        "conflict_of_interest": {
+          "type": "string",
+          "description": "Mandatory. Empty string is valid (= none disclosed); an ABSENT field fails CI. CHARTER.md §6."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+# OpenRisk feed registry — the single source of truth for every feed column.
+#
+# Every entry MUST carry a `conflict_of_interest` field (empty string is a
+# valid value; an ABSENT field fails CI) — this makes neutrality
+# machine-auditable. See CHARTER.md §6.
+#
+# `automation_tier`: full | partial | manual-only
+# `status`:          active | partial | manual | deprecated
+# `inline_label`:    charter §4 inline exception — only short self-explanatory
+#                    ordinal vocabularies may render inside the matrix.
+# This file generates the typed FeedKey union (scripts/codegen-feedkey.ts);
+# the registry and the type system cannot drift.
+
+feeds:
+  # ————————————————— Tier A — live, automated nightly (6) —————————————————
+  - key: defiscan
+    display_name: "DeFiScan"
+    url: "https://defiscan.info"
+    source_url: "https://github.com/deficollective/defiscan"
+    license: "MIT"
+    access_method: github_raw
+    machine_readable: true
+    api_key_required: false
+    automation_tier: full
+    status: active
+    provenance_tag: feed
+    methodology: "Decentralization-maturity reviews: a public stage framework plus per-dimension risk levels, maintained in the open on GitHub."
+    rating_vocabulary: "Stage 0 / 1 / 2 + per-dimension L/M/H (Chain, Upgradeability, Autonomy, Exit Window, Accessibility)"
+    rating_kind: stage-ladder
+    inline_label: true
+    scope_note: "Reviews protocol deployments per chain; OpenRisk consumes the Ethereum-mainnet reviews. Stages measure decentralization maturity, not safety."
+    conflict_of_interest: "Built by the DeFi Collective. Disclosed proximity in CONFLICTS.md: OpenRisk consumes only its public MIT-licensed data and has no relationship with the publisher."
+
+  - key: defipunkd
+    display_name: "DeFiPunk'd"
+    url: "https://defipunkd.com"
+    source_url: "https://github.com/guil-lambert/defipunkd"
+    license: "MIT"
+    access_method: github_raw
+    machine_readable: true
+    api_key_required: false
+    automation_tier: full
+    status: active
+    provenance_tag: feed
+    methodology: "Multi-model LLM consensus assessments per slice, merged from independent model submissions; an independent open-source project."
+    rating_vocabulary: "Per-slice green / orange / red / unknown + weak/strong consensus (slices: control, ability-to-exit, autonomy, open-access, verifiability)"
+    rating_kind: consensus-color
+    inline_label: false
+    scope_note: "Assessment units are its own protocol slugs (often versioned). OpenRisk shows each published slice verbatim and does not derive a publication tier from slice counts."
+    conflict_of_interest: ""
+
+  - key: philidor
+    display_name: "Philidor"
+    url: "https://philidor.io"
+    source_url: "https://api.philidor.io/v1"
+    license: "Public API"
+    access_method: rest_api
+    machine_readable: true
+    api_key_required: false
+    automation_tier: full
+    status: active
+    provenance_tag: feed
+    methodology: "Deterministic vault risk scoring (framework v4.x): asset, platform and governance vectors recomputed continuously per vault."
+    rating_vocabulary: "0–10 score + Prime / Core / Edge tier per vault"
+    rating_kind: numeric-tier
+    inline_label: false
+    scope_note: "Vault-scoped: scores individual vaults/markets, not whole protocols. On protocol rows whose vaults it wraps, coverage renders as partial with this note."
+    conflict_of_interest: ""
+
+  - key: pharos
+    display_name: "Pharos"
+    url: "https://pharos.watch"
+    source_url: "https://api.pharos.watch"
+    license: "Public API (free key)"
+    access_method: rest_api
+    machine_readable: true
+    api_key_required: true
+    automation_tier: full
+    status: active
+    provenance_tag: feed
+    methodology: "Real-time stablecoin safety monitoring: dimensional report cards plus a depeg early-warning system (DEWS)."
+    rating_vocabulary: "Safety grade A+–F / NR + DEWS band Calm / Watch / Alert / Warning / Danger"
+    rating_kind: letter-grade
+    inline_label: false
+    scope_note: "Stablecoin-scoped: applies only to protocols with an associated stablecoin (e.g. GHO, USDS/DAI, crvUSD, LUSD/BOLD). All other cells render not-applicable, never as a coverage gap."
+    conflict_of_interest: "Built by a DeFi Collective board member. Disclosed proximity in CONFLICTS.md: OpenRisk consumes only its public API data."
+
+  - key: defillama-hacks
+    display_name: "DefiLlama Hacks"
+    url: "https://defillama.com/hacks"
+    source_url: "https://api.llama.fi/hacks"
+    license: "Open data"
+    access_method: rest_api
+    machine_readable: true
+    api_key_required: false
+    automation_tier: full
+    status: active
+    provenance_tag: feed
+    methodology: "Community-maintained registry of DeFi exploit events with date, amount and technique."
+    rating_vocabulary: "Incident events: date + USD amount + technique (not a rating)"
+    rating_kind: incident-history
+    inline_label: false
+    scope_note: "Incident history, not an assessment. A protocol with zero events renders as 'no incidents on record', which is itself a datum — never as a judgment."
+    conflict_of_interest: ""
+
+  - key: defisphere
+    display_name: "DeFi Sphere"
+    url: "https://sphere.blockanalitica.com"
+    source_url: "https://sphere.data.blockanalitica.com/markets/"
+    license: "Public API"
+    access_method: rest_api
+    machine_readable: true
+    api_key_required: false
+    automation_tier: full
+    status: active
+    provenance_tag: feed
+    methodology: "Quantitative lending-market risk analytics by Block Analitica: per-market collateral and liquidity risk scores."
+    rating_vocabulary: "Per-market collateral risk score + liquidity risk score (0–100 floats)"
+    rating_kind: market-scores
+    inline_label: false
+    scope_note: "Lending-market-scoped: covers individual lending markets (Aave, Spark, Morpho, Compound, …). Non-lending protocols render not-applicable; lending protocols absent from its market set are honest not-yet-covered."
+    conflict_of_interest: "Built by Block Analitica, which provides ongoing risk services to Spark, a protocol listed in this registry."
+
+  # ————————— Tier B — registry columns, automation pending access —————————
+  - key: anticapture
+    display_name: "Anticapture"
+    url: "https://anticapture.com"
+    source_url: "https://anticapture.com"
+    license: "MIT (self-hostable)"
+    access_method: rest_api
+    machine_readable: true
+    api_key_required: true
+    automation_tier: partial
+    status: partial
+    provenance_tag: feed
+    methodology: "Governance-capture resistance framework: stage plus attack-cost metrics per DAO."
+    rating_vocabulary: "Stage 0 / 1 / 2 + attack-cost metrics"
+    rating_kind: governance-stage
+    inline_label: true
+    scope_note: "Access pending (API key via Blockful, or self-host). Column ships now; cells render not-yet-covered until data flows — coverage gaps are data."
+    conflict_of_interest: ""
+
+  - key: credora
+    display_name: "Credora by RedStone"
+    url: "https://credora.network"
+    source_url: "https://credora.network"
+    license: "Proprietary (whitelist)"
+    access_method: rest_api
+    machine_readable: true
+    api_key_required: true
+    automation_tier: partial
+    status: partial
+    provenance_tag: feed
+    methodology: "Institutional credit-style risk ratings for DeFi protocols and markets (alpha)."
+    rating_vocabulary: "Letter grade A+–D + probability-of-significant-loss %"
+    rating_kind: credit-grade
+    inline_label: false
+    scope_note: "GraphQL access is whitelist-gated; publisher labels current output alpha. Cells render not-yet-covered until access lands and will carry the publisher's alpha disclaimer."
+    conflict_of_interest: "Owned by RedStone, an oracle provider whose feeds rated protocols may consume."
+
+  - key: xerberus
+    display_name: "Xerberus"
+    url: "https://xerberus.io"
+    source_url: "https://xerberus.io"
+    license: "Unconfirmed"
+    access_method: rest_api
+    machine_readable: false
+    api_key_required: true
+    automation_tier: partial
+    status: partial
+    provenance_tag: feed
+    methodology: "Evidence-based risk scoring."
+    rating_vocabulary: "0–100 score / AAA–D grade"
+    rating_kind: evidence-grade
+    inline_label: false
+    scope_note: "Public REST access unconfirmed after the v3.1.0 product pivot — re-verification required before automation. Cells render not-yet-covered."
+    conflict_of_interest: ""
+
+  # ——————— Tier C — manual/curated columns (community overlay PRs) ———————
+  - key: llamarisk
+    display_name: "LlamaRisk"
+    url: "https://llamarisk.com"
+    source_url: "https://llamarisk.com/research"
+    license: "Public research"
+    access_method: manual
+    machine_readable: false
+    api_key_required: false
+    automation_tier: manual-only
+    status: manual
+    provenance_tag: curated
+    methodology: "Narrative risk research and market-health monitoring; risk service provider to DAOs."
+    rating_vocabulary: "Narrative assessments + Market Health 0–1"
+    rating_kind: narrative-health
+    inline_label: false
+    scope_note: "No machine-readable feed: cells populate via curated overlay PRs citing a research post. Currently Aave's primary risk service provider."
+    conflict_of_interest: "Paid risk service provider to Aave DAO (primary risk SP, epoch-4 renewal Apr 2026); historically funded from the Curve ecosystem. Its cells on those rows carry this disclosure."
+
+  - key: gauntlet
+    display_name: "Gauntlet"
+    url: "https://gauntlet.xyz"
+    source_url: "https://gauntlet.xyz"
+    license: "Public dashboards"
+    access_method: manual
+    machine_readable: false
+    api_key_required: false
+    automation_tier: manual-only
+    status: manual
+    provenance_tag: curated
+    methodology: "Agent-based simulation risk management: value-at-risk, liquidations-at-risk, borrow-usage analytics."
+    rating_vocabulary: "VaR $ / LaR $ / borrow-usage %"
+    rating_kind: dollar-var
+    inline_label: false
+    scope_note: "No public machine feed: cells populate via curated overlay PRs. Active engagements: Compound and Morpho vault curation. NOT Aave's risk manager — exited that engagement Feb 2024."
+    conflict_of_interest: "Paid risk-management engagements with rated protocols (currently Compound; curates Morpho vaults). Exited Aave engagement Feb 2024."
+
+  - key: defisafety
+    display_name: "DeFi Safety"
+    url: "https://defisafety.com"
+    source_url: "https://defisafety.com"
+    license: "Public reviews"
+    access_method: manual
+    machine_readable: false
+    api_key_required: false
+    automation_tier: manual-only
+    status: manual
+    provenance_tag: curated
+    methodology: "Process-quality reviews: documentation, testing, audit and admin-controls scoring."
+    rating_vocabulary: "PQR 0–100% + PASS/FAIL"
+    rating_kind: process-score
+    inline_label: false
+    scope_note: "Review pages are JS-rendered (no API): cells populate via curated overlay PRs citing the dated review."
+    conflict_of_interest: ""

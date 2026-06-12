@@ -1,0 +1,232 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/FarseenSh/openrisk/schema/protocol.schema.json",
+  "title": "OpenRisk protocol registry entry",
+  "type": "object",
+  "required": [
+    "slug",
+    "name",
+    "display_name",
+    "chain",
+    "category",
+    "website",
+    "description",
+    "defillama",
+    "governance",
+    "addresses",
+    "tokens",
+    "stablecoins",
+    "audits",
+    "feeds",
+    "hack_match",
+    "last_manual_review",
+    "added_by"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "display_name": { "type": "string", "minLength": 1 },
+    "chain": { "const": "ethereum" },
+    "category": {
+      "enum": [
+        "lending",
+        "cdp",
+        "dex",
+        "swap-aggregator",
+        "yield",
+        "liquid-staking",
+        "capital-allocator"
+      ]
+    },
+    "website": { "type": "string", "format": "uri" },
+    "description": { "type": "string", "minLength": 1 },
+    "defillama": {
+      "type": "object",
+      "required": ["versions", "volume_only"],
+      "additionalProperties": false,
+      "properties": {
+        "versions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "slug", "id"],
+            "additionalProperties": false,
+            "properties": {
+              "label": { "type": "string" },
+              "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+              "id": { "type": ["integer", "null"] }
+            }
+          }
+        },
+        "volume_only": { "type": "boolean" },
+        "volume_names": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Display names in DefiLlama's aggregator/dex volume overview used to match volume rows"
+        },
+        "tvl_note": { "type": "string" }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["model", "note", "safes", "timelock", "forum_url"],
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "enum": [
+            "governor-timelock",
+            "safe-multisig",
+            "aragon-dao",
+            "token-dao",
+            "immutable",
+            "registry",
+            "hybrid"
+          ]
+        },
+        "note": { "type": "string", "minLength": 1 },
+        "governance_contract": {
+          "type": "object",
+          "required": ["label", "address"],
+          "additionalProperties": false,
+          "properties": {
+            "label": { "type": "string" },
+            "address": { "$ref": "#/definitions/address" }
+          }
+        },
+        "safes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "address", "role", "threshold", "owners"],
+            "additionalProperties": false,
+            "properties": {
+              "label": { "type": "string" },
+              "address": { "$ref": "#/definitions/address" },
+              "role": { "type": "string" },
+              "threshold": { "type": ["integer", "null"] },
+              "owners": { "type": ["integer", "null"] }
+            }
+          }
+        },
+        "timelock": { "type": ["string", "null"] },
+        "forum_url": { "type": ["string", "null"] }
+      }
+    },
+    "addresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "address"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string" },
+          "address": { "$ref": "#/definitions/address" }
+        }
+      }
+    },
+    "tokens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["symbol", "address"],
+        "additionalProperties": false,
+        "properties": {
+          "symbol": { "type": "string" },
+          "address": { "$ref": "#/definitions/address" }
+        }
+      }
+    },
+    "stablecoins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["symbol", "address", "pharos_id"],
+        "additionalProperties": false,
+        "properties": {
+          "symbol": { "type": "string" },
+          "address": { "$ref": "#/definitions/address" },
+          "pharos_id": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "audits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["firm", "year"],
+        "additionalProperties": false,
+        "properties": {
+          "firm": { "type": "string" },
+          "year": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "scope": { "type": "string" }
+        }
+      }
+    },
+    "feeds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "defiscan": {
+          "type": "object",
+          "required": ["ids"],
+          "additionalProperties": false,
+          "properties": {
+            "ids": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "defipunkd": {
+          "type": "object",
+          "required": ["slugs"],
+          "additionalProperties": false,
+          "properties": {
+            "slugs": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "philidor": {
+          "type": "object",
+          "required": ["protocol_id", "relation"],
+          "additionalProperties": false,
+          "properties": {
+            "protocol_id": { "type": "string" },
+            "relation": { "enum": ["native", "markets"] }
+          }
+        },
+        "defisphere": {
+          "type": "object",
+          "required": ["sphere_protocols"],
+          "additionalProperties": false,
+          "properties": {
+            "sphere_protocols": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "hack_match": {
+      "type": "object",
+      "required": ["ids", "name_patterns"],
+      "additionalProperties": false,
+      "properties": {
+        "ids": { "type": "array", "items": { "type": "integer" } },
+        "name_patterns": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "last_manual_review": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "added_by": { "type": "string" }
+  },
+  "definitions": {
+    "address": {
+      "type": "string",
+      "pattern": "^0x[0-9a-fA-F]{40}$",
+      "description": "EIP-55 checksum equality is additionally enforced by scripts/validate-schemas.ts"
+    }
+  }
+}
