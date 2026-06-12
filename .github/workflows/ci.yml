@@ -1,0 +1,47 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: FeedKey codegen drift check (registry ↔ types)
+        run: pnpm codegen:check
+
+      - name: Schema validation (protocols · feeds · overlays · checksums)
+        run: pnpm validate
+
+      - name: No-composite-scoring gate (CHARTER.md §2)
+        run: |
+          set -e
+          if grep -rEn '"(composite|aggregate|average|combined|our_score)"[[:space:]]*:' data/ --include='*.json'; then
+            echo '::error::composite-like key found in data/ — prohibited by CHARTER.md §2'
+            exit 1
+          fi
+          if grep -rEn '^[[:space:]]*(composite|aggregate|average|combined|our_score)(_score)?:' data/ --include='*.yaml' --include='*.yml'; then
+            echo '::error::composite-like key found in data/ — prohibited by CHARTER.md §2'
+            exit 1
+          fi
+          echo "no-composite gate: clean"
+
+      - name: Lint (incl. no-cross-feed-render)
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build

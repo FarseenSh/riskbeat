@@ -1,0 +1,56 @@
+name: nightly-fetch
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # 03:17 UTC nightly
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly-fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Fetch all six feeds (content-addressed archive)
+        env:
+          PHAROS_API_KEY: ${{ secrets.PHAROS_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm fetch:feeds
+
+      - name: Sync DefiLlama TVL snapshot
+        run: pnpm sync:defillama
+
+      - name: Sync Safe governance snapshot
+        run: pnpm sync:safe
+
+      - name: Compute daily Merkle root
+        run: pnpm merkle
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cache data/provenance
+          if git diff --cached --quiet; then
+            echo "no data changes today"
+          else
+            git commit -m "data: nightly snapshot $(date -u +%F)"
+            git push
+          fi
