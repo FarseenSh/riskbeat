@@ -1,0 +1,16 @@
+[
+  {
+    "id": "curve-llamarisk-llamalend-postmortem-001",
+    "protocol_slug": "curve",
+    "feed_key": "llamarisk",
+    "field": "research_coverage",
+    "corrected_value": "LlamaLend sDOLA-long2 Post-mortem (2026-03-13) — analysis of the 2026-03-02 exploit on the sDOLA/crvUSD LlamaLend market, produced with Swiss Stake, CurveDocs and Wavey",
+    "correction_type": "add",
+    "source_url": "https://www.llamarisk.com/research/llamalend-sdola-long2-post-mortem",
+    "source_date": "2026-03-13",
+    "contributor": "github:FarseenSh",
+    "date": "2026-06-13",
+    "provenance_tag": "curated",
+    "status": "merged"
+  }
+]

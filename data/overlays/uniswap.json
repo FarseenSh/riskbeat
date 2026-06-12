@@ -1,0 +1,16 @@
+[
+  {
+    "id": "uniswap-anticapture-resilience-stage-001",
+    "protocol_slug": "uniswap",
+    "feed_key": "anticapture",
+    "field": "resilience_stage",
+    "corrected_value": "Resilience Stage 1 — no governance protection at high risk, four at medium (voting delay 1d19h, voting period 5d6h, vote immutability, interface resilience); 4 fixes to Stage 2. Quorum 40M UNI (observed 2026-06-13)",
+    "correction_type": "add",
+    "source_url": "https://app.anticapture.com/uni/resilience-stages",
+    "source_date": "2026-06-13",
+    "contributor": "github:FarseenSh",
+    "date": "2026-06-13",
+    "provenance_tag": "curated",
+    "status": "merged"
+  }
+]

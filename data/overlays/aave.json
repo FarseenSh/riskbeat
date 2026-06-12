@@ -1,0 +1,16 @@
+[
+  {
+    "id": "aave-llamarisk-gho-pegkeeper-review-001",
+    "protocol_slug": "aave",
+    "feed_key": "llamarisk",
+    "field": "research_coverage",
+    "corrected_value": "Pegkeeper Onboarding Review: Aave's GHO (2026-02-27, with TokenLogic) — GHO risk assessed for crvUSD pegkeeper onboarding; quantitative and qualitative evaluation with exposure recommendations",
+    "correction_type": "add",
+    "source_url": "https://www.llamarisk.com/research/pegkeeper-onboarding-review-aave-s-gho",
+    "source_date": "2026-02-27",
+    "contributor": "github:FarseenSh",
+    "date": "2026-06-13",
+    "provenance_tag": "curated",
+    "status": "merged"
+  }
+]

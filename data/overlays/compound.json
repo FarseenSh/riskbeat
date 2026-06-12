@@ -1,0 +1,30 @@
+[
+  {
+    "id": "compound-gauntlet-ezeth-cap-recommendation-001",
+    "protocol_slug": "compound",
+    "feed_key": "gauntlet",
+    "field": "risk_management",
+    "corrected_value": "Active risk manager — latest recommendation: reduce ezETH supply cap on Ethereum WETH Comet from 33,163 to 500 ezETH at ~1.33% utilization (2026-05-13)",
+    "correction_type": "add",
+    "source_url": "https://www.comp.xyz/t/gauntlet-ezeth-supply-cap-reduction-recommendation-on-ethereum-weth-comet/7851",
+    "source_date": "2026-05-13",
+    "contributor": "github:FarseenSh",
+    "date": "2026-06-13",
+    "provenance_tag": "curated",
+    "status": "merged"
+  },
+  {
+    "id": "compound-anticapture-resilience-stage-001",
+    "protocol_slug": "compound",
+    "feed_key": "anticapture",
+    "field": "resilience_stage",
+    "corrected_value": "Resilience Stage 0 — at least one governance protection at high risk; 5 items to Stage 1. Quorum 400K COMP, turnout 817.88K COMP, top 1 delegate reaches quorum (observed 2026-06-13)",
+    "correction_type": "add",
+    "source_url": "https://app.anticapture.com/comp",
+    "source_date": "2026-06-13",
+    "contributor": "github:FarseenSh",
+    "date": "2026-06-13",
+    "provenance_tag": "curated",
+    "status": "merged"
+  }
+]

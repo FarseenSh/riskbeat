@@ -27,11 +27,16 @@ import type {
   DefipunkdDatum,
   FeedDatum,
   FeedSnapshot,
+  GenericCuratedDatum,
   OverlayEntry,
   ProtocolCoverage,
   ProtocolMeta,
 } from "@/lib/types";
-import { AUTOMATED_FEED_KEYS, type FeedKey } from "@/lib/feed-keys";
+import {
+  AUTOMATED_FEED_KEYS,
+  type AutomatedFeedKey,
+  type FeedKey,
+} from "@/lib/feed-keys";
 
 const OUT_DIR = resolve(REPO_ROOT, "lib/generated");
 
@@ -224,6 +229,26 @@ function main() {
       snapshot_date: snap?.date ?? null,
       ok: snap?.payload.ok ?? false,
     };
+  }
+
+  // Manual/Tier-B/C feeds have no snapshots: merged add/update overlays ARE
+  // their data. Materialize each as a GenericCuratedDatum so detail pages and
+  // the API render them through the same path as automated feeds.
+  for (const o of overlays) {
+    if (o.status !== "merged") continue;
+    if (o.correction_type !== "add" && o.correction_type !== "update") continue;
+    if (!o.corrected_value) continue;
+    if ((AUTOMATED_FEED_KEYS as readonly string[]).includes(o.feed_key)) continue;
+    const key = o.feed_key as Exclude<FeedKey, AutomatedFeedKey>;
+    const datum: GenericCuratedDatum = {
+      feed_key: key,
+      raw_value: o.corrected_value,
+      source_url: o.source_url,
+      source_date: o.source_date,
+      contributor: o.contributor,
+      provenance: "curated",
+    };
+    ((feed_data[key] ??= {})[o.protocol_slug] ??= []).push(datum);
   }
 
   const coverage: Record<string, ProtocolCoverage> = {};
