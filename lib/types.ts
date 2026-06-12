@@ -10,7 +10,7 @@
  * without a type error. `FeedDatum` is the only type that crosses feed
  * boundaries, and it is a discriminated union on `feed_key`.
  */
-import type { FeedKey } from "@/lib/feed-keys";
+import type { AutomatedFeedKey, FeedKey } from "@/lib/feed-keys";
 
 export type CoverageStatus =
   | "covered"
@@ -41,6 +41,8 @@ export interface DefiscanDatum {
   defiscan_id: string;
   /** DeFiScan's own display name for the reviewed protocol, e.g. "Aave v3". */
   protocol_label: string;
+  /** DefiLlama slugs the review declares it covers (from its data.json). */
+  covered_llama_slugs: string[];
   /** Integer stage from frontmatter; "O" when the review uses a non-stage marker. */
   stage: number | "O";
   /** Per-dimension risk levels, mapped from the ordered `risks` array. */
@@ -183,7 +185,9 @@ export interface DefiSphereDatum {
 /* ——————————————— Generic curated datum (manual feeds) ——————————————— */
 
 export interface GenericCuratedDatum {
-  feed_key: FeedKey;
+  /** Manual/registry feeds only — automated feeds have their own typed datum,
+   *  which keeps the union discriminable on feed_key. */
+  feed_key: Exclude<FeedKey, AutomatedFeedKey>;
   /** The feed's published rating, verbatim, as free text. */
   raw_value: string;
   value_label?: string;
@@ -347,6 +351,18 @@ export interface OverlayEntry {
   date: string;
   provenance_tag: ProvenanceTag;
   status: "open" | "merged" | "rejected" | "superseded";
+}
+
+/* ————————————————— Feed snapshots (content-addressed cache) ————————————————— */
+
+export interface FeedSnapshot {
+  feed_key: FeedKey;
+  fetched_at: string;
+  source: string;
+  ok: boolean;
+  error?: string;
+  /** protocol slug → data published by this feed (empty array = none). */
+  data: Record<string, FeedDatum[]>;
 }
 
 /* ————————————————— Live layers (TVL / governance) ————————————————— */

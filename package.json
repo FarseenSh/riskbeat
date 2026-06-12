@@ -14,13 +14,20 @@
   },
   "packageManager": "pnpm@11.6.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "pnpm codegen && pnpm build-data && next dev",
+    "build": "pnpm codegen && pnpm build-data && next build",
+    "build-data": "tsx scripts/build-data.ts",
     "start": "next start",
     "lint": "eslint .",
     "codegen": "tsx scripts/codegen-feedkey.ts",
     "codegen:check": "tsx scripts/codegen-feedkey.ts --check",
-    "validate": "tsx scripts/validate-schemas.ts"
+    "validate": "tsx scripts/validate-schemas.ts",
+    "fetch:feeds": "tsx scripts/fetch-feeds.ts",
+    "sync:defillama": "tsx scripts/sync-defillama.ts",
+    "sync:safe": "tsx scripts/sync-safe.ts",
+    "merkle": "tsx scripts/compute-merkle-root.ts",
+    "merkle:verify": "tsx scripts/compute-merkle-root.ts --verify",
+    "verify:onchain": "tsx scripts/verify-onchain.ts"
   },
   "dependencies": {
     "marked": "^15.0.0",
