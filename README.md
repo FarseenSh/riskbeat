@@ -10,6 +10,22 @@ The mental model is **oracle diversity**: no single risk feed is canonical, **th
 
 ---
 
+## Verify this repo in two minutes
+
+Every claim below is checkable from a fresh clone — nothing requires trusting this README:
+
+```bash
+git clone https://github.com/FarseenSh/openrisk && cd openrisk
+pnpm install
+pnpm merkle:verify 2026-06-12   # recomputes that day's published provenance root, bit for bit
+pnpm validate                   # every registry/overlay file against its committed schema
+pnpm build                      # the full site, from the committed data layer alone
+```
+
+The root printed must equal the one served live at [`/api/v0/provenance-root.json`](https://openrisk-eth.vercel.app/api/v0/provenance-root.json). Every datum on the site traces to a content-addressed snapshot under `data/cache/` — `<date>-<sha256-of-content>.json` — committed by the nightly pipeline.
+
+---
+
 ## What OpenRisk does — and does NOT do
 
 **Does:** aggregates the major DeFi risk feeds for the top-20 Ethereum-mainnet protocols, rendering each feed's assessment **verbatim, in that feed's own vocabulary**; surfaces governance from on-chain sources; tracks which feeds have / have not assessed each protocol; links to every source; maintains a community-correctable data registry.
