@@ -60,6 +60,8 @@ export async function fetchDefisphere(
     const res = await fetchJson<ApiPage>(`${BASE}?page=${page}`, {
       headers: HEADERS,
     });
+    if (res.success === false)
+      throw new Error("DeFi Sphere API returned success=false");
     pages = res.data?.pagination?.pages ?? 1;
     markets.push(...(res.data?.results ?? []));
     await sleep(250);

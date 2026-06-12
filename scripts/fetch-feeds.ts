@@ -37,6 +37,12 @@ const FETCHERS: [string, (p: ProtocolMeta[]) => Promise<FeedSnapshot>][] = [
 const only = process.argv
   .find((a) => a.startsWith("--only="))
   ?.slice("--only=".length);
+if (only && !FETCHERS.some(([k]) => k === only)) {
+  console.error(
+    `fetch-feeds: unknown feed "${only}" — valid: ${FETCHERS.map(([k]) => k).join(", ")}`,
+  );
+  process.exit(2);
+}
 
 async function main() {
   const protocols = loadProtocols();

@@ -27,6 +27,13 @@ interface DefiscanDataJson {
   defillama_slug?: string[];
 }
 
+/** js-yaml parses unquoted YAML dates as Date objects; normalize to YYYY-MM-DD. */
+function isoDate(v: unknown): string | undefined {
+  if (v == null || v === "") return undefined;
+  if (v instanceof Date) return v.toISOString().slice(0, 10);
+  return String(v);
+}
+
 export async function fetchDefiscan(
   protocols: ProtocolMeta[],
 ): Promise<FeedSnapshot> {
@@ -69,10 +76,10 @@ export async function fetchDefiscan(
         stage: typeof fm.stage === "number" ? fm.stage : "O",
         risks,
         reasons: Array.isArray(fm.reasons) ? fm.reasons.map(String) : [],
-        publish_date: fm.publish_date ? String(fm.publish_date) : undefined,
+        publish_date: isoDate(fm.publish_date),
         update_date:
-          fm.update_date && String(fm.update_date) !== "1970-01-01"
-            ? String(fm.update_date)
+          isoDate(fm.update_date) !== "1970-01-01"
+            ? isoDate(fm.update_date)
             : undefined,
         source_url: `https://defiscan.info/protocols/${id}`,
         fetched_at,

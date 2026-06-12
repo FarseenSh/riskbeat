@@ -56,7 +56,7 @@ pnpm merkle:verify ${root?.date ?? "YYYY-MM-DD"}
 # → VERIFIED ${root?.date ?? "YYYY-MM-DD"}: ${root ? `${root.root.slice(0, 24)}…` : "<root>"}`}</pre>
 
       <h2>The tree, precisely</h2>
-      <pre>{`files  = every file under data/cache/, sorted by relative path (bytewise)
+      <pre>{`files  = every file under data/cache/ named <date>-<sha256>.json for the date being verified, sorted by relative path (bytewise)
 leaf_i = sha256( relpath_i + "\\n" + file_bytes_i )
 parent = sha256( left_digest || right_digest )   # raw 32-byte concat
          (odd node count → last node duplicated)

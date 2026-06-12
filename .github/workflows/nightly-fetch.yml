@@ -28,7 +28,7 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      - name: Fetch all six feeds (content-addressed archive)
+      - name: Fetch all automated feeds (content-addressed archive)
         env:
           PHAROS_API_KEY: ${{ secrets.PHAROS_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

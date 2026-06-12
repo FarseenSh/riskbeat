@@ -3,8 +3,8 @@
  *
  * Snapshots are content-addressed: data/cache/{feed}/{YYYY-MM-DD}-{sha256}.json
  * where the hash is over the canonical file bytes — so any datum shown on the
- * site can be re-derived from a `git clone` and the day's Merkle root
- * (scripts/compute-merkle-root.ts, surfaced at /verify).
+ * site can be re-derived from a `git clone` and the day's DATE-SCOPED
+ * Merkle root (scripts/compute-merkle-root.ts, surfaced at /verify).
  */
 import { createHash } from "node:crypto";
 import {
@@ -14,12 +14,16 @@ import {
   readFileSync,
   readdirSync,
   rmSync,
-  statSync,
   writeFileSync,
 } from "node:fs";
 import { resolve } from "node:path";
 
-export const REPO_ROOT = resolve(import.meta.dirname, "..");
+// tsx scripts resolve from this file's location (lib/ → repo root); in the
+// bundled Next.js route context import.meta.dirname is unavailable, and
+// process.cwd() is the project root at build time.
+export const REPO_ROOT = import.meta.dirname
+  ? resolve(import.meta.dirname, "..")
+  : process.cwd();
 export const CACHE_DIR = resolve(REPO_ROOT, "data/cache");
 export const PROVENANCE_DIR = resolve(REPO_ROOT, "data/provenance");
 
@@ -133,8 +137,10 @@ export function pruneSnapshots(feedDir: string, keep = 30): string[] {
   return drop;
 }
 
-/** Latest snapshot for a feed directory: newest date, mtime tie-break for
- *  same-day refetches (hash order is not temporal). */
+/** Latest snapshot for a feed directory: newest date; same-day refetches are
+ *  tie-broken by the timestamp INSIDE each payload (fetched_at / as_of), not
+ *  filesystem mtime — a fresh `git clone` flattens mtimes, so they are not a
+ *  deterministic ordering. Hash order is not temporal either. */
 export function latestSnapshot<T = unknown>(
   feedDir: string,
 ): { payload: T; file: string; date: string } | null {
@@ -142,17 +148,22 @@ export function latestSnapshot<T = unknown>(
   if (!existsSync(dir)) return null;
   const files = readdirSync(dir)
     .filter((f) => /^\d{4}-\d{2}-\d{2}-[0-9a-f]{64}\.json$/.test(f))
-    .sort(
-      (a, b) =>
-        a.slice(0, 10).localeCompare(b.slice(0, 10)) ||
-        statSync(resolve(dir, a)).mtimeMs - statSync(resolve(dir, b)).mtimeMs,
-    );
-  const file = files.at(-1);
-  if (!file) return null;
+    .sort((a, b) => a.slice(0, 10).localeCompare(b.slice(0, 10)));
+  const maxDate = files.at(-1)?.slice(0, 10);
+  if (!maxDate) return null;
+
+  let best: { payload: T; file: string; ts: string } | null = null;
+  for (const f of files.filter((x) => x.startsWith(maxDate))) {
+    const payload = JSON.parse(readFileSync(resolve(dir, f), "utf8")) as T;
+    const p = payload as { fetched_at?: string; as_of?: string };
+    const ts = p.fetched_at ?? p.as_of ?? "";
+    if (!best || ts > best.ts) best = { payload, file: f, ts };
+  }
+  if (!best) return null;
   return {
-    payload: JSON.parse(readFileSync(resolve(dir, file), "utf8")) as T,
-    file: `${feedDir}/${file}`,
-    date: file.slice(0, 10),
+    payload: best.payload,
+    file: `${feedDir}/${best.file}`,
+    date: maxDate,
   };
 }
 

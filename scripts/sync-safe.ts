@@ -35,4 +35,14 @@ async function main() {
   console.log(`sync-safe: ${live}/${total} safes live → ${archive.file}`);
 }
 
-main();
+main().catch((err) => {
+  // A crash here must not abort the nightly run — feeds already archived
+  // this night still get committed; the previous Safe snapshot stays live.
+  appendNightlyLog({
+    ts: new Date().toISOString(),
+    feed: "safe-governance",
+    status: "error",
+    error: err instanceof Error ? err.message : String(err),
+  });
+  console.error("sync-safe: failed —", err);
+});

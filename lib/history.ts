@@ -3,18 +3,19 @@
  * snapshot, not just the latest) for the /api/v0/history endpoint.
  *
  * Same tie-break rule as latestSnapshot: when a date has multiple
- * content-addressed files for one feed (intra-day refetches), the most
- * recently written file is that day's record; earlier files remain in the
- * archive and under the day's Merkle root.
+ * content-addressed files for one feed (intra-day refetches), the file with
+ * the latest `fetched_at` INSIDE the payload is that day's record (mtime is
+ * not deterministic across clones); earlier files remain in the archive and
+ * under the day's Merkle root.
  */
-import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import type { FeedDatum, FeedSnapshot } from "@/lib/types";
 import { AUTOMATED_FEED_KEYS, type AutomatedFeedKey } from "@/lib/feed-keys";
+import { CACHE_DIR, PROVENANCE_DIR } from "@/lib/fetch-util";
 
-const ROOT = process.cwd();
-const CACHE = resolve(ROOT, "data/cache");
-const ROOTS = resolve(ROOT, "data/provenance/roots.jsonl");
+const CACHE = CACHE_DIR;
+const ROOTS = resolve(PROVENANCE_DIR, "roots.jsonl");
 
 export interface DailyRoot {
   date: string;
@@ -35,7 +36,6 @@ export function rootsByDate(): Map<string, DailyRoot> {
 interface DatedFile {
   date: string;
   path: string;
-  mtime: number;
 }
 
 function datedFiles(feed: AutomatedFeedKey): DatedFile[] {
@@ -43,11 +43,7 @@ function datedFiles(feed: AutomatedFeedKey): DatedFile[] {
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
     .filter((f) => /^\d{4}-\d{2}-\d{2}-[0-9a-f]{64}\.json$/.test(f))
-    .map((f) => ({
-      date: f.slice(0, 10),
-      path: resolve(dir, f),
-      mtime: statSync(resolve(dir, f)).mtimeMs,
-    }));
+    .map((f) => ({ date: f.slice(0, 10), path: resolve(dir, f) }));
 }
 
 export interface HistoryDay {
@@ -64,14 +60,15 @@ export function protocolHistory(slug: string): HistoryDay[] {
   const days = new Map<string, HistoryDay>();
 
   for (const feed of AUTOMATED_FEED_KEYS) {
-    // newest file per (feed, date)
-    const byDate = new Map<string, DatedFile>();
+    // newest snapshot per (feed, date), by the fetched_at INSIDE each payload
+    const byDate = new Map<string, FeedSnapshot>();
     for (const f of datedFiles(feed)) {
+      const snap = JSON.parse(readFileSync(f.path, "utf8")) as FeedSnapshot;
       const prev = byDate.get(f.date);
-      if (!prev || f.mtime > prev.mtime) byDate.set(f.date, f);
+      if (!prev || (snap.fetched_at ?? "") > (prev.fetched_at ?? ""))
+        byDate.set(f.date, snap);
     }
-    for (const [date, file] of byDate) {
-      const snap = JSON.parse(readFileSync(file.path, "utf8")) as FeedSnapshot;
+    for (const [date, snap] of byDate) {
       const datums = snap.data?.[slug] ?? [];
       if (datums.length === 0) continue;
       const day = days.get(date) ?? {

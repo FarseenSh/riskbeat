@@ -70,7 +70,8 @@ for (const f of feedsDoc.feeds ?? []) {
   if (f.inline_label === true && !INLINE_LABEL_ALLOWLIST.has(key))
     fail(`feeds.yaml: "${key}" sets inline_label — charter §4 allows only: ${[...INLINE_LABEL_ALLOWLIST].join(", ")} (amend CHARTER.md first)`);
 }
-console.log(`  ${feedsDoc.feeds?.length ?? 0} feeds ok`);
+console.log(`  ${feedsDoc.feeds?.length ?? 0} feeds ${failures ? "checked (failures above)" : "ok"}`);
+const failuresAfterFeeds = failures;
 
 /* ——— protocols/*.yaml ——— */
 const protoDir = resolve(ROOT, "data/protocols");
@@ -109,7 +110,8 @@ for (const file of protoFiles) {
     seenLlamaSlugs.set(v.slug, file);
   }
 }
-console.log(`  ${protoFiles.length} protocols ok`);
+console.log(`  ${protoFiles.length} protocols ${failures > failuresAfterFeeds ? "checked (failures above)" : "ok"}`);
+const failuresAfterProtos = failures;
 
 /* ——— overlays/*.json ——— */
 const overlayDir = resolve(ROOT, "data/overlays");
@@ -129,7 +131,7 @@ for (const file of overlayFiles) {
       fail(`${file} entry ${entry.id}: unknown feed_key "${entry.feed_key}"`);
   }
 }
-console.log(`  ${overlayFiles.length} overlay files ok`);
+console.log(`  ${overlayFiles.length} overlay files ${failures > failuresAfterProtos ? "checked (failures above)" : "ok"}`);
 
 if (failures) {
   console.error(`\nvalidate: ${failures} failure(s)`);

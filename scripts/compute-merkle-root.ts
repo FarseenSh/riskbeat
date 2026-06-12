@@ -3,19 +3,28 @@
  * third party can verify from a `git clone` that the published data is
  * exactly what the site serves.
  *
+ * The root is DATE-SCOPED: each roots.jsonl entry commits to the set of
+ * snapshot files WRITTEN ON that UTC date (filenames are `YYYY-MM-DD-<sha>`),
+ * so `--verify <date>` keeps working forever as the archive grows on later
+ * days. Caveat: the 30-snapshot-per-feed retention window eventually rotates
+ * the oldest files out of the working tree; past roots remain as recorded
+ * commitments and any historical state is reconstructable from git history.
+ *
  * Tree definition (reproduce independently with any sha256 tool):
- *   files  = every file under data/cache/, sorted by relative path (bytewise)
+ *   files  = every file under data/cache/ whose name starts with `<date>-`,
+ *            sorted by relative path (bytewise)
  *   leaf_i = sha256( relpath_i + "\n" + bytes_i )
  *   level: parent = sha256( left_digest || right_digest )   (raw 32-byte concat)
  *          odd node count → last node is duplicated
  *   root   = hex of the final digest
  *
  * Modes:
- *   (default)        compute + append {date, root, file_count} to
- *                    data/provenance/roots.jsonl (same-date entry replaced)
- *   --print          compute + print only (no write)
- *   --verify <date>  recompute and compare against the recorded entry; exits
- *                    non-zero on mismatch — this is the /verify page command
+ *   (default)        compute today's root + append {date, root, file_count}
+ *                    to data/provenance/roots.jsonl (same-date entry replaced)
+ *   --print          compute today's root + print only (no write)
+ *   --verify <date>  recompute that date's root and compare against the
+ *                    recorded entry; exits non-zero on mismatch — this is the
+ *                    /verify page command
  */
 import { createHash } from "node:crypto";
 import {
@@ -42,9 +51,13 @@ function walk(dir: string): string[] {
   return out;
 }
 
-export function computeRoot(): { root: string; file_count: number } {
+export function computeRoot(date: string): {
+  root: string;
+  file_count: number;
+} {
   const files = walk(CACHE_DIR)
     .map((f) => ({ rel: relative(CACHE_DIR, f), full: f }))
+    .filter(({ full }) => resolve(full).split("/").at(-1)!.startsWith(`${date}-`))
     .sort((a, b) => (a.rel < b.rel ? -1 : 1));
   if (files.length === 0) return { root: "", file_count: 0 };
 
@@ -79,14 +92,15 @@ function loadRoots(): RootEntry[] {
     .map((l) => JSON.parse(l) as RootEntry);
 }
 
-const { root, file_count } = computeRoot();
 const args = process.argv.slice(2);
 
 if (args[0] === "--print") {
-  console.log(`${root}  (${file_count} files)`);
+  const date = utcDate();
+  const { root, file_count } = computeRoot(date);
+  console.log(`${root}  (${file_count} files for ${date})`);
 } else if (args[0] === "--verify") {
   const date = args[1];
-  if (!date) {
+  if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
     console.error("usage: compute-merkle-root --verify YYYY-MM-DD");
     process.exit(2);
   }
@@ -94,6 +108,13 @@ if (args[0] === "--print") {
   if (!entry) {
     console.error(`no recorded root for ${date} in data/provenance/roots.jsonl`);
     process.exit(2);
+  }
+  const { root, file_count } = computeRoot(date);
+  if (file_count === 0) {
+    console.error(
+      `no snapshot files dated ${date} remain in data/cache/ — the retention window has rotated them out; the recorded root remains a historical commitment, and that day's files are reconstructable from git history`,
+    );
+    process.exit(1);
   }
   if (entry.root === root) {
     console.log(`VERIFIED ${date}: ${root} (${file_count} files)`);
@@ -105,6 +126,7 @@ if (args[0] === "--print") {
   }
 } else {
   const date = utcDate();
+  const { root, file_count } = computeRoot(date);
   const entries = loadRoots().filter((r) => r.date !== date);
   entries.push({
     date,

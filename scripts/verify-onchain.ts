@@ -15,10 +15,11 @@ import { resolve } from "node:path";
 import yaml from "js-yaml";
 import { createPublicClient, http, erc20Abi } from "viem";
 import { mainnet } from "viem/chains";
+import { SAFE_API_BASE } from "@/lib/safe-api";
 
 const ROOT = resolve(import.meta.dirname, "..");
 const RPC = process.env.ETH_RPC_URL ?? "https://ethereum-rpc.publicnode.com";
-const SAFE_API = "https://api.safe.global/tx-service/eth/api/v1";
+const SAFE_API = SAFE_API_BASE;
 
 const client = createPublicClient({ chain: mainnet, transport: http(RPC) });
 
@@ -91,11 +92,21 @@ async function main() {
           continue;
         }
         const data = (await res.json()) as { threshold: number; owners: string[] };
-        if (s.threshold !== null && data.threshold !== s.threshold)
+        let mismatched = false;
+        if (s.threshold !== null && data.threshold !== s.threshold) {
           fail(`${doc.slug} safe ${s.label}: live threshold ${data.threshold} != yaml ${s.threshold}`);
-        else if (s.owners !== null && data.owners.length !== s.owners)
+          mismatched = true;
+        }
+        if (s.owners !== null && data.owners.length !== s.owners) {
           fail(`${doc.slug} safe ${s.label}: live owners ${data.owners.length} != yaml ${s.owners}`);
-        else ok(`Safe ${s.label}: ${data.threshold}/${data.owners.length} matches`);
+          mismatched = true;
+        }
+        if (!mismatched)
+          ok(
+            s.threshold === null && s.owners === null
+              ? `Safe ${s.label}: live ${data.threshold}/${data.owners.length} (no yaml expectation recorded)`
+              : `Safe ${s.label}: ${data.threshold}/${data.owners.length} matches`,
+          );
       } catch {
         fail(`${doc.slug} safe ${s.label}: Safe API call failed`);
       }
