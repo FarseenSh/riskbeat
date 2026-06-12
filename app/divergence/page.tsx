@@ -62,7 +62,7 @@ export default function DivergencePage() {
 
       {rows.map(({ proto, feeds, tvl }) => (
         <section key={proto.slug} className="panel" style={{ marginBottom: "1.5rem" }}>
-          <header style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem", flexWrap: "wrap" }}>
+          <header className="panel-head" style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem", flexWrap: "wrap" }}>
             <h2 style={{ margin: 0 }}>
               <Link href={`/protocol/${proto.slug}`}>{proto.name}</Link>
             </h2>
@@ -73,12 +73,12 @@ export default function DivergencePage() {
               · {feeds.length} rating feeds
             </span>
           </header>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem", marginTop: "0.75rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem", padding: "12px" }}>
             {feeds.map((f) => {
               const datums =
                 siteData.feed_data[f.key as FeedKey]?.[proto.slug] ?? [];
               return (
-                <div key={f.key} style={{ border: "1px solid var(--line, #2a2930)", padding: "0.75rem" }}>
+                <div key={f.key} style={{ border: "1px solid var(--border)", padding: "0.75rem" }}>
                   <div className="muted" style={{ marginBottom: "0.5rem" }}>
                     {f.display_name}
                     {siteData.coverage[proto.slug].cells[f.key as FeedKey]

@@ -21,8 +21,11 @@ The mental model is **oracle diversity**: no single risk feed is canonical, **th
 - **`/`** — Coverage matrix: every protocol × every feed, cells labeled `covered / partial / not-applicable / not-yet-covered`, with live TVL.
 - **`/protocol/[slug]`** — Per-protocol detail: governance (on-chain, via the Safe Transaction Service), one card per feed with its methodology and **verbatim** rating, source links, an explicit "Not yet covered by:" row, audit & incident history.
 - **`/methodology`** — What the project does and does not do, the full feed registry, the four provenance tags, the charter.
+- **`/divergence`** — Every protocol assessed by two or more rating feeds, each feed's verbatim value side by side. Nothing is computed between them.
 - **`/corrections`** — The live log of community corrections.
-- **`/verify`** — Reproduce any day's data root from a `git clone`: every feed datum is content-addressed and the daily Merkle root is published.
+- **`/verify`** — Reproduce any day's data root from a `git clone`: every feed datum is content-addressed and the daily Merkle root is published (`pnpm merkle:verify <date>`).
+- **`/status`** — Feed health: per-feed last fetch, snapshot file, and the provenance log tail.
+- **`/api/v0/`** — `matrix.json` (full coverage matrix), `history/{slug}.json` (per-protocol archive time series), `provenance-root.json` (daily Merkle roots).
 
 ## Provenance — every datum is tagged
 

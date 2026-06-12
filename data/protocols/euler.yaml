@@ -49,7 +49,7 @@ audits:
   - { firm: "Certora", year: "2024", scope: "V2", url: "https://github.com/euler-xyz/euler-vault-kit/tree/master/audits" }
 feeds: {}
 hack_match:
-  ids: [5044, 1183]
+  ids: [5044, 1183] # 1183 = the wound-down V1 DefiLlama entry, included so the 2023 incident matches; display versions list V2 only
   name_patterns: ["^Euler"]
 notes:
   - "Ethereum TVL declined from roughly $890M (April 2026) to roughly $127M (June 2026) with no published incident or governance action identified at review time — flagged for analyst review, see data/assessments/euler.md."

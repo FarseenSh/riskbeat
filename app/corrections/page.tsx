@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ProvenanceTag } from "@/components/ProvenanceTag";
 import { siteData } from "@/lib/data-loader";
 import type { OverlayEntry } from "@/lib/types";
@@ -53,7 +54,7 @@ export default function CorrectionsPage() {
         [...byProtocol.entries()].map(([slug, entries]) => (
           <div key={slug} style={{ marginBottom: 18 }}>
             <h2>
-              <a href={`/protocol/${slug}`}>{slug}</a>
+              <Link href={`/protocol/${slug}`}>{slug}</Link>
             </h2>
             <div className="panel">
               <table className="data-table">

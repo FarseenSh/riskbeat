@@ -1,6 +1,6 @@
 # Conflicts of Interest
 
-> OpenRisk's neutrality is only credible if its relationships are disclosed. This file lists every commercial, financial, advisory, or governance relationship between the OpenRisk maintainers and any listed protocol or feed provider. It is maintained in the open and updated whenever a relationship changes.
+> OpenRisk's neutrality is only credible if its relationships are disclosed. This file lists every commercial, financial, advisory, or governance relationship between the OpenRisk maintainer and any listed protocol or feed provider. It is maintained in the open and updated whenever a relationship changes.
 
 _Last updated: 2026-06-12._
 

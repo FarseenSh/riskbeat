@@ -43,7 +43,7 @@ feeds:
   defipunkd: { slugs: ["uniswap-v4"] }
   philidor: { protocol_id: "uniswap", relation: markets }
 hack_match:
-  ids: [2196, 2197, 2198, 5690]
+  ids: [2196, 2197, 2198, 5690] # 2196 = legacy Uniswap family DefiLlama entry kept for incident matching; display versions are v3/v4/UniswapX
   name_patterns: ["^Uniswap"]
 notes:
   - "V4 hooks introduce per-pool third-party code risk — a property feeds assess at the version level (see the DeFiPunk'd v4 assessment)."

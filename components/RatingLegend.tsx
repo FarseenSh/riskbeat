@@ -22,7 +22,7 @@ const KIND_LABELS: Record<string, string> = {
 
 export function RatingLegend({ feeds }: { feeds: FeedRegistryEntry[] }) {
   return (
-    <details className="panel legend" style={{ marginBottom: 14 }}>
+    <details className="panel" style={{ marginBottom: 14 }}>
       <summary style={{ padding: "8px 12px", cursor: "pointer" }}>
         <span className="lbl">rating-type legend</span>{" "}
         <span className="faint" style={{ fontSize: 11 }}>

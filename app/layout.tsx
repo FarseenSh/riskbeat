@@ -93,7 +93,7 @@ export default function RootLayout({
                 <Link href="/methodology">Methodology</Link>
                 <Link href="/corrections">Corrections</Link>
                 <Link href="/verify">Verify</Link>
-                <Link href="/status">Status</Link>
+                <Link href="/status">Feed Health</Link>
                 <a
                   href="https://github.com/FarseenSh/openrisk"
                   target="_blank"
@@ -108,7 +108,7 @@ export default function RootLayout({
         </header>
         <main className="shell">{children}</main>
         <footer className="site-footer">
-          <div className="shell" style={{ display: "contents" }}>
+          <div className="shell" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
             <span>
               AGPL-3.0 · git-native data ·{" "}
               <a

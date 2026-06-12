@@ -31,23 +31,30 @@ Every value displayed on the site carries exactly one **provenance tag**:
 |---|---|---|
 | **Correct or add feed data** | `data/overlays/<slug>.json` | schema valid · `feed_key` exists · `provenance_tag` set · `source_url` + `source_date` present for curated data |
 | **Add a protocol** | `data/protocols/<new-slug>.yaml` | schema valid · `slug` == filename · checksummed `0x…` addresses · DefiLlama slug resolves |
-| **Add a feed** | `data/feeds/feeds.yaml` + a fetcher in `apps/web/lib/feed-fetchers/` | schema valid · `FeedKey` unique · `automation_tier` + `conflict_of_interest` set · at least one test fixture |
+| **Add a feed** | `data/feeds/feeds.yaml` + a fetcher in `lib/feed-fetchers/` | schema valid · `FeedKey` unique · `automation_tier` + `conflict_of_interest` set · at least one test fixture |
 
 ### Overlay entry — required fields
 ```json
-{
-  "feed_key": "defiscan",
-  "field": "stage",
-  "corrected_value": "Stage 1",
-  "correction_type": "update",
-  "source_url": "https://defiscan.info/protocols/aave",
-  "source_date": "2026-06-09",
-  "contributor": "github:your-handle",
-  "date": "2026-06-09",
-  "provenance_tag": "curated",
-  "status": "open"
-}
+[
+  {
+    "id": "aave-defiscan-stage-001",
+    "protocol_slug": "aave",
+    "feed_key": "defiscan",
+    "field": "stage",
+    "original_value": "Stage 0",
+    "corrected_value": "Stage 1",
+    "correction_type": "update",
+    "source_url": "https://defiscan.info/protocols/aave",
+    "source_date": "2026-06-09",
+    "contributor": "github:your-handle",
+    "date": "2026-06-09",
+    "provenance_tag": "curated",
+    "status": "open"
+  }
+]
 ```
+The file is an **array** of entries; `id` and `protocol_slug` are required, and
+`correction_type: "update"` requires both `original_value` and `corrected_value`.
 `correction_type` is one of `add | update | flag | deprecate`. Flags (`stale`, `disputed`, …) require a `flag_reason` and `evidence_url`.
 
 ## What gets merged — and what doesn't

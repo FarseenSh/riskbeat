@@ -137,7 +137,7 @@ feeds:
     rating_vocabulary: "Stage 0 / 1 / 2 + attack-cost metrics"
     rating_kind: governance-stage
     inline_label: true
-    scope_note: "Access pending (API key via Blockful, or self-host). Column ships now; cells render not-yet-covered until data flows — coverage gaps are data."
+    scope_note: "Access pending as of 2026-06-12 (API key via Blockful, or self-host). Column ships now; cells render not-yet-covered until data flows — coverage gaps are data."
     conflict_of_interest: ""
 
   - key: credora
@@ -237,7 +237,7 @@ feeds:
     license: "Proprietary (pay-per-request API)"
     access_method: manual
     machine_readable: false
-    api_key_required: true
+    api_key_required: true # a pay-per-request API exists (future automation); current tier is manual
     automation_tier: manual-only
     status: manual
     provenance_tag: curated

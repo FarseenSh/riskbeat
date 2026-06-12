@@ -40,6 +40,6 @@ feeds:
   defisphere: { sphere_protocols: ["morpho"] }
 hack_match:
   ids: [4025]
-  name_patterns: ["Morpho"]
+  name_patterns: ["Morpho Blue"] # substring match; "Morpho" alone also hits MetaMorpho vault events (those belong on the morpho-vaults row)
 last_manual_review: "2026-06-12"
 added_by: core-team

@@ -22,10 +22,13 @@ Important constraints for agents consuming this site:
 - [Coverage matrix API (v0, unstable)](https://openrisk-eth.vercel.app/api/v0/matrix.json): full protocol × feed coverage with verbatim feed data
 - [Repository](https://github.com/FarseenSh/openrisk): AGPL-3.0 code; git-native data layer under /data
 - [Daily Merkle roots](https://github.com/FarseenSh/openrisk/blob/main/data/provenance/roots.jsonl): reproduce via `pnpm merkle:verify <date>`
+- [Per-protocol history API](https://openrisk-eth.vercel.app/api/v0/history/aave.json): what every feed said on every archived day, per protocol (replace `aave` with any seed slug)
+- [Provenance roots API](https://openrisk-eth.vercel.app/api/v0/provenance-root.json): all daily Merkle roots + the reproduce command
 
 ## Pages
 
-- [Coverage matrix](https://openrisk-eth.vercel.app/): 20 seed protocols × 12 registry feeds
+- [Coverage matrix](https://openrisk-eth.vercel.app/): 20 seed protocols × 13 registry feeds
+- [Divergence](https://openrisk-eth.vercel.app/divergence): protocols assessed by 2+ rating feeds, verbatim values side by side — nothing computed between them
 - [Methodology](https://openrisk-eth.vercel.app/methodology): what OpenRisk does and does not do; full feed registry with conflict disclosures
 - [Verify](https://openrisk-eth.vercel.app/verify): reproduce the data root from a clone
 - [Corrections](https://openrisk-eth.vercel.app/corrections): community-correction log (PRs are the write path)

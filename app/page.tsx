@@ -12,6 +12,12 @@ import { fetchDefillamaLive, tvlPointFor, type TvlSyncResult } from "@/lib/defil
 export const dynamic = "force-static";
 export const revalidate = 1800;
 
+export const metadata = {
+  title: "Coverage matrix",
+  description:
+    "20 Ethereum-mainnet protocols × 13 risk feeds — coverage status and verbatim ratings, side by side, with live TVL. No score of our own.",
+};
+
 export default async function Home() {
   let tvlSync: TvlSyncResult | null = null;
   let tvlStale = false;
@@ -79,8 +85,9 @@ export default async function Home() {
       <h1>COVERAGE MATRIX</h1>
       <p className="page-intro">
         What every major DeFi risk feed says about the 20 seed Ethereum-mainnet
-        protocols — side by side, verbatim, with no score of our own. Six feeds
-        populate automatically every night; the rest are registry columns whose
+        protocols — side by side, verbatim, with no score of our own.{" "}
+        {siteData.feeds.filter((f) => f.automation_tier === "full" && f.status === "active").length}{" "}
+        feeds populate automatically every night; the rest are registry columns whose
         gaps are shown as data.{" "}
         <a href="/methodology">How to read this →</a>
       </p>

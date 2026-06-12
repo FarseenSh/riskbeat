@@ -6,6 +6,7 @@
  * feeds' values and no common "score" path — the no-cross-feed-render lint
  * rule and the FeedDatum union keep it that way.
  */
+import { DEFIPUNKD_SLICES } from "@/lib/types";
 import type {
   DefiSphereDatum,
   DefipunkdDatum,
@@ -74,7 +75,7 @@ function Defipunkd({ d }: { d: DefipunkdDatum }) {
     <div className="rating-block">
       <div className="faint" style={{ marginBottom: 4 }}>
         assessment unit: <b className="muted">{d.punkd_slug}</b> ·{" "}
-        {d.slices.length}/5 slices published
+        {d.slices.length}/{DEFIPUNKD_SLICES.length} slices published
       </div>
       <table className="mini-table">
         <tbody>
@@ -104,7 +105,8 @@ function Philidor({ d }: { d: PhilidorDatum }) {
   return (
     <div className="rating-block">
       <div className="faint" style={{ marginBottom: 4 }}>
-        {d.vault_count_total} vaults tracked · top {d.vaults.length} by TVL
+        {d.vault_count_total} vaults tracked · top{" "}
+        {Math.min(6, d.vaults.length)} of {d.vaults.length} archived by TVL
         shown · 0–10 score + tier, per vault
       </div>
       <table className="mini-table">
