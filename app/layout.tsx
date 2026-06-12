@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Martian_Mono } from "next/font/google";
 import Link from "next/link";
+import { siteData } from "@/lib/data-loader";
 import "./globals.css";
 
 const jetbrains = JetBrains_Mono({
@@ -26,6 +27,49 @@ export const metadata: Metadata = {
     "What every major DeFi risk feed says about every major Ethereum protocol — side by side, verbatim, with no score of its own.",
 };
 
+function SystemBar() {
+  const automated = siteData.feeds.filter(
+    (f) => f.automation_tier === "full" && f.status === "active",
+  );
+  const lastFetch = Object.values(siteData.feed_meta)
+    .map((m) => m.fetched_at)
+    .filter((t): t is string => Boolean(t))
+    .sort()
+    .at(-1);
+  const root = siteData.provenance.latest_root;
+  return (
+    <div className="system-bar">
+      <span>
+        ETHEREUM MAINNET · <b>{siteData.protocols.length}</b> PROTOCOLS ·{" "}
+        <b>{siteData.feeds.length}</b> FEEDS (<b>{automated.length}</b>{" "}
+        AUTOMATED)
+      </span>
+      <span>
+        LAST FETCH{" "}
+        <b>{lastFetch ? lastFetch.slice(0, 16).replace("T", " ") : "—"} UTC</b>
+      </span>
+      {root && (
+        <span>
+          ROOT{" "}
+          <Link href="/verify" className="root-hash" title="Daily Merkle root over the content-addressed archive — reproduce it from a clone at /verify">
+            {root.root.slice(0, 16)}…
+          </Link>
+        </span>
+      )}
+      <span>
+        NO COMPOSITE SCORES —{" "}
+        <a
+          href="https://github.com/FarseenSh/openrisk/blob/main/CHARTER.md"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CHARTER
+        </a>
+      </span>
+    </div>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -48,6 +92,7 @@ export default function RootLayout({
                 <Link href="/methodology">Methodology</Link>
                 <Link href="/corrections">Corrections</Link>
                 <Link href="/verify">Verify</Link>
+                <Link href="/status">Status</Link>
                 <a
                   href="https://github.com/FarseenSh/openrisk"
                   target="_blank"
@@ -57,6 +102,7 @@ export default function RootLayout({
                 </a>
               </nav>
             </div>
+            <SystemBar />
           </div>
         </header>
         <main className="shell">{children}</main>
