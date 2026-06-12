@@ -17,7 +17,6 @@ import type { FeedKey } from "@/lib/feed-keys";
 import type { HacksDatum, SafeStatus } from "@/lib/types";
 
 export const dynamic = "force-static";
-export const revalidate = 1800;
 export const dynamicParams = false;
 
 export function generateStaticParams() {

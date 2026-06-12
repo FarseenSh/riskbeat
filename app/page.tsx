@@ -10,7 +10,6 @@ import { fetchDefillamaLive, tvlPointFor, type TvlSyncResult } from "@/lib/defil
 // ISR: regenerate at most every 30 minutes; a failed live fetch falls back
 // to the committed nightly snapshot with a [stale] badge — never a blank.
 export const dynamic = "force-static";
-export const revalidate = 1800;
 
 export const metadata = {
   title: "Coverage matrix",

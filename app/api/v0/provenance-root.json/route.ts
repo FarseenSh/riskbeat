@@ -7,7 +7,6 @@ import { resolve } from "node:path";
 import { siteData } from "@/lib/data-loader";
 
 export const dynamic = "force-static";
-export const revalidate = 1800;
 
 export function GET() {
   const path = resolve(process.cwd(), "data/provenance/roots.jsonl");

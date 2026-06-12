@@ -8,7 +8,6 @@ import { tvlPointFor } from "@/lib/defillama";
 import type { FeedKey } from "@/lib/feed-keys";
 
 export const dynamic = "force-static";
-export const revalidate = 1800;
 
 export function GET() {
   const tvl = siteData.tvl_snapshot;

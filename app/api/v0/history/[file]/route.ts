@@ -7,7 +7,6 @@ import { siteData } from "@/lib/data-loader";
 import { archiveBegins, protocolHistory } from "@/lib/history";
 
 export const dynamic = "force-static";
-export const revalidate = 1800;
 export const dynamicParams = false;
 
 export function generateStaticParams() {
