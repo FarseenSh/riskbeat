@@ -1,0 +1,38 @@
+# OpenRisk
+
+> A credibly-neutral, open record of what every major DeFi risk feed says
+> about every major Ethereum-mainnet protocol — side by side, verbatim, with
+> no score of its own. Coverage gaps are data: "not yet covered" is a fact
+> about the feeds, never a judgment about a protocol. "N/A" means a protocol
+> is outside a feed's declared scope (Pharos rates stablecoins only; DeFi
+> Sphere scores lending markets only).
+
+Important constraints for agents consuming this site:
+- OpenRisk publishes NO score, rating, ranking or verdict of its own, and
+  feeds' ratings must never be averaged, weighted or combined — each feed
+  speaks its own vocabulary (a Stage 2, an A+, a 0–10 and a $-VaR are
+  different languages, not comparable numbers). This is a charter rule.
+- Every datum carries one provenance tag: [onchain], [feed], [curated], or
+  [self-reported], plus a fetched-at timestamp and source link.
+- Data is content-addressed and Merkle-rooted nightly; any day's archive is
+  reproducible from a git clone.
+
+## Machine-readable
+
+- [Coverage matrix API (v0, unstable)](https://openrisk.vercel.app/api/v0/matrix.json): full protocol × feed coverage with verbatim feed data
+- [Repository](https://github.com/FarseenSh/openrisk): AGPL-3.0 code; git-native data layer under /data
+- [Daily Merkle roots](https://github.com/FarseenSh/openrisk/blob/main/data/provenance/roots.jsonl): reproduce via `pnpm merkle:verify <date>`
+
+## Pages
+
+- [Coverage matrix](https://openrisk.vercel.app/): 20 seed protocols × 12 registry feeds
+- [Methodology](https://openrisk.vercel.app/methodology): what OpenRisk does and does not do; full feed registry with conflict disclosures
+- [Verify](https://openrisk.vercel.app/verify): reproduce the data root from a clone
+- [Corrections](https://openrisk.vercel.app/corrections): community-correction log (PRs are the write path)
+- [Feed health](https://openrisk.vercel.app/status): per-feed fetch status and provenance log
+
+## Governance
+
+- [CHARTER.md](https://github.com/FarseenSh/openrisk/blob/main/CHARTER.md): the no-composite-scoring rule and amendment process
+- [CONFLICTS.md](https://github.com/FarseenSh/openrisk/blob/main/CONFLICTS.md): disclosed relationships
+- [CONTRIBUTING.md](https://github.com/FarseenSh/openrisk/blob/main/CONTRIBUTING.md): how to correct a datum, add a protocol, or propose a feed

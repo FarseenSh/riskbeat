@@ -71,6 +71,14 @@ OpenRisk is community-correctable. You can correct a datum, add a protocol, or p
 
 [GNU AGPL-3.0](./LICENSE). The full codebase and data layer are AGPL-3.0 and public.
 
+**Data outputs:** to the extent OpenRisk holds rights in its *compiled data
+outputs* (the JSON snapshots under `data/cache/`, the provenance records, and
+the `/api/v0/*` responses), they are additionally dedicated to the public
+domain under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) —
+take them, no attribution required. Verbatim ratings inside those outputs
+remain the work of their publishers and stay attributable to them; source
+links are embedded in every datum.
+
 ---
 
 *Built for the Ethereum Foundation ESP / App Relations RFP, "Neutral DeFi Risk Intelligence Aggregator." OpenRisk is not affiliated with, and produces no assessment of its own about, any listed protocol or feed provider.*
