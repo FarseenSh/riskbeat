@@ -64,8 +64,12 @@ OpenRisk is community-correctable. You can correct a datum, add a protocol, or p
 
 ## Team
 
-- **Farseen Shaikh** — technical lead & long-term steward · [github.com/FarseenSh](https://github.com/FarseenSh)
-- **Manish Chaudhary** — DeFi risk-domain lead (feed registry, methodology, curation)
+- **Farseen Shaikh** — builder, technical lead & long-term steward · [github.com/FarseenSh](https://github.com/FarseenSh)
+
+OpenRisk is community-correctable by design: data corrections, protocol
+additions, and feed proposals come in as pull requests from anyone, and the
+CI gates (schema validation, checksums, the no-composite rule) hold every
+contributor — including the maintainer — to the same charter.
 
 ## License
 

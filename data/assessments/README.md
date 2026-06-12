@@ -1,6 +1,6 @@
 # Analyst assessments
 
-Prose risk-assessment notes by the project's risk-domain lead — **observations
+Prose risk-assessment notes curated by the maintainer (and, via PRs, the community) — **observations
 with sources, never verdicts** (see [`CHARTER.md`](../../CHARTER.md): OpenRisk
 produces no score or judgment of its own; that applies to humans too).
 

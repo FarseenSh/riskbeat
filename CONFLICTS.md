@@ -6,18 +6,26 @@ _Last updated: 2026-06-12._
 
 ---
 
-## Maintainers
+## Maintainer
 
-- **Farseen Shaikh** — technical lead & steward.
-- **Manish Chaudhary** — DeFi risk-domain lead.
+- **Farseen Shaikh** — technical lead & steward ([github.com/FarseenSh](https://github.com/FarseenSh)).
 
 ## Disclosure statement
 
-As of the date above, **neither maintainer has any commercial, employment, advisory, equity, or paid-governance relationship with any of the 20 listed seed protocols or any feed provider in the registry.** Neither maintainer is compensated by any rated entity for placement, ordering, or favorable presentation on OpenRisk.
+As of the date above, **the maintainer has no commercial, employment, advisory, equity, or paid-governance relationship with any of the 20 listed seed protocols or any feed provider in the registry**, and is not compensated by any rated entity for placement, ordering, or favorable presentation on OpenRisk.
+
+## Feed providers' relationships with rated protocols
+
+These are conflicts **of the feeds, not of OpenRisk** — a feed provider that is paid by a protocol it rates has an interest OpenRisk does not share and cannot audit. They are recorded in the feed registry (`data/feeds/feeds.yaml`, machine-readable, CI-required field), rendered on every feed card on the site, and listed here formally:
+
+- **DeFi Sphere** is built by **Block Analitica**, which provides ongoing paid risk services to **Spark** — a protocol in the seed registry. (Block Analitica's own dashboard is not a separate registry column because DeFi Sphere *is* Block Analitica's public lending-market data surface.)
+- **LlamaRisk** is the **primary paid risk service provider to Aave DAO** (epoch-4 renewal Apr 2026) and has historically been funded from the **Curve** ecosystem — both protocols in the seed registry. Its cells on those rows carry this disclosure inline.
+- **Gauntlet** holds paid risk-management engagements with rated protocols (currently **Compound**) and **curates Morpho vaults**; it exited its Aave engagement in Feb 2024.
+- **Credora** is owned by **RedStone**, an oracle provider whose feeds rated protocols may consume.
 
 ## Disclosed proximities (for transparency)
 
-These are not conflicts of the OpenRisk team, but are disclosed so readers can judge the data pipeline for themselves:
+These are not conflicts of the OpenRisk maintainer, but are disclosed so readers can judge the data pipeline for themselves:
 
 - **DeFiScan** is built by the **DeFi Collective**, and **Pharos** (`pharos.watch`) is built by a **DeFi Collective board member**. Both are feeds in the OpenRisk registry, and the DeFi Collective is among the parties most likely to also build a neutral aggregator. OpenRisk has no relationship with the DeFi Collective. Both feeds are **MIT-licensed**, and our pipeline consumes only their **public data** — so OpenRisk's coverage of them does not depend on their cooperation or consent, and is not influenced by them.
 
@@ -29,7 +37,7 @@ If any maintainer acquires a relationship with a feed provider or protocol (empl
 
 ## Funding disclosure
 
-- OpenRisk's initial build is funded by the **Ethereum Foundation ESP / App Relations grant** for this RFP. This is non-dilutive public-goods funding; the work is open-source.
+- OpenRisk's initial build (June 2026) was **self-funded by the maintainer**. OpenRisk **has applied** for the Ethereum Foundation ESP / App Relations grant under the "Neutral DeFi Risk Intelligence Aggregator" RFP; if awarded, that is non-dilutive public-goods funding and will be recorded here.
 - OpenRisk **does not** accept funding from any listed protocol or feed provider in exchange for editorial influence. Any post-grant matching contributions are governed by [`CHARTER.md`](./CHARTER.md) §7 — disclosed terms, zero editorial influence.
 
 ## How to flag a missing disclosure
