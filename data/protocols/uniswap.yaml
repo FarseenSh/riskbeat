@@ -34,8 +34,8 @@ tokens:
   - { symbol: UNI, address: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984" }
 stablecoins: []
 audits:
-  - { firm: "Trail of Bits", year: "2021", scope: "V3" }
-  - { firm: "ABDK", year: "2021", scope: "V3" }
+  - { firm: "Trail of Bits", year: "2021", scope: "V3", url: "https://github.com/Uniswap/v3-core/tree/main/audits" }
+  - { firm: "ABDK", year: "2021", scope: "V3", url: "https://github.com/Uniswap/v3-core/tree/main/audits" }
   - { firm: "OpenZeppelin", year: "2021", scope: "V3" }
   - { firm: "Certora", year: "2024", scope: "V4" }
 feeds:

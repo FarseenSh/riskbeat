@@ -44,9 +44,9 @@ tokens:
   - { symbol: EUL, address: "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b" }
 stablecoins: []
 audits:
-  - { firm: "Spearbit", year: "2024", scope: "V2" }
-  - { firm: "ChainSecurity", year: "2024", scope: "V2" }
-  - { firm: "Certora", year: "2024", scope: "V2" }
+  - { firm: "Spearbit", year: "2024", scope: "V2", url: "https://github.com/euler-xyz/euler-vault-kit/tree/master/audits" }
+  - { firm: "ChainSecurity", year: "2024", scope: "V2", url: "https://github.com/euler-xyz/euler-vault-kit/tree/master/audits" }
+  - { firm: "Certora", year: "2024", scope: "V2", url: "https://github.com/euler-xyz/euler-vault-kit/tree/master/audits" }
 feeds: {}
 hack_match:
   ids: [5044, 1183]

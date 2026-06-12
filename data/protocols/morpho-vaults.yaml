@@ -27,8 +27,8 @@ addresses:
 tokens: []
 stablecoins: []
 audits:
-  - { firm: "ChainSecurity", year: "2023", scope: "MetaMorpho" }
-  - { firm: "Certora", year: "2024", scope: "MetaMorpho" }
+  - { firm: "ChainSecurity", year: "2023", scope: "MetaMorpho", url: "https://github.com/morpho-org/metamorpho/tree/main/audits" }
+  - { firm: "Certora", year: "2024", scope: "MetaMorpho", url: "https://github.com/morpho-org/metamorpho/tree/main/audits" }
 feeds:
   philidor: { protocol_id: "morpho", relation: native }
 hack_match:

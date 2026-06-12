@@ -30,9 +30,9 @@ tokens:
   - { symbol: YFI, address: "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e" }
 stablecoins: []
 audits:
-  - { firm: "ChainSecurity", year: "2021–2023" }
-  - { firm: "Spearbit", year: "2023" }
-  - { firm: "yAcademy", year: "2023", scope: "V3" }
+  - { firm: "ChainSecurity", year: "2021–2023", url: "https://github.com/yearn/yearn-security/tree/master/audits" }
+  - { firm: "Spearbit", year: "2023", url: "https://github.com/yearn/yearn-security/tree/master/audits" }
+  - { firm: "yAcademy", year: "2023", scope: "V3", url: "https://github.com/yearn/yearn-security/tree/master/audits" }
 feeds:
   philidor: { protocol_id: "yearn", relation: native }
 hack_match:

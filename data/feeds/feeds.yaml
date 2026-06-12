@@ -230,3 +230,20 @@ feeds:
     inline_label: false
     scope_note: "Review pages are JS-rendered (no API): cells populate via curated overlay PRs citing the dated review."
     conflict_of_interest: ""
+  - key: yo
+    display_name: "YO (ex-Exponential.fi)"
+    url: "https://yo.xyz"
+    source_url: "https://yo.xyz"
+    license: "Proprietary (pay-per-request API)"
+    access_method: manual
+    machine_readable: false
+    api_key_required: true
+    automation_tier: manual-only
+    status: manual
+    provenance_tag: curated
+    methodology: "Pool/asset risk ratings on an A–F scale over a risk graph of chained dependencies (relaunched from Exponential.fi's rating system)."
+    rating_vocabulary: "A–F risk grades"
+    rating_kind: letter-grade
+    inline_label: false
+    scope_note: "Relaunched with a pay-per-request API; not yet integrated — cells populate via curated overlay PRs citing a dated rating until automated access lands."
+    conflict_of_interest: "Originated at Exponential.fi, which offered yield investing in pools it also risk-rated."

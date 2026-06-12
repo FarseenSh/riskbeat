@@ -30,9 +30,9 @@ tokens:
   - { symbol: MORPHO, address: "0x58D97B57BB95320F9a05dC918Aef65434969c2B2" }
 stablecoins: []
 audits:
-  - { firm: "Spearbit", year: "2023" }
-  - { firm: "ChainSecurity", year: "2023" }
-  - { firm: "Certora", year: "2023–2024", scope: "formal verification" }
+  - { firm: "Spearbit", year: "2023", url: "https://github.com/morpho-org/morpho-blue/tree/main/audits" }
+  - { firm: "ChainSecurity", year: "2023", url: "https://github.com/morpho-org/morpho-blue/tree/main/audits" }
+  - { firm: "Certora", year: "2023–2024", scope: "formal verification", url: "https://github.com/morpho-org/morpho-blue/tree/main/audits" }
 feeds:
   defiscan: { ids: ["morpho"] }
   defipunkd: { slugs: ["morpho", "morpho-blue"] }

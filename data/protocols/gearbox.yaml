@@ -33,9 +33,9 @@ addresses:
 tokens: []
 stablecoins: []
 audits:
-  - { firm: "ChainSecurity", year: "2024", scope: "V3" }
-  - { firm: "Sigma Prime", year: "2022" }
-  - { firm: "Consensys Diligence", year: "2023" }
+  - { firm: "ChainSecurity", year: "2024", scope: "V3", url: "https://github.com/Gearbox-protocol/security/tree/main/audits" }
+  - { firm: "Sigma Prime", year: "2022", url: "https://github.com/Gearbox-protocol/security/tree/main/audits" }
+  - { firm: "Consensys Diligence", year: "2023", url: "https://github.com/Gearbox-protocol/security/tree/main/audits" }
 feeds: {}
 hack_match:
   ids: [1108]

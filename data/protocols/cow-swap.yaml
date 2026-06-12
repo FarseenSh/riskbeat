@@ -29,8 +29,8 @@ tokens:
   - { symbol: COW, address: "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB" }
 stablecoins: []
 audits:
-  - { firm: "G0 Group", year: "2021" }
-  - { firm: "Runtime Verification", year: "2022" }
+  - { firm: "G0 Group", year: "2021", url: "https://github.com/cowprotocol/contracts/tree/main/audits" }
+  - { firm: "Runtime Verification", year: "2022", url: "https://github.com/cowprotocol/contracts/tree/main/audits" }
   - { firm: "Ackee", year: "2024", scope: "CoW AMM" }
 feeds: {}
 hack_match:

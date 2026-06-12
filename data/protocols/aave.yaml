@@ -30,9 +30,9 @@ tokens:
 stablecoins:
   - { symbol: GHO, address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f", pharos_id: "gho-aave" }
 audits:
-  - { firm: "Trail of Bits", year: "multiple" }
-  - { firm: "OpenZeppelin", year: "2022", scope: "V3" }
-  - { firm: "Certora", year: "ongoing", scope: "formal verification" }
+  - { firm: "Trail of Bits", year: "multiple", url: "https://github.com/aave/aave-v3-core/tree/master/audits" }
+  - { firm: "OpenZeppelin", year: "2022", scope: "V3", url: "https://github.com/aave/aave-v3-core/tree/master/audits" }
+  - { firm: "Certora", year: "ongoing", scope: "formal verification", url: "https://github.com/aave-dao/aave-v3-origin/tree/main/audits" }
   - { firm: "SigmaPrime", year: "2025", scope: "V4" }
 feeds:
   defiscan: { ids: ["aave"] }

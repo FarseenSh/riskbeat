@@ -35,9 +35,9 @@ tokens:
   - { symbol: BAL, address: "0xba100000625a3754423978a60c9317c58a424e3D" }
 stablecoins: []
 audits:
-  - { firm: "Trail of Bits", year: "2021", scope: "V2" }
-  - { firm: "Certora", year: "2021", scope: "V2" }
-  - { firm: "Spearbit", year: "2024", scope: "V3" }
+  - { firm: "Trail of Bits", year: "2021", scope: "V2", url: "https://github.com/balancer/balancer-v2-monorepo/tree/master/audits" }
+  - { firm: "Certora", year: "2021", scope: "V2", url: "https://github.com/balancer/balancer-v2-monorepo/tree/master/audits" }
+  - { firm: "Spearbit", year: "2024", scope: "V3", url: "https://github.com/balancer/balancer-v3-monorepo/tree/main/audits" }
 feeds:
   defipunkd: { slugs: ["balancer-v3"] }
 hack_match:

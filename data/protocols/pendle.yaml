@@ -29,9 +29,9 @@ tokens:
   - { symbol: PENDLE, address: "0x808507121B80c02388fAd14726482e061B8da827" }
 stablecoins: []
 audits:
-  - { firm: "Ackee", year: "2023" }
-  - { firm: "ChainSecurity", year: "2023", scope: "SY" }
-  - { firm: "Dedaub", year: "2023" }
+  - { firm: "Ackee", year: "2023", url: "https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits" }
+  - { firm: "ChainSecurity", year: "2023", scope: "SY", url: "https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits" }
+  - { firm: "Dedaub", year: "2023", url: "https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits" }
 feeds:
   defiscan: { ids: ["pendle"] }
   defipunkd: { slugs: ["pendle"] }
