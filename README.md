@@ -26,6 +26,26 @@ The root printed must equal the one served live at [`/api/v0/provenance-root.jso
 
 ---
 
+## Screenshots
+
+**Coverage matrix** — 20 protocols × the 13-feed registry, every cell labelled covered / partial / not-yet-covered, live TVL, the day's Merkle root in the header.
+
+![Coverage matrix](docs/screenshots/home.png)
+
+**Per-protocol detail** — on-chain governance from the Safe Transaction Service, one card per feed with its rating verbatim in its own vocabulary, audit and incident history.
+
+![Protocol detail](docs/screenshots/aave.png)
+
+**Verify** — reproduce any day's data root from a `git clone`; the project's accountability guarantee, in one command.
+
+![Verify](docs/screenshots/verify.png)
+
+**Divergence** — every protocol the feeds disagree on, side by side, nothing computed between them.
+
+![Divergence](docs/screenshots/divergence.png)
+
+---
+
 ## What OpenRisk does — and does NOT do
 
 **Does:** aggregates the major DeFi risk feeds for the top-20 Ethereum-mainnet protocols, rendering each feed's assessment **verbatim, in that feed's own vocabulary**; surfaces governance from on-chain sources; tracks which feeds have / have not assessed each protocol; links to every source; maintains a community-correctable data registry.
