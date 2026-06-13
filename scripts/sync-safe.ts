@@ -12,14 +12,21 @@ async function main() {
   const live = Object.values(sync.by_address).filter((s) => !s.is_stale).length;
   const total = Object.keys(sync.by_address).length;
   if (live === 0 && total > 0) {
+    // All upstream reads failed (Safe Transaction Service down or rate-limited).
+    // This is a recoverable, EXPECTED condition — not a build failure. We write
+    // no new snapshot, so the previous good one stays and renders stale-but-
+    // honest; returning (exit 0) lets the nightly still commit the feeds/TVL
+    // that DID update this run. Exiting non-zero here would skip the commit.
     appendNightlyLog({
       ts: new Date().toISOString(),
       feed: "safe-governance",
       status: "error",
       error: "all Safe reads failed",
     });
-    console.error("sync-safe: all reads failed — previous snapshot preserved");
-    process.exit(1);
+    console.error(
+      "sync-safe: all reads failed — previous snapshot preserved (non-fatal)",
+    );
+    return;
   }
   const archive = writeSnapshot("safe-governance", sync);
   pruneSnapshots("safe-governance");

@@ -35,9 +35,11 @@ jobs:
         run: pnpm fetch:feeds
 
       - name: Sync DefiLlama TVL snapshot
+        continue-on-error: true # enrichment layer — a failure must never block the feed commit
         run: pnpm sync:defillama
 
       - name: Sync Safe governance snapshot
+        continue-on-error: true # enrichment layer — stale snapshot stays; never blocks commit
         run: pnpm sync:safe
 
       - name: Compute daily Merkle root
