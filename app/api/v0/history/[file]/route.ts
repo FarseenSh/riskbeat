@@ -33,7 +33,7 @@ export async function GET(
     license:
       "Code AGPL-3.0; compiled data outputs additionally CC0-1.0 to the extent of our rights; verbatim feed values remain attributable to their publishers (see README).",
     charter:
-      "No composite scoring — feeds are never combined, including across time. https://github.com/FarseenSh/openrisk/blob/main/CHARTER.md",
+      "No composite scoring — feeds are never combined, including across time. https://github.com/FarseenSh/riskbeat/blob/main/CHARTER.md",
     archive_begins: archiveBegins(),
     archive_note:
       "The archive is append-only from its first day and grows by one entry per nightly run (03:17 UTC). Days before archive_begins are not reconstructable — that limitation is recorded, never backfilled.",

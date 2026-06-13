@@ -20,8 +20,8 @@ const martian = Martian_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "OpenRisk — every feed, one view",
-    template: "%s · OpenRisk",
+    default: "RiskBeat — every feed, one view",
+    template: "%s · RiskBeat",
   },
   description:
     "What every major DeFi risk feed says about every major Ethereum protocol — side by side, verbatim, with no score of its own.",
@@ -59,7 +59,7 @@ function SystemBar() {
       <span>
         NO COMPOSITE SCORES —{" "}
         <a
-          href="https://github.com/FarseenSh/openrisk/blob/main/CHARTER.md"
+          href="https://github.com/FarseenSh/riskbeat/blob/main/CHARTER.md"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -81,7 +81,7 @@ export default function RootLayout({
             <div className="site-header-inner">
               <div style={{ display: "flex", gap: 14, alignItems: "baseline" }}>
                 <Link href="/" className="wordmark">
-                  OPENRISK<span className="tick">_</span>
+                  RISKBEAT<span className="tick">_</span>
                 </Link>
                 <span className="tagline">
                   every feed · one view · no score of its own
@@ -95,7 +95,7 @@ export default function RootLayout({
                 <Link href="/verify">Verify</Link>
                 <Link href="/status">Feed Health</Link>
                 <a
-                  href="https://github.com/FarseenSh/openrisk"
+                  href="https://github.com/FarseenSh/riskbeat"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -112,7 +112,7 @@ export default function RootLayout({
             <span>
               AGPL-3.0 · git-native data ·{" "}
               <a
-                href="https://github.com/FarseenSh/openrisk/blob/main/CHARTER.md"
+                href="https://github.com/FarseenSh/riskbeat/blob/main/CHARTER.md"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -123,11 +123,11 @@ export default function RootLayout({
             <span>
               Ethereum mainnet · built in the open ·{" "}
               <a
-                href="https://github.com/FarseenSh/openrisk"
+                href="https://github.com/FarseenSh/riskbeat"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                github.com/FarseenSh/openrisk
+                github.com/FarseenSh/riskbeat
               </a>
             </span>
           </div>

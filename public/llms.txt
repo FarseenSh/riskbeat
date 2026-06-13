@@ -1,4 +1,4 @@
-# OpenRisk
+# RiskBeat
 
 > A credibly-neutral, open record of what every major DeFi risk feed says
 > about every major Ethereum-mainnet protocol — side by side, verbatim, with
@@ -8,7 +8,7 @@
 > Sphere scores lending markets only).
 
 Important constraints for agents consuming this site:
-- OpenRisk publishes NO score, rating, ranking or verdict of its own, and
+- RiskBeat publishes NO score, rating, ranking or verdict of its own, and
   feeds' ratings must never be averaged, weighted or combined — each feed
   speaks its own vocabulary (a Stage 2, an A+, a 0–10 and a $-VaR are
   different languages, not comparable numbers). This is a charter rule.
@@ -19,23 +19,23 @@ Important constraints for agents consuming this site:
 
 ## Machine-readable
 
-- [Coverage matrix API (v0, unstable)](https://openrisk-eth.vercel.app/api/v0/matrix.json): full protocol × feed coverage with verbatim feed data
-- [Repository](https://github.com/FarseenSh/openrisk): AGPL-3.0 code; git-native data layer under /data
-- [Daily Merkle roots](https://github.com/FarseenSh/openrisk/blob/main/data/provenance/roots.jsonl): reproduce via `pnpm merkle:verify <date>`
-- [Per-protocol history API](https://openrisk-eth.vercel.app/api/v0/history/aave.json): what every feed said on every archived day, per protocol (replace `aave` with any seed slug)
-- [Provenance roots API](https://openrisk-eth.vercel.app/api/v0/provenance-root.json): all daily Merkle roots + the reproduce command
+- [Coverage matrix API (v0, unstable)](https://riskbeat-eth.vercel.app/api/v0/matrix.json): full protocol × feed coverage with verbatim feed data
+- [Repository](https://github.com/FarseenSh/riskbeat): AGPL-3.0 code; git-native data layer under /data
+- [Daily Merkle roots](https://github.com/FarseenSh/riskbeat/blob/main/data/provenance/roots.jsonl): reproduce via `pnpm merkle:verify <date>`
+- [Per-protocol history API](https://riskbeat-eth.vercel.app/api/v0/history/aave.json): what every feed said on every archived day, per protocol (replace `aave` with any seed slug)
+- [Provenance roots API](https://riskbeat-eth.vercel.app/api/v0/provenance-root.json): all daily Merkle roots + the reproduce command
 
 ## Pages
 
-- [Coverage matrix](https://openrisk-eth.vercel.app/): 20 seed protocols × 13 registry feeds
-- [Divergence](https://openrisk-eth.vercel.app/divergence): protocols assessed by 2+ rating feeds, verbatim values side by side — nothing computed between them
-- [Methodology](https://openrisk-eth.vercel.app/methodology): what OpenRisk does and does not do; full feed registry with conflict disclosures
-- [Verify](https://openrisk-eth.vercel.app/verify): reproduce the data root from a clone
-- [Corrections](https://openrisk-eth.vercel.app/corrections): community-correction log (PRs are the write path)
-- [Feed health](https://openrisk-eth.vercel.app/status): per-feed fetch status and provenance log
+- [Coverage matrix](https://riskbeat-eth.vercel.app/): 20 seed protocols × 13 registry feeds
+- [Divergence](https://riskbeat-eth.vercel.app/divergence): protocols assessed by 2+ rating feeds, verbatim values side by side — nothing computed between them
+- [Methodology](https://riskbeat-eth.vercel.app/methodology): what RiskBeat does and does not do; full feed registry with conflict disclosures
+- [Verify](https://riskbeat-eth.vercel.app/verify): reproduce the data root from a clone
+- [Corrections](https://riskbeat-eth.vercel.app/corrections): community-correction log (PRs are the write path)
+- [Feed health](https://riskbeat-eth.vercel.app/status): per-feed fetch status and provenance log
 
 ## Governance
 
-- [CHARTER.md](https://github.com/FarseenSh/openrisk/blob/main/CHARTER.md): the no-composite-scoring rule and amendment process
-- [CONFLICTS.md](https://github.com/FarseenSh/openrisk/blob/main/CONFLICTS.md): disclosed relationships
-- [CONTRIBUTING.md](https://github.com/FarseenSh/openrisk/blob/main/CONTRIBUTING.md): how to correct a datum, add a protocol, or propose a feed
+- [CHARTER.md](https://github.com/FarseenSh/riskbeat/blob/main/CHARTER.md): the no-composite-scoring rule and amendment process
+- [CONFLICTS.md](https://github.com/FarseenSh/riskbeat/blob/main/CONFLICTS.md): disclosed relationships
+- [CONTRIBUTING.md](https://github.com/FarseenSh/riskbeat/blob/main/CONTRIBUTING.md): how to correct a datum, add a protocol, or propose a feed

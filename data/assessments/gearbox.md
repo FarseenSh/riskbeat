@@ -39,7 +39,7 @@
 
 ## Sources
 
-- OpenRisk archived snapshots, 2026-06-12 (`data/cache/{defiscan,defipunkd,philidor,defisphere,defillama-hacks}/2026-06-12-*.json`)
+- RiskBeat archived snapshots, 2026-06-12 (`data/cache/{defiscan,defipunkd,philidor,defisphere,defillama-hacks}/2026-06-12-*.json`)
 - Safe Transaction Service (thresholds, live-verified 2026-06-12)
 - docs.gearbox.finance — Protocol DAO & guardrails pages (accessed 2026-06-12)
 - Risk DAO Medium (2022-10-27) · Gearbox Medium GRF post (2023-08-15) · Chaos Labs announcement (2024-06-26)

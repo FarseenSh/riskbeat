@@ -1,4 +1,4 @@
-# OpenRisk feed registry — the single source of truth for every feed column.
+# RiskBeat feed registry — the single source of truth for every feed column.
 #
 # Every entry MUST carry a `conflict_of_interest` field (empty string is a
 # valid value; an ABSENT field fails CI) — this makes neutrality
@@ -28,8 +28,8 @@ feeds:
     rating_vocabulary: "Stage 0 / 1 / 2 + per-dimension L/M/H (Chain, Upgradeability, Autonomy, Exit Window, Accessibility)"
     rating_kind: stage-ladder
     inline_label: true
-    scope_note: "Reviews protocol deployments per chain; OpenRisk consumes the Ethereum-mainnet reviews. Stages measure decentralization maturity, not safety."
-    conflict_of_interest: "Built by the DeFi Collective. Disclosed proximity in CONFLICTS.md: OpenRisk consumes only its public MIT-licensed data and has no relationship with the publisher."
+    scope_note: "Reviews protocol deployments per chain; RiskBeat consumes the Ethereum-mainnet reviews. Stages measure decentralization maturity, not safety."
+    conflict_of_interest: "Built by the DeFi Collective. Disclosed proximity in CONFLICTS.md: RiskBeat consumes only its public MIT-licensed data and has no relationship with the publisher."
 
   - key: defipunkd
     display_name: "DeFiPunk'd"
@@ -46,7 +46,7 @@ feeds:
     rating_vocabulary: "Per-slice green / orange / red / unknown + weak/strong consensus (slices: control, ability-to-exit, autonomy, open-access, verifiability)"
     rating_kind: consensus-color
     inline_label: false
-    scope_note: "Assessment units are its own protocol slugs (often versioned). OpenRisk shows each published slice verbatim and does not derive a publication tier from slice counts."
+    scope_note: "Assessment units are its own protocol slugs (often versioned). RiskBeat shows each published slice verbatim and does not derive a publication tier from slice counts."
     conflict_of_interest: ""
 
   - key: philidor
@@ -83,7 +83,7 @@ feeds:
     rating_kind: letter-grade
     inline_label: false
     scope_note: "Stablecoin-scoped: applies only to protocols with an associated stablecoin (e.g. GHO, USDS/DAI, crvUSD, LUSD/BOLD). All other cells render not-applicable, never as a coverage gap."
-    conflict_of_interest: "Built by a DeFi Collective board member. Disclosed proximity in CONFLICTS.md: OpenRisk consumes only its public API data."
+    conflict_of_interest: "Built by a DeFi Collective board member. Disclosed proximity in CONFLICTS.md: RiskBeat consumes only its public API data."
 
   - key: defillama-hacks
     display_name: "DefiLlama Hacks"

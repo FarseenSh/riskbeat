@@ -5,7 +5,7 @@
  *   control · ability-to-exit · autonomy · open-access · verifiability
  * Some directories carry a stray non-canonical "discovery" slice — skipped by
  * design (only the five canonical slices are part of the published framework).
- * Verbatim mapping; OpenRisk derives no tier from slice counts.
+ * Verbatim mapping; RiskBeat derives no tier from slice counts.
  */
 import { fetchJson, githubHeaders, sleep } from "@/lib/fetch-util";
 import {

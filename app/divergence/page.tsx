@@ -8,7 +8,7 @@ import type { FeedKey } from "@/lib/feed-keys";
 export const metadata: Metadata = {
   title: "Divergence",
   description:
-    "Every protocol assessed by two or more rating feeds, with each feed's verbatim value side by side. OpenRisk computes nothing — including here.",
+    "Every protocol assessed by two or more rating feeds, with each feed's verbatim value side by side. RiskBeat computes nothing — including here.",
 };
 
 /**
@@ -45,7 +45,7 @@ export default function DivergencePage() {
       <h1>DIVERGENCE</h1>
       <p className="page-intro">
         Every protocol that two or more rating feeds have assessed, with each
-        feed&apos;s verbatim value in one row — sorted by TVL. OpenRisk
+        feed&apos;s verbatim value in one row — sorted by TVL. RiskBeat
         computes nothing here: a Stage, a slice grade, a vault score and a
         letter grade are different languages, not comparable numbers. Where
         the feeds diverge — and whether that matters — is for you to judge.

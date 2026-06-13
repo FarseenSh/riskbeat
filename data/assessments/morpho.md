@@ -22,7 +22,7 @@
 
 ## Analyst notes (observations, no verdicts)
 
-- Morpho is the **most-covered lending protocol in this registry** — five automated feeds carry data for it as of 2026-06-12. But each feed's *unit of assessment* differs: DeFiScan rates the protocol's decentralization, Philidor rates curated vaults, Sphere rates individual markets. These answer different questions, which is why the matrix keeps them in separate columns and OpenRisk never merges them.
+- Morpho is the **most-covered lending protocol in this registry** — five automated feeds carry data for it as of 2026-06-12. But each feed's *unit of assessment* differs: DeFiScan rates the protocol's decentralization, Philidor rates curated vaults, Sphere rates individual markets. These answer different questions, which is why the matrix keeps them in separate columns and RiskBeat never merges them.
 - The protocol-vs-vault distinction is the load-bearing one for users: depositing into a MetaMorpho vault adds **curator-allocation risk on top of** protocol risk. Philidor's per-vault scores (and their spread) are the closest public measurement of that added layer; the registry shows them verbatim on the Morpho Vaults row.
 
 ## What I checked and couldn't confirm
@@ -31,7 +31,7 @@
 
 ## Sources
 
-- OpenRisk archived snapshots, 2026-06-12 (`data/cache/{defiscan,defipunkd,philidor,defisphere,defillama-hacks}/2026-06-12-*.json`)
+- RiskBeat archived snapshots, 2026-06-12 (`data/cache/{defiscan,defipunkd,philidor,defisphere,defillama-hacks}/2026-06-12-*.json`)
 - defiscan.info/protocols/morpho (published 2025-05-21) · defipunkd.com/protocol/morpho
 - Safe Transaction Service (5/9 threshold, live-verified 2026-06-12)
 - Morpho docs (docs.morpho.org, accessed at registry build 2026-06-12)

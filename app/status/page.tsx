@@ -46,7 +46,7 @@ export default function StatusPage() {
                   <td className="faint" style={{ maxWidth: 420, wordBreak: "break-all" }}>
                     {meta?.snapshot_file ? (
                       <a
-                        href={`https://github.com/FarseenSh/openrisk/blob/main/${meta.snapshot_file}`}
+                        href={`https://github.com/FarseenSh/riskbeat/blob/main/${meta.snapshot_file}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

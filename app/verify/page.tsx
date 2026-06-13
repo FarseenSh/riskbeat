@@ -36,7 +36,7 @@ export default function VerifyPage() {
             <span className="faint">
               {root.date} · {root.file_count} archive files ·{" "}
               <a
-                href="https://github.com/FarseenSh/openrisk/blob/main/data/provenance/roots.jsonl"
+                href="https://github.com/FarseenSh/riskbeat/blob/main/data/provenance/roots.jsonl"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -50,8 +50,8 @@ export default function VerifyPage() {
       </div>
 
       <h2>Reproduce it (one command)</h2>
-      <pre>{`git clone https://github.com/FarseenSh/openrisk
-cd openrisk && pnpm install
+      <pre>{`git clone https://github.com/FarseenSh/riskbeat
+cd riskbeat && pnpm install
 pnpm merkle:verify ${root?.date ?? "YYYY-MM-DD"}
 # → VERIFIED ${root?.date ?? "YYYY-MM-DD"}: ${root ? `${root.root.slice(0, 24)}…` : "<root>"}`}</pre>
 
@@ -66,7 +66,7 @@ root   = hex(final digest)        # appended nightly to data/provenance/roots.js
         no dependencies beyond Node&apos;s crypto). Independent implementations
         are encouraged — if you find a mismatch, that is a finding:{" "}
         <a
-          href="https://github.com/FarseenSh/openrisk/issues"
+          href="https://github.com/FarseenSh/riskbeat/issues"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -30,7 +30,7 @@
 
 ## Sources
 
-- OpenRisk archived snapshots, 2026-06-12 (`data/cache/defillama-hacks/2026-06-12-7d287fc9….json` and the five feed snapshots)
+- RiskBeat archived snapshots, 2026-06-12 (`data/cache/defillama-hacks/2026-06-12-7d287fc9….json` and the five feed snapshots)
 - Safe Transaction Service (thresholds, live-verified 2026-06-12)
 - DefiLlama protocol API for `euler-v2` (accessed 2026-06-12)
 - Euler docs (docs.euler.finance, accessed at registry build 2026-06-12)

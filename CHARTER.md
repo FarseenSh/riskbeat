@@ -1,6 +1,6 @@
-# OpenRisk Charter
+# RiskBeat Charter
 
-> This is a **founding document**, not a policy file. It defines what OpenRisk may and may not do. It is committed to the repository, rendered on the project's Methodology page, and changes to it are tracked in git history. Amending the core no-composite-scoring rule requires **written agreement from the Ethereum Foundation** (see §3).
+> This is a **founding document**, not a policy file. It defines what RiskBeat may and may not do. It is committed to the repository, rendered on the project's Methodology page, and changes to it are tracked in git history. Amending the core no-composite-scoring rule requires **written agreement from the Ethereum Foundation** (see §3).
 
 _Last updated: 2026-06-12. Steward: Farseen Shaikh ([github.com/FarseenSh](https://github.com/FarseenSh))._
 
@@ -8,21 +8,21 @@ _Last updated: 2026-06-12. Steward: Farseen Shaikh ([github.com/FarseenSh](https
 
 ## 1. Purpose
 
-OpenRisk exists to be a **credibly-neutral, verbatim record** of what every major DeFi risk feed says about every major protocol. Its value comes from aggregating independent assessments **without synthesis** — the mental model is oracle diversity. The neutrality this requires is not a marketing claim; it is a set of hard constraints, enforced in code, written down here.
+RiskBeat exists to be a **credibly-neutral, verbatim record** of what every major DeFi risk feed says about every major protocol. Its value comes from aggregating independent assessments **without synthesis** — the mental model is oracle diversity. The neutrality this requires is not a marketing claim; it is a set of hard constraints, enforced in code, written down here.
 
 ## 2. The core commitment — no composite scoring
 
-**OpenRisk does not produce, derive, or display any composite, average, weighted, blended, or synthesized score of its own.** Each feed's published assessment is shown verbatim, in that feed's own vocabulary, attributed to its source. The absence of a house opinion is the product.
+**RiskBeat does not produce, derive, or display any composite, average, weighted, blended, or synthesized score of its own.** Each feed's published assessment is shown verbatim, in that feed's own vocabulary, attributed to its source. The absence of a house opinion is the product.
 
 ### 2.1 Three permitted operations
-The only operations OpenRisk performs across the data are:
+The only operations RiskBeat performs across the data are:
 1. **Verbatim display** — render a feed's rating exactly as the feed publishes it.
 2. **Coverage COUNT** — count how many feeds have assessed a protocol (a count of `status` enum values; it never reads or combines rating *values*). Labeled "feeds with assessments," never as a risk signal.
 3. **TVL sort/filter** — order or filter protocols by live TVL (or volume), a market metric, not a risk rating.
 
 ### 2.2 Two hard prohibitions
 1. **No cross-feed arithmetic on rating values.** No function may read two or more feeds' rating values in the same expression to produce a combined output.
-2. **No OpenRisk-produced score.** No field, column, badge, color, or label may represent OpenRisk's own judgment of a protocol's risk.
+2. **No RiskBeat-produced score.** No field, column, badge, color, or label may represent RiskBeat's own judgment of a protocol's risk.
 
 ## 3. Amendment process
 
@@ -47,7 +47,7 @@ Every datum carries exactly one provenance tag: `[onchain]`, `[feed]`, `[curated
 
 ## 7. Neutrality & conflicts
 
-- OpenRisk has **no feed of its own** and produces no first-party assessment of any protocol.
+- RiskBeat has **no feed of its own** and produces no first-party assessment of any protocol.
 - The project and its maintainers **do not accept funding from any listed protocol or feed provider** in exchange for placement, ordering, or favorable presentation, and disclose all relationships in [`CONFLICTS.md`](./CONFLICTS.md).
 - **Recusal.** Any maintainer with a relationship to a feed or protocol must disclose it and recuse from registry decisions touching that entity.
 - Post-grant **matching contributions** (a mechanism named in the RFP) may fund operations only under disclosed terms that grant **no editorial influence** whatsoever; sponsors cannot affect what any feed says or how it is ordered.
@@ -69,4 +69,4 @@ The commitments above are enforced at four independent layers, so that violating
 
 ---
 
-*OpenRisk is a public good. This charter is the contract that keeps it neutral.*
+*RiskBeat is a public good. This charter is the contract that keeps it neutral.*

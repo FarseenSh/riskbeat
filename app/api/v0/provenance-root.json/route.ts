@@ -24,7 +24,7 @@ export function GET() {
     file_count_note:
       "file_count is the number of content-addressed cache files under the day's Merkle tree (feed, TVL and governance snapshots) — it is unrelated to the number of protocols (20).",
     reproduce:
-      "git clone https://github.com/FarseenSh/openrisk && pnpm install && pnpm merkle:verify <date>",
+      "git clone https://github.com/FarseenSh/riskbeat && pnpm install && pnpm merkle:verify <date>",
     latest: roots[roots.length - 1] ?? null,
     roots: [...roots].reverse(),
   });

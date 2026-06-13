@@ -1,8 +1,8 @@
-# OpenRisk — every feed, one view
+# RiskBeat — every feed, one view
 
 **A credibly-neutral, open record of what every major DeFi risk feed says about every major protocol — side by side, verbatim, with no score of its own.**
 
-OpenRisk is a **public good** for the Ethereum ecosystem. It is **infrastructure for builders** — an open, machine-readable risk-data layer that wallets, explorers, governance tools, and DAO treasuries can consume to surface *what every feed says about a protocol*. The website is one reference consumer of that data.
+RiskBeat is a **public good** for the Ethereum ecosystem. It is **infrastructure for builders** — an open, machine-readable risk-data layer that wallets, explorers, governance tools, and DAO treasuries can consume to surface *what every feed says about a protocol*. The website is one reference consumer of that data.
 
 The mental model is **oracle diversity**: no single risk feed is canonical, **the aggregation is the value**, and **a coverage gap is itself a signal**.
 
@@ -15,14 +15,14 @@ The mental model is **oracle diversity**: no single risk feed is canonical, **th
 Every claim below is checkable from a fresh clone — nothing requires trusting this README:
 
 ```bash
-git clone https://github.com/FarseenSh/openrisk && cd openrisk
+git clone https://github.com/FarseenSh/riskbeat && cd riskbeat
 pnpm install
 pnpm merkle:verify 2026-06-12   # recomputes that day's published provenance root, bit for bit
 pnpm validate                   # every registry/overlay file against its committed schema
 pnpm build                      # the full site, from the committed data layer alone
 ```
 
-The root printed must equal the one served live at [`/api/v0/provenance-root.json`](https://openrisk-eth.vercel.app/api/v0/provenance-root.json). Every datum on the site traces to a content-addressed snapshot under `data/cache/` — `<date>-<sha256-of-content>.json` — committed by the nightly pipeline.
+The root printed must equal the one served live at [`/api/v0/provenance-root.json`](https://riskbeat-eth.vercel.app/api/v0/provenance-root.json). Every datum on the site traces to a content-addressed snapshot under `data/cache/` — `<date>-<sha256-of-content>.json` — committed by the nightly pipeline.
 
 ---
 
@@ -46,11 +46,11 @@ The root printed must equal the one served live at [`/api/v0/provenance-root.jso
 
 ---
 
-## What OpenRisk does — and does NOT do
+## What RiskBeat does — and does NOT do
 
 **Does:** aggregates the major DeFi risk feeds for the top-20 Ethereum-mainnet protocols, rendering each feed's assessment **verbatim, in that feed's own vocabulary**; surfaces governance from on-chain sources; tracks which feeds have / have not assessed each protocol; links to every source; maintains a community-correctable data registry.
 
-**Does NOT:** produce its own risk score · weight, rank, or average feeds against each other · tell you whether a protocol is "safe" · endorse any protocol. **There is no OpenRisk score, ever.** This prohibition is documented in [`CHARTER.md`](./CHARTER.md) and enforced in code (a typed data model with no shared score field, a CI gate, and a lint rule). See the charter for the full rule and the process required to ever change it.
+**Does NOT:** produce its own risk score · weight, rank, or average feeds against each other · tell you whether a protocol is "safe" · endorse any protocol. **There is no RiskBeat score, ever.** This prohibition is documented in [`CHARTER.md`](./CHARTER.md) and enforced in code (a typed data model with no shared score field, a CI gate, and a lint rule). See the charter for the full rule and the process required to ever change it.
 
 ## Surfaces
 
@@ -94,7 +94,7 @@ pnpm validate # schema-validate all data files
 
 ## Contributing
 
-OpenRisk is community-correctable. You can correct a datum, add a protocol, or propose a new feed — all via PR. See [`CONTRIBUTING.md`](./CONTRIBUTING.md). CI validates every change against the schemas and the no-composite-scoring gate.
+RiskBeat is community-correctable. You can correct a datum, add a protocol, or propose a new feed — all via PR. See [`CONTRIBUTING.md`](./CONTRIBUTING.md). CI validates every change against the schemas and the no-composite-scoring gate.
 
 ## Governance, neutrality & conflicts
 
@@ -105,7 +105,7 @@ OpenRisk is community-correctable. You can correct a datum, add a protocol, or p
 
 - **Farseen Shaikh** — builder, technical lead & long-term steward · [github.com/FarseenSh](https://github.com/FarseenSh)
 
-OpenRisk is community-correctable by design: data corrections, protocol
+RiskBeat is community-correctable by design: data corrections, protocol
 additions, and feed proposals come in as pull requests from anyone, and the
 CI gates (schema validation, checksums, the no-composite rule) hold every
 contributor — including the maintainer — to the same charter.
@@ -114,7 +114,7 @@ contributor — including the maintainer — to the same charter.
 
 [GNU AGPL-3.0](./LICENSE). The full codebase and data layer are AGPL-3.0 and public.
 
-**Data outputs:** to the extent OpenRisk holds rights in its *compiled data
+**Data outputs:** to the extent RiskBeat holds rights in its *compiled data
 outputs* (the JSON snapshots under `data/cache/`, the provenance records, and
 the `/api/v0/*` responses), they are additionally dedicated to the public
 domain under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) —
@@ -124,4 +124,4 @@ links are embedded in every datum.
 
 ---
 
-*Built for the Ethereum Foundation ESP / App Relations RFP, "Neutral DeFi Risk Intelligence Aggregator." OpenRisk is not affiliated with, and produces no assessment of its own about, any listed protocol or feed provider.*
+*Built for the Ethereum Foundation ESP / App Relations RFP, "Neutral DeFi Risk Intelligence Aggregator." RiskBeat is not affiliated with, and produces no assessment of its own about, any listed protocol or feed provider.*

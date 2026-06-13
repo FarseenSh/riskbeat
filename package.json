@@ -1,5 +1,5 @@
 {
-  "name": "openrisk",
+  "name": "riskbeat",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -7,7 +7,7 @@
   "license": "AGPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FarseenSh/openrisk.git"
+    "url": "https://github.com/FarseenSh/riskbeat.git"
   },
   "engines": {
     "node": ">=20"

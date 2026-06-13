@@ -1,6 +1,6 @@
-# Contributing to OpenRisk
+# Contributing to RiskBeat
 
-OpenRisk is **community-correctable by design**. There is no database and no admin panel — **all data lives in git, and pull requests are the write path.** Anyone can correct a datum, add a protocol, or propose a new feed. CI validates every change automatically, so reviewers focus on credibility, not syntax.
+RiskBeat is **community-correctable by design**. There is no database and no admin panel — **all data lives in git, and pull requests are the write path.** Anyone can correct a datum, add a protocol, or propose a new feed. CI validates every change automatically, so reviewers focus on credibility, not syntax.
 
 By contributing you agree your contribution is licensed under the project's [AGPL-3.0](./LICENSE) license.
 
@@ -81,4 +81,4 @@ A correction shows up on the live **`/corrections`** page once merged, and the u
 
 ## Conduct
 
-Be precise, cite sources, assume good faith. Disputes about a feed's methodology belong with that feed; OpenRisk only records what each feed says, verbatim.
+Be precise, cite sources, assume good faith. Disputes about a feed's methodology belong with that feed; RiskBeat only records what each feed says, verbatim.

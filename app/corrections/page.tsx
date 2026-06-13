@@ -31,7 +31,7 @@ export default function CorrectionsPage() {
     <div>
       <h1>CORRECTIONS</h1>
       <p className="page-intro">
-        OpenRisk is community-correctable: anyone can correct a datum via pull
+        RiskBeat is community-correctable: anyone can correct a datum via pull
         request against <code>data/overlays/</code>. CI validates the schema,
         the source link and the no-composite gate; merged corrections render
         here and on the protocol page. The reviewers judge credibility — the
@@ -43,7 +43,7 @@ export default function CorrectionsPage() {
           No corrections filed yet — the registry shipped on{" "}
           {siteData.generated_at.slice(0, 10)}. Found something wrong?{" "}
           <a
-            href="https://github.com/FarseenSh/openrisk/blob/main/CONTRIBUTING.md"
+            href="https://github.com/FarseenSh/riskbeat/blob/main/CONTRIBUTING.md"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -115,7 +115,7 @@ export default function CorrectionsPage() {
       )}
 
       <h2>How to file one</h2>
-      <pre>{`1. Fork github.com/FarseenSh/openrisk
+      <pre>{`1. Fork github.com/FarseenSh/riskbeat
 2. Edit data/overlays/<protocol-slug>.json (see CONTRIBUTING.md for the schema)
 3. Every entry needs: source_url + source_date + contributor ("github:you")
 4. Open a PR — CI validates it; a merged entry appears here automatically`}</pre>

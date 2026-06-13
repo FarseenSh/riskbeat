@@ -61,7 +61,7 @@ const rule = {
       crossFeed:
         "Expression reads rating values from multiple feeds ({{feeds}}). Cross-feed arithmetic/comparison is prohibited by CHARTER.md §2.2 — render each feed verbatim instead.",
       compositeName:
-        '"{{name}}" is named like a composite score. OpenRisk produces no score of its own (CHARTER.md §2.2).',
+        '"{{name}}" is named like a composite score. RiskBeat produces no score of its own (CHARTER.md §2.2).',
     },
   },
   create(context) {
@@ -111,7 +111,7 @@ const rule = {
 };
 
 const plugin = {
-  meta: { name: "openrisk", version: "1.0.0" },
+  meta: { name: "riskbeat", version: "1.0.0" },
   rules: { "no-cross-feed-render": rule },
 };
 

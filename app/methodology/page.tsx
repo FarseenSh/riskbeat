@@ -8,7 +8,7 @@ import { siteData } from "@/lib/data-loader";
 export const metadata: Metadata = {
   title: "Methodology",
   description:
-    "What OpenRisk does and does not do: verbatim aggregation, coverage as data, the four provenance tags, and the full feed registry.",
+    "What RiskBeat does and does not do: verbatim aggregation, coverage as data, the four provenance tags, and the full feed registry.",
 };
 
 const TIER_LABEL: Record<string, string> = {
@@ -30,17 +30,17 @@ export default function MethodologyPage() {
       <p className="page-intro">
         The mental model is <b>oracle diversity</b>: no single risk feed is
         canonical, the aggregation is the value, and a coverage gap is itself
-        a signal. OpenRisk is a camera, not a judge.
+        a signal. RiskBeat is a camera, not a judge.
       </p>
 
       <div className="box box-not">
         <span className="lbl" style={{ color: "var(--red)" }}>
-          what openrisk does NOT do
+          what riskbeat does NOT do
         </span>
         <ul style={{ marginTop: 8 }}>
           <li>
             produce its own risk score, rating, ranking, or verdict —{" "}
-            <b>there is no OpenRisk score, ever</b>
+            <b>there is no RiskBeat score, ever</b>
           </li>
           <li>average, weight, blend or otherwise combine feeds&apos; ratings</li>
           <li>translate any feed&apos;s vocabulary into another&apos;s</li>
@@ -50,7 +50,7 @@ export default function MethodologyPage() {
       </div>
       <div className="box box-does">
         <span className="lbl" style={{ color: "var(--green)" }}>
-          what openrisk does
+          what riskbeat does
         </span>
         <ul style={{ marginTop: 8 }}>
           <li>
@@ -205,7 +205,7 @@ export default function MethodologyPage() {
         All data lives in git; PRs are the write path. CI validates schemas,
         checksums and the no-composite gate on every change — see{" "}
         <a
-          href="https://github.com/FarseenSh/openrisk/blob/main/CONTRIBUTING.md"
+          href="https://github.com/FarseenSh/riskbeat/blob/main/CONTRIBUTING.md"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -218,7 +218,7 @@ export default function MethodologyPage() {
       <p className="muted" style={{ fontSize: 12 }}>
         Rendered from{" "}
         <a
-          href="https://github.com/FarseenSh/openrisk/blob/main/CHARTER.md"
+          href="https://github.com/FarseenSh/riskbeat/blob/main/CHARTER.md"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -226,7 +226,7 @@ export default function MethodologyPage() {
         </a>{" "}
         (
         <a
-          href="https://github.com/FarseenSh/openrisk/commits/main/CHARTER.md"
+          href="https://github.com/FarseenSh/riskbeat/commits/main/CHARTER.md"
           target="_blank"
           rel="noopener noreferrer"
         >

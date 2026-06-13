@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/FarseenSh/openrisk/schema/protocol.schema.json",
-  "title": "OpenRisk protocol registry entry",
+  "$id": "https://github.com/FarseenSh/riskbeat/schema/protocol.schema.json",
+  "title": "RiskBeat protocol registry entry",
   "type": "object",
   "required": [
     "slug",

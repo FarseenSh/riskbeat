@@ -209,7 +209,7 @@ export default async function ProtocolPage({
             Analyst notes{" "}
             <span className="muted" style={{ fontWeight: 400 }}>
               — curated observations, no verdicts (per{" "}
-              <a href="https://github.com/FarseenSh/openrisk/blob/main/CHARTER.md">
+              <a href="https://github.com/FarseenSh/riskbeat/blob/main/CHARTER.md">
                 charter
               </a>
               )
@@ -225,7 +225,7 @@ export default async function ProtocolPage({
             <div className="faint" style={{ marginTop: 8, fontSize: 11 }}>
               <ProvenanceTag tag="curated" /> ·{" "}
               <a
-                href={`https://github.com/FarseenSh/openrisk/commits/main/data/assessments/${proto.slug}.md`}
+                href={`https://github.com/FarseenSh/riskbeat/commits/main/data/assessments/${proto.slug}.md`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -315,7 +315,7 @@ export default async function ProtocolPage({
       <div className="gap-row" style={{ marginTop: 28 }}>
         See something wrong?{" "}
         <a
-          href={`https://github.com/FarseenSh/openrisk/issues/new?title=correction:+${proto.slug}&body=Protocol:+${proto.slug}%0AFeed:%0AField:%0AWhat+the+source+actually+says:%0ASource+URL:%0ASource+date:`}
+          href={`https://github.com/FarseenSh/riskbeat/issues/new?title=correction:+${proto.slug}&body=Protocol:+${proto.slug}%0AFeed:%0AField:%0AWhat+the+source+actually+says:%0ASource+URL:%0ASource+date:`}
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -25,7 +25,7 @@
 
 ## Analyst notes (observations, no verdicts)
 
-- The question this project exists to answer — *"what did every feed say the day before the exploit?"* — **cannot be answered for 2025-11-03 from OpenRisk's archive, because the archive begins 2026-06-12.** I checked our own provenance log: there is no earlier snapshot. For the next incident, the nightly content-addressed archive makes that reconstruction a `git log` away. Recording the limitation honestly is the point of the column.
+- The question this project exists to answer — *"what did every feed say the day before the exploit?"* — **cannot be answered for 2025-11-03 from RiskBeat's archive, because the archive begins 2026-06-12.** I checked our own provenance log: there is no earlier snapshot. For the next incident, the nightly content-addressed archive makes that reconstruction a `git log` away. Recording the limitation honestly is the point of the column.
 - As of 2026-06-12, the only rating-feed coverage of Balancer is DeFiPunk'd's V3 assessment (merged 2026-05-12); the exploited V2 codebase — still holding ≈ $19.1M on Ethereum against V3's ≈ $66.4M (DefiLlama snapshot 2026-06-12T14:02Z) — has no current assessment from any feed in the registry.
 
 ## What I checked and couldn't confirm
@@ -35,7 +35,7 @@
 
 ## Sources
 
-- OpenRisk archived snapshots, 2026-06-12 (`data/cache/{defipunkd,defillama-hacks}/2026-06-12-*.json`) and `data/provenance/roots.jsonl`
+- RiskBeat archived snapshots, 2026-06-12 (`data/cache/{defipunkd,defillama-hacks}/2026-06-12-*.json`) and `data/provenance/roots.jsonl`
 - defipunkd.com/protocol/balancer-v3
 - Safe Transaction Service (DAO Multisig threshold, live-verified 2026-06-12)
 - DefiLlama TVL snapshot 2026-06-12T14:02Z (`data/cache/defillama-tvl/`)

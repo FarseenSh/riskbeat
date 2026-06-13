@@ -1,5 +1,5 @@
 /**
- * OpenRisk core types.
+ * RiskBeat core types.
  *
  * THE STRUCTURAL RULE (CHARTER.md §2, enforced 4 ways — see ci.yml,
  * eslint-rules/no-cross-feed-render.js):
@@ -78,7 +78,7 @@ export interface DefipunkdDatum {
   feed_key: "defipunkd";
   /** DeFiPunk'd's own assessment slug (its unit; often versioned). */
   punkd_slug: string;
-  /** Published slices, verbatim. OpenRisk derives no tier from slice counts. */
+  /** Published slices, verbatim. RiskBeat derives no tier from slice counts. */
   slices: DefipunkdSliceAssessment[];
   source_url: string;
   fetched_at: string;

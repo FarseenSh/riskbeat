@@ -27,7 +27,7 @@
 
 ## Analyst notes (observations, no verdicts)
 
-- Lido is the **largest row in the registry by TVL** — $14.84B on Ethereum (DefiLlama snapshot 2026-06-12T14:02Z) — and the clearest case of two rating feeds measuring the same protocol with **different vocabularies**: DeFiScan's Stage 0 with H-flags on upgradeability and exit window, and DeFiPunk'd's mixed orange/green slice profile, are published side by side above. OpenRisk does not reconcile them; a Stage and a slice grade are different languages, and the disagreement-or-agreement between them is for the reader to weigh.
+- Lido is the **largest row in the registry by TVL** — $14.84B on Ethereum (DefiLlama snapshot 2026-06-12T14:02Z) — and the clearest case of two rating feeds measuring the same protocol with **different vocabularies**: DeFiScan's Stage 0 with H-flags on upgradeability and exit window, and DeFiPunk'd's mixed orange/green slice profile, are published side by side above. RiskBeat does not reconcile them; a Stage and a slice grade are different languages, and the disagreement-or-agreement between them is for the reader to weigh.
 - Both feeds' strongest cautions point at the same structural facts — governance's emergency override and the pausability of new exit requests — while both also credit open access and source verifiability. That convergence-of-subject (not of verdict) is visible only because the values sit in one row; that is the aggregation working as intended.
 
 ## What I checked and couldn't confirm
@@ -37,7 +37,7 @@
 
 ## Sources
 
-- OpenRisk archived snapshots, 2026-06-12 (`data/cache/{defiscan,defipunkd,defillama-hacks}/2026-06-12-*.json`)
+- RiskBeat archived snapshots, 2026-06-12 (`data/cache/{defiscan,defipunkd,defillama-hacks}/2026-06-12-*.json`)
 - defiscan.info/protocols/lido-v2 (published 2025-06-19) · defipunkd.com/protocol/lido
 - Safe Transaction Service (GateSeal threshold, live-verified 2026-06-12)
 - Lido docs (docs.lido.fi, accessed at registry build 2026-06-12)

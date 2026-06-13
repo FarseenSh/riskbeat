@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/FarseenSh/openrisk/schema/feeds.schema.json",
-  "title": "OpenRisk feed registry",
+  "$id": "https://github.com/FarseenSh/riskbeat/schema/feeds.schema.json",
+  "title": "RiskBeat feed registry",
   "type": "object",
   "required": ["feeds"],
   "additionalProperties": false,
