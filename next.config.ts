@@ -10,6 +10,11 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/**": ["./data/**", "./CHARTER.md"],
   },
+  // The charter renders inside /methodology; send anyone who guesses /charter
+  // there rather than to a 404.
+  async redirects() {
+    return [{ source: "/charter", destination: "/methodology", permanent: false }];
+  },
 };
 
 export default nextConfig;
