@@ -1,0 +1,521 @@
+{
+ "feed_key": "defipunkd",
+ "fetched_at": "2026-06-13T07:07:52.330Z",
+ "source": "https://raw.githubusercontent.com/guil-lambert/defipunkd/main/data/assessments",
+ "ok": true,
+ "data": {
+  "0x-matcha": [],
+  "1inch": [],
+  "aave": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "aave",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "Fast-path T1 upgrades reachable in ~5 days",
+      "merged_at": "2026-05-04T16:11:35.032Z"
+     },
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "Withdrawals pausable indefinitely by multisig",
+      "merged_at": "2026-05-04T19:59:58.216Z"
+     },
+     {
+      "slice": "autonomy",
+      "consensus_grade": "orange",
+      "consensus_strength": "weak",
+      "short_headline": "Oracle dependency with mutable sources and past exploits",
+      "merged_at": "2026-05-04T16:11:36.289Z"
+     },
+     {
+      "slice": "open-access",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "Contracts open; official UI screens wallets and regions",
+      "merged_at": "2026-05-04T16:11:36.290Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Verified; multi-firm audits current",
+      "merged_at": "2026-05-04T19:59:58.222Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/aave",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   },
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "aave-v3",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "T1 upgrades reachable via ~5-day fast path",
+      "merged_at": "2026-06-02T13:51:17.538Z"
+     },
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "red",
+      "consensus_strength": "weak",
+      "short_headline": "Exits pausable indefinitely by 5-of-9 multisig",
+      "merged_at": "2026-05-02T07:43:25.868Z"
+     },
+     {
+      "slice": "autonomy",
+      "consensus_grade": "orange",
+      "consensus_strength": "weak",
+      "short_headline": "Oracle dependency with governance fast-paths",
+      "merged_at": "2026-05-02T07:43:25.870Z"
+     },
+     {
+      "slice": "open-access",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "Contracts open; official UI screens wallets",
+      "merged_at": "2026-05-02T07:43:25.871Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "weak",
+      "short_headline": "Verified source + 5 auditors pre-deployment",
+      "merged_at": "2026-05-02T07:43:25.872Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/aave-v3",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "balancer": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "balancer-v3",
+    "slices": [
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "orange",
+      "consensus_strength": "weak",
+      "short_headline": "Exits pausable; recovery mode admin-gated",
+      "merged_at": "2026-05-12T08:39:16.047Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "orange",
+      "consensus_strength": "weak",
+      "short_headline": "Audits exist but audit-to-deploy drift unresolved",
+      "merged_at": "2026-05-12T08:39:16.048Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/balancer-v3",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "compound": [],
+  "cow-swap": [],
+  "curve": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "curve-dex",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Immutable pools, DAO-gated via 7-day vote",
+      "merged_at": "2026-06-02T13:51:17.588Z"
+     },
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Permissionless exits, no admin pause possible",
+      "merged_at": "2026-06-02T13:51:17.589Z"
+     },
+     {
+      "slice": "autonomy",
+      "consensus_grade": "green",
+      "consensus_strength": "weak",
+      "short_headline": "Immutable core pools minimal external dependencies",
+      "merged_at": "2026-05-12T08:39:16.087Z"
+     },
+     {
+      "slice": "open-access",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "No on-chain gate, multiple execution paths",
+      "merged_at": "2026-05-02T07:43:25.899Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Verified Vyper bytecode, multi-firm audits",
+      "merged_at": "2026-06-02T13:51:17.589Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/curve-dex",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   },
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "curve-llamalend",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "unknown",
+      "consensus_strength": "weak",
+      "short_headline": "On-chain control surface unverified this run",
+      "merged_at": "2026-05-12T08:39:16.090Z"
+     },
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "unknown",
+      "consensus_strength": "weak",
+      "short_headline": "Exit paths unverified, sources unreachable",
+      "merged_at": "2026-05-12T08:39:17.859Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "orange",
+      "consensus_strength": "weak",
+      "short_headline": "Factory verified; impl contracts and audit recency unconfirmed",
+      "merged_at": "2026-05-12T08:39:19.460Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/curve-llamalend",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   },
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "crvusd",
+    "slices": [
+     {
+      "slice": "autonomy",
+      "consensus_grade": "orange",
+      "consensus_strength": "weak",
+      "short_headline": "Single-source Curve EMA oracles, no fallback",
+      "merged_at": "2026-05-02T07:43:25.889Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/crvusd",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "euler": [],
+  "fluid": [],
+  "gearbox": [],
+  "lido": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "lido",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "Short timelock with insider emergency override",
+      "merged_at": "2026-06-02T13:51:17.618Z"
+     },
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "Finalized claims safe; new requests pausable indefinitely by governance",
+      "merged_at": "2026-05-04T19:59:59.390Z"
+     },
+     {
+      "slice": "autonomy",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "Oracle committee governs rebase reports",
+      "merged_at": "2026-06-02T13:51:17.619Z"
+     },
+     {
+      "slice": "open-access",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "No user allowlists or geofences",
+      "merged_at": "2026-05-04T19:59:59.392Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Verified source + multiple recent audits",
+      "merged_at": "2026-05-04T19:59:59.394Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/lido",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "liquity": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "liquity-v1",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Fully immutable, no admin keys or upgrades",
+      "merged_at": "2026-05-12T08:39:19.505Z"
+     },
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Immutable contracts, no admin pause possible",
+      "merged_at": "2026-05-12T08:39:19.506Z"
+     },
+     {
+      "slice": "autonomy",
+      "consensus_grade": "green",
+      "consensus_strength": "weak",
+      "short_headline": "Immutable, dual-oracle fallback, zero admin keys",
+      "merged_at": "2026-05-12T08:39:19.506Z"
+     },
+     {
+      "slice": "open-access",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Permissionless immutable contracts, no operator gates",
+      "merged_at": "2026-05-12T08:39:19.506Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Verified source, immutable, multiple top audits",
+      "merged_at": "2026-05-12T08:39:19.507Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/liquity-v1",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "mellow": [],
+  "morpho": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "morpho",
+    "slices": [
+     {
+      "slice": "open-access",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "No user allowlists or geofences",
+      "merged_at": "2026-05-04T19:59:59.401Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/morpho",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   },
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "morpho-blue",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "orange",
+      "consensus_strength": "weak",
+      "short_headline": "5/9 multisig controls fees, no timelock",
+      "merged_at": "2026-06-02T13:51:17.634Z"
+     },
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Permissionless immutable exits, no admin pause",
+      "merged_at": "2026-05-12T08:39:19.515Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "weak",
+      "short_headline": "Immutable, verified, multi-audited by top firms",
+      "merged_at": "2026-05-12T08:39:19.516Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/morpho-blue",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "morpho-vaults": [],
+  "pendle": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "pendle",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "3-of-5 multisig controls upgrades, no timelock",
+      "merged_at": "2026-05-20T20:51:39.191Z"
+     },
+     {
+      "slice": "autonomy",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "Boros oracle/bot risk; V2 per-market isolated",
+      "merged_at": "2026-05-20T20:51:40.706Z"
+     },
+     {
+      "slice": "open-access",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Permissionless contracts, no KYC, multi-path access",
+      "merged_at": "2026-05-20T20:51:42.076Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Verified source + multiple top-firm audits",
+      "merged_at": "2026-05-20T20:51:43.337Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/pendle",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "rocket-pool": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "rocket-pool",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "orange",
+      "consensus_strength": "weak",
+      "short_headline": "oDAO controls T1 upgrades, timelock unverified",
+      "merged_at": "2026-06-12T10:11:32.857Z"
+     },
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "green",
+      "consensus_strength": "weak",
+      "short_headline": "Permissionless rETH burn limited by collateral depth",
+      "merged_at": "2026-05-26T09:55:23.299Z"
+     },
+     {
+      "slice": "open-access",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Permissionless contracts, multiple independent paths",
+      "merged_at": "2026-05-26T09:55:23.300Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "weak",
+      "short_headline": "Verified source, audited by multiple top firms",
+      "merged_at": "2026-05-26T09:55:23.300Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/rocket-pool",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "spark": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "sparklend",
+    "slices": [
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "red",
+      "consensus_strength": "strong",
+      "short_headline": "Multisig can pause withdrawals indefinitely",
+      "merged_at": "2026-05-12T08:39:19.544Z"
+     },
+     {
+      "slice": "autonomy",
+      "consensus_grade": "red",
+      "consensus_strength": "weak",
+      "short_headline": "Oracle failure risks ~100% TVS unmitigated",
+      "merged_at": "2026-05-04T23:09:09.757Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "weak",
+      "short_headline": "Verified source, audited, zero post-audit drift",
+      "merged_at": "2026-05-12T08:39:19.545Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/sparklend",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "uniswap": [
+   {
+    "feed_key": "defipunkd",
+    "punkd_slug": "uniswap-v4",
+    "slices": [
+     {
+      "slice": "control",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Bounded fee governance",
+      "merged_at": "2026-06-02T13:51:17.681Z"
+     },
+     {
+      "slice": "ability-to-exit",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "No pause, fully permissionless exit",
+      "merged_at": "2026-06-02T13:51:17.681Z"
+     },
+     {
+      "slice": "autonomy",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "No external dependencies in core",
+      "merged_at": "2026-06-02T13:51:17.681Z"
+     },
+     {
+      "slice": "open-access",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Permissionless contracts, multiple access paths",
+      "merged_at": "2026-06-02T13:51:17.682Z"
+     },
+     {
+      "slice": "verifiability",
+      "consensus_grade": "green",
+      "consensus_strength": "strong",
+      "short_headline": "Verified & heavily audited",
+      "merged_at": "2026-06-02T13:51:17.682Z"
+     }
+    ],
+    "source_url": "https://defipunkd.com/protocol/uniswap-v4",
+    "fetched_at": "2026-06-13T07:07:52.330Z",
+    "provenance": "feed"
+   }
+  ],
+  "yearn": []
+ }
+}
