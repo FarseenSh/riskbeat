@@ -15,6 +15,8 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -46,13 +48,32 @@ jobs:
         run: pnpm merkle
 
       - name: Commit snapshot
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/cache data/provenance
           if git diff --cached --quiet; then
             echo "no data changes today"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "data: nightly snapshot $(date -u +%F)"
             git push
+            echo "committed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Publish to Vercel production
+        # Auto-redeploy so the live site mirrors the freshly committed snapshot.
+        # Guarded on the secret: skipped cleanly (never fails) until VERCEL_TOKEN is set.
+        if: steps.commit.outputs.committed == 'true' && env.VERCEL_TOKEN != ''
+        env:
+          VERCEL_ORG_ID: team_z7nUhCns9rNdWBCp7t5JQCML
+          VERCEL_PROJECT_ID: prj_wizC9lzsxHf6cREUtmz6KlI9Nw8E
+        run: |
+          npm i -g vercel@latest
+          # The CLI prints a JSON envelope (not a bare URL) when stdout isn't a TTY,
+          # so parse the deployment URL out instead of trusting the last line.
+          DEPLOY_OUT=$(vercel deploy --prod --yes --token="$VERCEL_TOKEN")
+          DEPLOY_URL=$(printf '%s' "$DEPLOY_OUT" | grep -oE 'https://[a-z0-9-]+\.vercel\.app' | head -1)
+          echo "Deployed: $DEPLOY_URL"
+          vercel alias set "$DEPLOY_URL" riskbeat-eth.vercel.app --token="$VERCEL_TOKEN"
