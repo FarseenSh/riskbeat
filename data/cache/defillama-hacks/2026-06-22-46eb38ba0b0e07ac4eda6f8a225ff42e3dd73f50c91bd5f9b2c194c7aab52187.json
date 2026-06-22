@@ -1,0 +1,400 @@
+{
+ "feed_key": "defillama-hacks",
+ "fetched_at": "2026-06-22T09:25:11.174Z",
+ "source": "https://api.llama.fi/hacks",
+ "ok": true,
+ "data": {
+  "0x-matcha": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2026-01-25",
+      "amount_usd": 13430000,
+      "name": "Matcha",
+      "technique": "Unlimited Approval Exploit",
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "defillama-id"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "1inch": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2025-03-07",
+      "amount_usd": 5000000,
+      "name": "1inch",
+      "technique": "Calldata underflow and resolver hijack",
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     },
+     {
+      "date": "2024-10-31",
+      "amount_usd": 720000,
+      "name": "1inch",
+      "technique": "Private Key Compromised (Supply Chain Attack)",
+      "classification": "Ecosystem",
+      "returned_funds": null,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "defillama-id"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "aave": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2026-03-12",
+      "amount_usd": 862000,
+      "name": "Aave V3",
+      "technique": "CAPO Oracle Misconfiguration",
+      "classification": "Ecosystem",
+      "returned_funds": 862000,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "defillama-id"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "balancer": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2025-11-03",
+      "amount_usd": 128000000,
+      "name": "Balancer V2",
+      "technique": "Composable Stable Pools Exploit",
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     },
+     {
+      "date": "2023-09-19",
+      "amount_usd": 238000,
+      "name": "Balancer V2",
+      "technique": "Frontend Attack",
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     },
+     {
+      "date": "2023-08-27",
+      "amount_usd": 800000,
+      "name": "Balancer V2",
+      "technique": null,
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "defillama-id"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "compound": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2021-09-29",
+      "amount_usd": 147000000,
+      "name": "Compound V2",
+      "technique": "Math Mistake Exploit",
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "defillama-id"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "cow-swap": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "curve": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2026-03-02",
+      "amount_usd": 240000,
+      "name": "Curve LlamaLend",
+      "technique": "Donation Attack",
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     },
+     {
+      "date": "2023-07-30",
+      "amount_usd": 61700000,
+      "name": "Curve DEX",
+      "technique": "Vyper Compiler Bug",
+      "classification": "Infrastructure",
+      "returned_funds": null,
+      "source_url": null
+     },
+     {
+      "date": "2022-08-09",
+      "amount_usd": 575000,
+      "name": "Curve DEX",
+      "technique": "DNS Spoofing",
+      "classification": "Infrastructure",
+      "returned_funds": 575000,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "defillama-id"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "euler": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2023-03-13",
+      "amount_usd": 197000000,
+      "name": "Euler V1",
+      "technique": "Flashloan Donate Function Logic Exploit",
+      "classification": "Protocol Logic",
+      "returned_funds": 240000000,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "defillama-id"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "fluid": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2026-05-31",
+      "amount_usd": 215000,
+      "name": "Fluid Lending",
+      "technique": "Private Key Compromised",
+      "classification": "Infrastructure",
+      "returned_funds": null,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "defillama-id"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "gearbox": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "lido": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "liquity": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "mellow": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "morpho": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2024-10-14",
+      "amount_usd": 250000,
+      "name": "LeadBlock's Morpho Blue Market",
+      "technique": "Oracle Misconfiguration Exploit",
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "name-pattern"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "morpho-vaults": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "pendle": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "rocket-pool": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "spark": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "uniswap": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [],
+    "matched_by": [],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ],
+  "yearn": [
+   {
+    "feed_key": "defillama-hacks",
+    "events": [
+     {
+      "date": "2025-12-16",
+      "amount_usd": 300000,
+      "name": "Yearn Finance",
+      "technique": "misconfigured Fulcrum sUSD strategy",
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     },
+     {
+      "date": "2025-11-30",
+      "amount_usd": 9000000,
+      "name": "Yearn Ether",
+      "technique": "yETH stablepool Exploit",
+      "classification": "Protocol Logic",
+      "returned_funds": null,
+      "source_url": null
+     },
+     {
+      "date": "2023-04-13",
+      "amount_usd": 11539000,
+      "name": "Yearn Finance",
+      "technique": "Flashloan Misconfiguration Exploit",
+      "classification": "Ecosystem",
+      "returned_funds": null,
+      "source_url": null
+     },
+     {
+      "date": "2021-02-05",
+      "amount_usd": 11000000,
+      "name": "Yearn Finance",
+      "technique": "Flashloan Price Oracle Attack",
+      "classification": "Ecosystem",
+      "returned_funds": null,
+      "source_url": null
+     }
+    ],
+    "matched_by": [
+     "defillama-id"
+    ],
+    "source_url": "https://defillama.com/hacks",
+    "fetched_at": "2026-06-22T09:25:11.174Z",
+    "provenance": "feed"
+   }
+  ]
+ }
+}
