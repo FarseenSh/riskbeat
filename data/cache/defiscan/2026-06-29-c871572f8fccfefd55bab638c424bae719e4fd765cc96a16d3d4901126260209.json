@@ -1,0 +1,272 @@
+{
+ "feed_key": "defiscan",
+ "fetched_at": "2026-06-29T08:27:13.542Z",
+ "source": "https://raw.githubusercontent.com/deficollective/defiscan/main/src/content/protocols",
+ "ok": true,
+ "data": {
+  "0x-matcha": [],
+  "1inch": [],
+  "aave": [
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "aave",
+    "protocol_label": "Aave v3",
+    "covered_llama_slugs": [
+     "aave-v3"
+    ],
+    "stage": 0,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "H",
+     "autonomy": "H",
+     "exit_window": "H",
+     "accessibility": "L"
+    },
+    "reasons": [],
+    "publish_date": "2025-05-07",
+    "source_url": "https://defiscan.info/protocols/aave",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   }
+  ],
+  "balancer": [],
+  "compound": [
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "compound-v2",
+    "protocol_label": "Compound V2",
+    "covered_llama_slugs": [
+     "compound-v2"
+    ],
+    "stage": 0,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "H",
+     "autonomy": "H",
+     "exit_window": "H",
+     "accessibility": "L"
+    },
+    "reasons": [],
+    "publish_date": "1970-01-01",
+    "source_url": "https://defiscan.info/protocols/compound-v2",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   },
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "compound-v3",
+    "protocol_label": "Compound V3",
+    "covered_llama_slugs": [
+     "compound-v3"
+    ],
+    "stage": 0,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "H",
+     "autonomy": "H",
+     "exit_window": "H",
+     "accessibility": "L"
+    },
+    "reasons": [],
+    "publish_date": "2025-03-18",
+    "source_url": "https://defiscan.info/protocols/compound-v3",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   }
+  ],
+  "cow-swap": [],
+  "curve": [
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "curve-finance",
+    "protocol_label": "Curve Finance",
+    "covered_llama_slugs": [
+     "curve-dex",
+     "crvusd",
+     "curve-llamalend"
+    ],
+    "stage": 0,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "H",
+     "autonomy": "L",
+     "exit_window": "H",
+     "accessibility": "M"
+    },
+    "reasons": [],
+    "publish_date": "1970-01-01",
+    "source_url": "https://defiscan.info/protocols/curve-finance",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   }
+  ],
+  "euler": [],
+  "fluid": [],
+  "gearbox": [],
+  "lido": [
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "lido-v2",
+    "protocol_label": "Lido V2",
+    "covered_llama_slugs": [
+     "lido"
+    ],
+    "stage": 0,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "H",
+     "autonomy": "L",
+     "exit_window": "H",
+     "accessibility": "L"
+    },
+    "reasons": [],
+    "publish_date": "2025-06-19",
+    "source_url": "https://defiscan.info/protocols/lido-v2",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   }
+  ],
+  "liquity": [
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "liquity",
+    "protocol_label": "Liquity",
+    "covered_llama_slugs": [
+     "liquity-v1"
+    ],
+    "stage": 2,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "L",
+     "autonomy": "L",
+     "exit_window": "L",
+     "accessibility": "L"
+    },
+    "reasons": [],
+    "publish_date": "2024-10-23",
+    "source_url": "https://defiscan.info/protocols/liquity",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   }
+  ],
+  "mellow": [],
+  "morpho": [
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "morpho",
+    "protocol_label": "Morpho",
+    "covered_llama_slugs": [
+     "morpho-blue"
+    ],
+    "stage": 1,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "M",
+     "autonomy": "M",
+     "exit_window": "M",
+     "accessibility": "L"
+    },
+    "reasons": [],
+    "publish_date": "2025-05-21",
+    "source_url": "https://defiscan.info/protocols/morpho",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   }
+  ],
+  "morpho-vaults": [],
+  "pendle": [
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "pendle",
+    "protocol_label": "Pendle V2",
+    "covered_llama_slugs": [
+     "pendle"
+    ],
+    "stage": 0,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "H",
+     "autonomy": "L",
+     "exit_window": "H",
+     "accessibility": "H"
+    },
+    "reasons": [],
+    "publish_date": "1970-01-01",
+    "source_url": "https://defiscan.info/protocols/pendle",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   }
+  ],
+  "rocket-pool": [],
+  "spark": [
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "spark",
+    "protocol_label": "Spark",
+    "covered_llama_slugs": [
+     "sparklend",
+     "spark-liquidity-layer"
+    ],
+    "stage": 0,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "H",
+     "autonomy": "H",
+     "exit_window": "H",
+     "accessibility": "L"
+    },
+    "reasons": [],
+    "publish_date": "2025-06-05",
+    "source_url": "https://defiscan.info/protocols/spark",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   }
+  ],
+  "uniswap": [
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "uniswap-v2",
+    "protocol_label": "Uniswap V2",
+    "covered_llama_slugs": [
+     "uniswap-v2"
+    ],
+    "stage": 2,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "L",
+     "autonomy": "L",
+     "exit_window": "L",
+     "accessibility": "L"
+    },
+    "reasons": [],
+    "publish_date": "2025-01-22",
+    "source_url": "https://defiscan.info/protocols/uniswap-v2",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   },
+   {
+    "feed_key": "defiscan",
+    "defiscan_id": "uniswap-v3",
+    "protocol_label": "Uniswap V3",
+    "covered_llama_slugs": [
+     "uniswap-v3"
+    ],
+    "stage": 2,
+    "risks": {
+     "chain": "L",
+     "upgradeability": "L",
+     "autonomy": "L",
+     "exit_window": "L",
+     "accessibility": "L"
+    },
+    "reasons": [],
+    "publish_date": "2025-01-08",
+    "update_date": "2025-01-31",
+    "source_url": "https://defiscan.info/protocols/uniswap-v3",
+    "fetched_at": "2026-06-29T08:27:13.542Z",
+    "provenance": "feed"
+   }
+  ],
+  "yearn": []
+ }
+}
