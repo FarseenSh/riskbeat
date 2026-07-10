@@ -1,6 +1,6 @@
 {
  "feed_key": "pharos",
- "fetched_at": "2026-06-12T15:09:00.777Z",
+ "fetched_at": "2026-07-10T06:57:13.519Z",
  "source": "https://api.pharos.watch",
  "ok": true,
  "data": {
@@ -16,11 +16,11 @@
     "dimensions": {
      "pegStability": {
       "grade": "A",
-      "score": 84
+      "score": 85
      },
      "liquidity": {
       "grade": "A+",
-      "score": 93
+      "score": 92
      },
      "resilience": {
       "grade": "B+",
@@ -28,18 +28,18 @@
      },
      "decentralization": {
       "grade": "B",
-      "score": 73
+      "score": 72
      },
      "dependencyRisk": {
       "grade": "B-",
       "score": 65
      }
     },
-    "dews_band": "WATCH",
-    "dews_score": 19,
+    "dews_band": "CALM",
+    "dews_score": 15,
     "is_defunct": false,
     "source_url": "https://pharos.watch",
-    "fetched_at": "2026-06-12T15:09:00.777Z",
+    "fetched_at": "2026-07-10T06:57:13.519Z",
     "provenance": "feed"
    }
   ],
@@ -52,7 +52,7 @@
     "coin_id": "crvusd-curve",
     "coin_symbol": "crvUSD",
     "coin_name": "crvUSD",
-    "overall_grade": "B+",
+    "overall_grade": "B",
     "dimensions": {
      "pegStability": {
       "grade": "A+",
@@ -60,26 +60,26 @@
      },
      "liquidity": {
       "grade": "B+",
-      "score": 78
+      "score": 79
      },
      "resilience": {
-      "grade": "A-",
-      "score": 81
+      "grade": "B+",
+      "score": 79
      },
      "decentralization": {
       "grade": "B+",
-      "score": 77
+      "score": 76
      },
      "dependencyRisk": {
-      "grade": "B+",
-      "score": 75
+      "grade": "C+",
+      "score": 63
      }
     },
     "dews_band": "CALM",
-    "dews_score": 13,
+    "dews_score": 8,
     "is_defunct": false,
     "source_url": "https://pharos.watch",
-    "fetched_at": "2026-06-12T15:09:00.777Z",
+    "fetched_at": "2026-07-10T06:57:13.519Z",
     "provenance": "feed"
    }
   ],
@@ -96,8 +96,8 @@
     "overall_grade": "A",
     "dimensions": {
      "pegStability": {
-      "grade": "B+",
-      "score": 77
+      "grade": "A-",
+      "score": 80
      },
      "liquidity": {
       "grade": "A+",
@@ -109,7 +109,7 @@
      },
      "decentralization": {
       "grade": "A+",
-      "score": 100
+      "score": 96
      },
      "dependencyRisk": {
       "grade": "A+",
@@ -117,10 +117,10 @@
      }
     },
     "dews_band": "WATCH",
-    "dews_score": 23,
+    "dews_score": 27,
     "is_defunct": false,
     "source_url": "https://pharos.watch",
-    "fetched_at": "2026-06-12T15:09:00.777Z",
+    "fetched_at": "2026-07-10T06:57:13.519Z",
     "provenance": "feed"
    },
    {
@@ -144,18 +144,18 @@
      },
      "decentralization": {
       "grade": "A+",
-      "score": 100
+      "score": 92
      },
      "dependencyRisk": {
       "grade": "A+",
       "score": 90
      }
     },
-    "dews_band": "CALM",
-    "dews_score": 14,
+    "dews_band": "WATCH",
+    "dews_score": 17,
     "is_defunct": false,
     "source_url": "https://pharos.watch",
-    "fetched_at": "2026-06-12T15:09:00.777Z",
+    "fetched_at": "2026-07-10T06:57:13.519Z",
     "provenance": "feed"
    }
   ],
@@ -170,23 +170,23 @@
     "coin_id": "usds-sky",
     "coin_symbol": "USDS",
     "coin_name": "Sky Dollar",
-    "overall_grade": "B+",
+    "overall_grade": "A-",
     "dimensions": {
      "pegStability": {
       "grade": "A+",
       "score": 96
      },
      "liquidity": {
-      "grade": "B+",
-      "score": 75
+      "grade": "A+",
+      "score": 100
      },
      "resilience": {
       "grade": "A-",
       "score": 81
      },
      "decentralization": {
-      "grade": "B+",
-      "score": 75
+      "grade": "B-",
+      "score": 68
      },
      "dependencyRisk": {
       "grade": "B+",
@@ -194,10 +194,10 @@
      }
     },
     "dews_band": "CALM",
-    "dews_score": 9,
+    "dews_score": 12,
     "is_defunct": false,
     "source_url": "https://pharos.watch",
-    "fetched_at": "2026-06-12T15:09:00.777Z",
+    "fetched_at": "2026-07-10T06:57:13.519Z",
     "provenance": "feed"
    },
    {
@@ -205,34 +205,34 @@
     "coin_id": "dai-makerdao",
     "coin_symbol": "DAI",
     "coin_name": "Dai",
-    "overall_grade": "B+",
+    "overall_grade": "A",
     "dimensions": {
      "pegStability": {
       "grade": "A+",
       "score": 96
      },
      "liquidity": {
-      "grade": "B+",
-      "score": 75
+      "grade": "A+",
+      "score": 100
      },
      "resilience": {
       "grade": "A-",
       "score": 81
      },
      "decentralization": {
-      "grade": "A",
-      "score": 83
+      "grade": "B+",
+      "score": 76
      },
      "dependencyRisk": {
       "grade": "B+",
       "score": 75
      }
     },
-    "dews_band": "WATCH",
-    "dews_score": 21,
+    "dews_band": "CALM",
+    "dews_score": 14,
     "is_defunct": false,
     "source_url": "https://pharos.watch",
-    "fetched_at": "2026-06-12T15:09:00.777Z",
+    "fetched_at": "2026-07-10T06:57:13.519Z",
     "provenance": "feed"
    }
   ],
