@@ -1,6 +1,6 @@
 {
  "feed_key": "philidor",
- "fetched_at": "2026-06-15T09:38:08.518Z",
+ "fetched_at": "2026-07-14T05:41:45.730Z",
  "source": "https://api.philidor.io/v1",
  "ok": true,
  "data": {
@@ -15,138 +15,138 @@
      {
       "name": "Aave Ethereum WETH",
       "address": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
-      "total_score": 8.76,
+      "total_score": 8.75,
       "risk_tier": "Prime",
-      "tvl_usd": 3355421865.217846,
+      "tvl_usd": 3605616433.9427223,
       "asset_symbol": "WETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      },
      {
       "name": "Aave Ethereum USDT",
       "address": "0x23878914efe38d27c4d67ab83ed1b93a74d4086a",
       "total_score": 7.9,
-      "risk_tier": "Prime",
-      "tvl_usd": 2599267391.884702,
+      "risk_tier": "Core",
+      "tvl_usd": 2760540952.5249143,
       "asset_symbol": "USDT",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
-     },
-     {
-      "name": "Aave Ethereum WBTC",
-      "address": "0x5ee5bf7ae06d1be5997a1a72006fe6c607ec6de8",
-      "total_score": 8.73,
-      "risk_tier": "Prime",
-      "tvl_usd": 2077907634.0600004,
-      "asset_symbol": "WBTC",
-      "curator_name": null,
-      "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      },
      {
       "name": "Aave Ethereum USDC",
       "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
       "total_score": 8.91,
       "risk_tier": "Prime",
-      "tvl_usd": 1994504696.098853,
+      "tvl_usd": 2133308695.6663902,
       "asset_symbol": "USDC",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
+     },
+     {
+      "name": "Aave Ethereum WBTC",
+      "address": "0x5ee5bf7ae06d1be5997a1a72006fe6c607ec6de8",
+      "total_score": 7.9,
+      "risk_tier": "Core",
+      "tvl_usd": 2050335045.2292235,
+      "asset_symbol": "WBTC",
+      "curator_name": null,
+      "protocol_version": "v3",
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      },
      {
       "name": "Aave Ethereum weETH",
       "address": "0xbdfa7b7893081b35fb54027489e2bc7a38275129",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 1944241107.5608814,
+      "tvl_usd": 1910347365.2284312,
       "asset_symbol": "weETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      },
      {
       "name": "Aave Ethereum wstETH",
       "address": "0x0b925ed163218f6662a35e0f0371ac234f9e9371",
-      "total_score": 8.76,
+      "total_score": 8.75,
       "risk_tier": "Prime",
-      "tvl_usd": 1480575411.9481268,
+      "tvl_usd": 1841020836.5235586,
       "asset_symbol": "wstETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      },
      {
       "name": "Aave Ethereum cbBTC",
       "address": "0x5c647ce0ae10658ec44fa4e11a51c96e94efd1dd",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 1077914148.377586,
+      "tvl_usd": 1226026379.5791764,
       "asset_symbol": "cbBTC",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      },
      {
       "name": "Aave Ethereum rsETH",
       "address": "0x2d62109243b87c4ba3ee7ba1d91b0dd0a074d7b1",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 789400712.3042337,
+      "tvl_usd": 751380730.0479401,
       "asset_symbol": "rsETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      },
      {
       "name": "Aave Ethereum USDe",
       "address": "0x4f5923fc5fd4a93352581b38b7cd26943012decf",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 360465051.5761611,
+      "tvl_usd": 526503423.35072994,
       "asset_symbol": "USDe",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      },
      {
       "name": "Aave Ethereum sUSDe",
       "address": "0x4579a27af00a62c0eb156349f31b345c08386419",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 289391834.5443674,
+      "tvl_usd": 326918843.31483924,
       "asset_symbol": "sUSDe",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
-     },
-     {
-      "name": "Aave EthereumHorizon RLUSD",
-      "address": "0xe3190143eb552456f88464662f0c0c4ac67a77eb",
-      "total_score": 7.9,
-      "risk_tier": "Core",
-      "tvl_usd": 194366571.26014924,
-      "asset_symbol": "RLUSD",
-      "curator_name": null,
-      "protocol_version": "v3-horizon",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      },
      {
       "name": "Aave Ethereum osETH",
       "address": "0x927709711794f3de5ddbf1d176bee2d55ba13c21",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 191369368.53396887,
+      "tvl_usd": 200771973.51455986,
       "asset_symbol": "osETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:27.551Z"
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
+     },
+     {
+      "name": "Aave Ethereum GHO",
+      "address": "0x00907f9921424583e7ffbfedf84f92b7b2be4977",
+      "total_score": 7.9,
+      "risk_tier": "Core",
+      "tvl_usd": 135224337.3462685,
+      "asset_symbol": "GHO",
+      "curator_name": null,
+      "protocol_version": "v3",
+      "last_synced_at": "2026-07-14T04:52:24.195Z"
      }
     ],
     "source_url": "https://api.philidor.io/v1/vaults?chain=ethereum&protocol=aave",
-    "fetched_at": "2026-06-15T09:38:08.518Z",
+    "fetched_at": "2026-07-14T05:41:45.730Z",
     "provenance": "feed"
    }
   ],
@@ -162,37 +162,37 @@
       "address": "0xc3d688b66703497daa19211eedff47f25384cdc3",
       "total_score": 7.5,
       "risk_tier": "Core",
-      "tvl_usd": 325484153.4024062,
+      "tvl_usd": 335464571.72269374,
       "asset_symbol": "USDC",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:54.346Z"
+      "last_synced_at": "2026-07-14T04:52:48.078Z"
      },
      {
       "name": "Compound V3 USDT",
       "address": "0x3afdc9bca9213a35503b077a6072f3d0d5ab0840",
-      "total_score": 8.76,
+      "total_score": 7.9,
       "risk_tier": "Prime",
-      "tvl_usd": 187764025.90288147,
+      "tvl_usd": 193017129.058878,
       "asset_symbol": "USDT",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:54.346Z"
+      "last_synced_at": "2026-07-14T04:52:48.078Z"
      },
      {
       "name": "Compound V3 USDS",
       "address": "0x5d409e56d886231adaf00c8775665ad0f9897b56",
       "total_score": 8.81,
       "risk_tier": "Prime",
-      "tvl_usd": 1941798.0906526798,
+      "tvl_usd": 1875805.0868383504,
       "asset_symbol": "USDS",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:47:54.346Z"
+      "last_synced_at": "2026-07-14T04:52:48.078Z"
      }
     ],
     "source_url": "https://api.philidor.io/v1/vaults?chain=ethereum&protocol=compound",
-    "fetched_at": "2026-06-15T09:38:08.518Z",
+    "fetched_at": "2026-07-14T05:41:45.730Z",
     "provenance": "feed"
    }
   ],
@@ -208,143 +208,143 @@
    {
     "feed_key": "philidor",
     "protocol_id": "morpho",
-    "vault_count_total": 173,
+    "vault_count_total": 180,
     "vaults": [
-     {
-      "name": "Sentora PYUSD",
-      "address": "0x19b3cd7032b8c062e8d44eacad661a0970dd8c55",
-      "total_score": 7.44,
-      "risk_tier": "Core",
-      "tvl_usd": 286987032.4299009,
-      "asset_symbol": "PYUSD",
-      "curator_name": "Sentora",
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
      {
       "name": "Sentora PYUSD Main",
       "address": "0xb576765fb15505433af24fee2c0325895c559fb2",
-      "total_score": 6.66,
+      "total_score": 6.35,
       "risk_tier": "Core",
-      "tvl_usd": 286987018.0880647,
+      "tvl_usd": 330777229.5282733,
       "asset_symbol": "PYUSD",
       "curator_name": "Sentora",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Sentora RLUSD Main",
       "address": "0x6dc58a0fdfc8d694e571dc59b9a52eeea780e6bf",
-      "total_score": 6.66,
+      "total_score": 6.44,
       "risk_tier": "Core",
-      "tvl_usd": 218259059.7070929,
+      "tvl_usd": 266811668.37108108,
       "asset_symbol": "RLUSD",
       "curator_name": "Sentora",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Sentora PRIME Main",
       "address": "0xc21b08c16458202593d4d9b26b9984ee67b38bbd",
-      "total_score": 4.9,
-      "risk_tier": "Edge",
-      "tvl_usd": 99345573.93566807,
+      "total_score": 6.74,
+      "risk_tier": "Core",
+      "tvl_usd": 121925667.33180489,
       "asset_symbol": "PYUSD",
       "curator_name": "Sentora",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "Steakhouse USDC",
-      "address": "0xbeef01735c132ada46aa9aa4c54623caa92a64cb",
-      "total_score": 7.9,
-      "risk_tier": "Core",
-      "tvl_usd": 97529285.84115884,
-      "asset_symbol": "USDC",
-      "curator_name": "Steakhouse Financial",
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "Steakhouse Ethena USDtb",
-      "address": "0xbeefc1cdafc5b4a649b54d07afc6bf0f75c6f4e2",
-      "total_score": 7.64,
-      "risk_tier": "Core",
-      "tvl_usd": 92964462.21131356,
-      "asset_symbol": "USDtb",
-      "curator_name": "Steakhouse Financial",
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "Steakhouse USDT",
-      "address": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
-      "total_score": 8.3,
-      "risk_tier": "Prime",
-      "tvl_usd": 85706261.34986529,
-      "asset_symbol": "USDT",
-      "curator_name": "Steakhouse Financial",
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Steakhouse Prime Instant",
       "address": "0xbeef0c075da5d01112ae5cf34d257074fb5ddb2f",
       "total_score": 7.5,
       "risk_tier": "Core",
-      "tvl_usd": 84637528.79523516,
+      "tvl_usd": 103195984.8958566,
       "asset_symbol": "EURCV",
       "curator_name": "Steakhouse Financial",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "Steakhouse USDC",
+      "address": "0xbeef01735c132ada46aa9aa4c54623caa92a64cb",
+      "total_score": 7.9,
+      "risk_tier": "Core",
+      "tvl_usd": 95373100.77505891,
+      "asset_symbol": "USDC",
+      "curator_name": "Steakhouse Financial",
+      "protocol_version": "v1",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "Steakhouse USDT",
+      "address": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
+      "total_score": 8.28,
+      "risk_tier": "Prime",
+      "tvl_usd": 87933232.3135484,
+      "asset_symbol": "USDT",
+      "curator_name": "Steakhouse Financial",
+      "protocol_version": "v1",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Gauntlet USDC Prime",
       "address": "0x8c106eedad96553e64287a5a6839c3cc78afa3d0",
-      "total_score": 7.29,
+      "total_score": 7.27,
       "risk_tier": "Core",
-      "tvl_usd": 84078279.16727126,
+      "tvl_usd": 73669376.27358314,
       "asset_symbol": "USDC",
       "curator_name": "Gauntlet",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "sky.money USDT Savings",
-      "address": "0x23f5e9c35820f4bab695ac1f19c203cc3f8e1e11",
-      "total_score": 7.56,
-      "risk_tier": "Core",
-      "tvl_usd": 69674891.38947721,
-      "asset_symbol": "USDT",
-      "curator_name": null,
-      "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "Steakhouse Prime Instant",
-      "address": "0xbeef088055857739c12cd3765f20b7679def0f51",
-      "total_score": 7.22,
-      "risk_tier": "Core",
-      "tvl_usd": 66191215.091056585,
-      "asset_symbol": "USDC",
-      "curator_name": "Steakhouse Financial",
-      "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Steakhouse Prime Instant",
       "address": "0xbeef003c68896c7d2c3c60d363e8d71a49ab2bf9",
       "total_score": 7.5,
       "risk_tier": "Core",
-      "tvl_usd": 58031993.80310478,
+      "tvl_usd": 70680264.54103528,
       "asset_symbol": "USDT",
       "curator_name": "Steakhouse Financial",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "Steakhouse Prime Instant",
+      "address": "0xbeef088055857739c12cd3765f20b7679def0f51",
+      "total_score": 7.35,
+      "risk_tier": "Core",
+      "tvl_usd": 64123314.47731967,
+      "asset_symbol": "USDC",
+      "curator_name": "Steakhouse Financial",
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "sky.money USDT Savings",
+      "address": "0x23f5e9c35820f4bab695ac1f19c203cc3f8e1e11",
+      "total_score": 7.65,
+      "risk_tier": "Core",
+      "tvl_usd": 63193254.09310648,
+      "asset_symbol": "USDT",
+      "curator_name": null,
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "Steakhouse High Yield Instant",
+      "address": "0xbeeff2c5bf38f90e3482a8b19f12e5a6d2fca757",
+      "total_score": 6.8,
+      "risk_tier": "Core",
+      "tvl_usd": 39181884.200693056,
+      "asset_symbol": "USDC",
+      "curator_name": "Steakhouse Financial",
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "",
+      "address": "0xa2eaad0d586cf9fd73bb2c09cf6a7e3e187d68cd",
+      "total_score": 7.18,
+      "risk_tier": "Core",
+      "tvl_usd": 34041101.85133899,
+      "asset_symbol": "USDC",
+      "curator_name": null,
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      }
     ],
     "source_url": "https://api.philidor.io/v1/vaults?chain=ethereum&protocol=morpho",
-    "fetched_at": "2026-06-15T09:38:08.518Z",
+    "fetched_at": "2026-07-14T05:41:45.730Z",
     "provenance": "feed"
    }
   ],
@@ -352,143 +352,143 @@
    {
     "feed_key": "philidor",
     "protocol_id": "morpho",
-    "vault_count_total": 173,
+    "vault_count_total": 180,
     "vaults": [
-     {
-      "name": "Sentora PYUSD",
-      "address": "0x19b3cd7032b8c062e8d44eacad661a0970dd8c55",
-      "total_score": 7.44,
-      "risk_tier": "Core",
-      "tvl_usd": 286987032.4299009,
-      "asset_symbol": "PYUSD",
-      "curator_name": "Sentora",
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
      {
       "name": "Sentora PYUSD Main",
       "address": "0xb576765fb15505433af24fee2c0325895c559fb2",
-      "total_score": 6.66,
+      "total_score": 6.35,
       "risk_tier": "Core",
-      "tvl_usd": 286987018.0880647,
+      "tvl_usd": 330777229.5282733,
       "asset_symbol": "PYUSD",
       "curator_name": "Sentora",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Sentora RLUSD Main",
       "address": "0x6dc58a0fdfc8d694e571dc59b9a52eeea780e6bf",
-      "total_score": 6.66,
+      "total_score": 6.44,
       "risk_tier": "Core",
-      "tvl_usd": 218259059.7070929,
+      "tvl_usd": 266811668.37108108,
       "asset_symbol": "RLUSD",
       "curator_name": "Sentora",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Sentora PRIME Main",
       "address": "0xc21b08c16458202593d4d9b26b9984ee67b38bbd",
-      "total_score": 4.9,
-      "risk_tier": "Edge",
-      "tvl_usd": 99345573.93566807,
+      "total_score": 6.74,
+      "risk_tier": "Core",
+      "tvl_usd": 121925667.33180489,
       "asset_symbol": "PYUSD",
       "curator_name": "Sentora",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "Steakhouse USDC",
-      "address": "0xbeef01735c132ada46aa9aa4c54623caa92a64cb",
-      "total_score": 7.9,
-      "risk_tier": "Core",
-      "tvl_usd": 97529285.84115884,
-      "asset_symbol": "USDC",
-      "curator_name": "Steakhouse Financial",
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "Steakhouse Ethena USDtb",
-      "address": "0xbeefc1cdafc5b4a649b54d07afc6bf0f75c6f4e2",
-      "total_score": 7.64,
-      "risk_tier": "Core",
-      "tvl_usd": 92964462.21131356,
-      "asset_symbol": "USDtb",
-      "curator_name": "Steakhouse Financial",
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "Steakhouse USDT",
-      "address": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
-      "total_score": 8.3,
-      "risk_tier": "Prime",
-      "tvl_usd": 85706261.34986529,
-      "asset_symbol": "USDT",
-      "curator_name": "Steakhouse Financial",
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Steakhouse Prime Instant",
       "address": "0xbeef0c075da5d01112ae5cf34d257074fb5ddb2f",
       "total_score": 7.5,
       "risk_tier": "Core",
-      "tvl_usd": 84637528.79523516,
+      "tvl_usd": 103195984.8958566,
       "asset_symbol": "EURCV",
       "curator_name": "Steakhouse Financial",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "Steakhouse USDC",
+      "address": "0xbeef01735c132ada46aa9aa4c54623caa92a64cb",
+      "total_score": 7.9,
+      "risk_tier": "Core",
+      "tvl_usd": 95373100.77505891,
+      "asset_symbol": "USDC",
+      "curator_name": "Steakhouse Financial",
+      "protocol_version": "v1",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "Steakhouse USDT",
+      "address": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
+      "total_score": 8.28,
+      "risk_tier": "Prime",
+      "tvl_usd": 87933232.3135484,
+      "asset_symbol": "USDT",
+      "curator_name": "Steakhouse Financial",
+      "protocol_version": "v1",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Gauntlet USDC Prime",
       "address": "0x8c106eedad96553e64287a5a6839c3cc78afa3d0",
-      "total_score": 7.29,
+      "total_score": 7.27,
       "risk_tier": "Core",
-      "tvl_usd": 84078279.16727126,
+      "tvl_usd": 73669376.27358314,
       "asset_symbol": "USDC",
       "curator_name": "Gauntlet",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "sky.money USDT Savings",
-      "address": "0x23f5e9c35820f4bab695ac1f19c203cc3f8e1e11",
-      "total_score": 7.56,
-      "risk_tier": "Core",
-      "tvl_usd": 69674891.38947721,
-      "asset_symbol": "USDT",
-      "curator_name": null,
-      "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
-     },
-     {
-      "name": "Steakhouse Prime Instant",
-      "address": "0xbeef088055857739c12cd3765f20b7679def0f51",
-      "total_score": 7.22,
-      "risk_tier": "Core",
-      "tvl_usd": 66191215.091056585,
-      "asset_symbol": "USDC",
-      "curator_name": "Steakhouse Financial",
-      "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      },
      {
       "name": "Steakhouse Prime Instant",
       "address": "0xbeef003c68896c7d2c3c60d363e8d71a49ab2bf9",
       "total_score": 7.5,
       "risk_tier": "Core",
-      "tvl_usd": 58031993.80310478,
+      "tvl_usd": 70680264.54103528,
       "asset_symbol": "USDT",
       "curator_name": "Steakhouse Financial",
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:48:29.077Z"
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "Steakhouse Prime Instant",
+      "address": "0xbeef088055857739c12cd3765f20b7679def0f51",
+      "total_score": 7.35,
+      "risk_tier": "Core",
+      "tvl_usd": 64123314.47731967,
+      "asset_symbol": "USDC",
+      "curator_name": "Steakhouse Financial",
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "sky.money USDT Savings",
+      "address": "0x23f5e9c35820f4bab695ac1f19c203cc3f8e1e11",
+      "total_score": 7.65,
+      "risk_tier": "Core",
+      "tvl_usd": 63193254.09310648,
+      "asset_symbol": "USDT",
+      "curator_name": null,
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "Steakhouse High Yield Instant",
+      "address": "0xbeeff2c5bf38f90e3482a8b19f12e5a6d2fca757",
+      "total_score": 6.8,
+      "risk_tier": "Core",
+      "tvl_usd": 39181884.200693056,
+      "asset_symbol": "USDC",
+      "curator_name": "Steakhouse Financial",
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
+     },
+     {
+      "name": "",
+      "address": "0xa2eaad0d586cf9fd73bb2c09cf6a7e3e187d68cd",
+      "total_score": 7.18,
+      "risk_tier": "Core",
+      "tvl_usd": 34041101.85133899,
+      "asset_symbol": "USDC",
+      "curator_name": null,
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:54:20.845Z"
      }
     ],
     "source_url": "https://api.philidor.io/v1/vaults?chain=ethereum&protocol=morpho",
-    "fetched_at": "2026-06-15T09:38:08.518Z",
+    "fetched_at": "2026-07-14T05:41:45.730Z",
     "provenance": "feed"
    }
   ],
@@ -503,138 +503,138 @@
      {
       "name": "USDS Savings Vault",
       "address": "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
-      "total_score": 8.41,
+      "total_score": 8.42,
       "risk_tier": "Prime",
-      "tvl_usd": 7064620052.304829,
+      "tvl_usd": 5128577008.174979,
       "asset_symbol": "USDS",
       "curator_name": null,
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
      },
      {
       "name": "Spark wstETH",
       "address": "0x12b54025c112aa61face2cdb7118740875a566e9",
-      "total_score": 8.71,
+      "total_score": 8.72,
       "risk_tier": "Prime",
-      "tvl_usd": 2261188306.8995,
+      "tvl_usd": 2168726218.063517,
       "asset_symbol": "wstETH",
       "curator_name": null,
       "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
+     },
+     {
+      "name": "Spark WETH",
+      "address": "0x59cd1c87501baa753d0b5b5ab5d8416a45cd71db",
+      "total_score": 8.87,
+      "risk_tier": "Prime",
+      "tvl_usd": 966171113.5321022,
+      "asset_symbol": "WETH",
+      "curator_name": null,
+      "protocol_version": "v1",
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
+     },
+     {
+      "name": "Spark USDS",
+      "address": "0xc02ab1a5eaa8d1b114ef786d9bde108cd4364359",
+      "total_score": 8.8,
+      "risk_tier": "Prime",
+      "tvl_usd": 609158843.8956239,
+      "asset_symbol": "USDS",
+      "curator_name": null,
+      "protocol_version": "v1",
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
      },
      {
       "name": "Spark Savings USDT",
       "address": "0xe2e7a17dff93280dec073c995595155283e3c372",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 1106461301.3923833,
+      "tvl_usd": 404078902.07776135,
       "asset_symbol": "USDT",
       "curator_name": null,
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
-     },
-     {
-      "name": "Spark WETH",
-      "address": "0x59cd1c87501baa753d0b5b5ab5d8416a45cd71db",
-      "total_score": 8.86,
-      "risk_tier": "Prime",
-      "tvl_usd": 782223814.6177672,
-      "asset_symbol": "WETH",
-      "curator_name": null,
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
      },
      {
       "name": "Spark USDT (v1)",
       "address": "0xe7df13b8e3d6740fe17cbe928c7334243d86c92f",
-      "total_score": 8.82,
+      "total_score": 7.9,
       "risk_tier": "Prime",
-      "tvl_usd": 579433276.385385,
+      "tvl_usd": 386446619.208348,
       "asset_symbol": "USDT",
       "curator_name": null,
       "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
-     },
-     {
-      "name": "Spark USDS",
-      "address": "0xc02ab1a5eaa8d1b114ef786d9bde108cd4364359",
-      "total_score": 8.79,
-      "risk_tier": "Prime",
-      "tvl_usd": 391091396.66477317,
-      "asset_symbol": "USDS",
-      "curator_name": null,
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
-     },
-     {
-      "name": "Spark Savings USDC",
-      "address": "0x28b3a8fb53b741a8fd78c0fb9a6b2393d896a43d",
-      "total_score": 8.67,
-      "risk_tier": "Prime",
-      "tvl_usd": 328136831.35202235,
-      "asset_symbol": "USDC",
-      "curator_name": null,
-      "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
-     },
-     {
-      "name": "Spark DAI",
-      "address": "0x4dedf26112b3ec8ec46e7e31ea5e123490b05b8b",
-      "total_score": 8.87,
-      "risk_tier": "Prime",
-      "tvl_usd": 277805514.76003695,
-      "asset_symbol": "DAI",
-      "curator_name": null,
-      "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
      },
      {
       "name": "USDC Savings Vault",
       "address": "0xbc65ad17c5c0a2a4d159fa5a503f4992c7b545fe",
-      "total_score": 8.54,
+      "total_score": 8.55,
       "risk_tier": "Prime",
-      "tvl_usd": 274913073.92759234,
+      "tvl_usd": 320871580.2240311,
       "asset_symbol": "USDC",
       "curator_name": null,
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
+     },
+     {
+      "name": "Spark Savings USDC",
+      "address": "0x28b3a8fb53b741a8fd78c0fb9a6b2393d896a43d",
+      "total_score": 8.69,
+      "risk_tier": "Prime",
+      "tvl_usd": 304193553.2206718,
+      "asset_symbol": "USDC",
+      "curator_name": null,
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
+     },
+     {
+      "name": "Spark DAI",
+      "address": "0x4dedf26112b3ec8ec46e7e31ea5e123490b05b8b",
+      "total_score": 8.88,
+      "risk_tier": "Prime",
+      "tvl_usd": 302443033.8939905,
+      "asset_symbol": "DAI",
+      "curator_name": null,
+      "protocol_version": "v1",
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
      },
      {
       "name": "DAI Savings Vault",
       "address": "0x83f20f44975d03b1b09e64809b757c47f942beea",
-      "total_score": 8.56,
+      "total_score": 8.57,
       "risk_tier": "Prime",
-      "tvl_usd": 247597758.42549372,
+      "tvl_usd": 240221085.4123156,
       "asset_symbol": "DAI",
       "curator_name": null,
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
      },
      {
       "name": "Spark LBTC",
       "address": "0xa9d4ecebd48c282a70cfd3c469d6c8f178a5738e",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 215487804.93919584,
+      "tvl_usd": 208071266.42237735,
       "asset_symbol": "LBTC",
       "curator_name": null,
       "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
      },
      {
       "name": "Spark WBTC",
       "address": "0x4197ba364ae6698015ae5c1468f54087602715b2",
-      "total_score": 8.83,
-      "risk_tier": "Prime",
-      "tvl_usd": 156390566.32622743,
+      "total_score": 7.9,
+      "risk_tier": "Core",
+      "tvl_usd": 151859797.33389324,
       "asset_symbol": "WBTC",
       "curator_name": null,
       "protocol_version": "v1",
-      "last_synced_at": "2026-06-15T08:49:28.909Z"
+      "last_synced_at": "2026-07-14T04:55:36.581Z"
      }
     ],
     "source_url": "https://api.philidor.io/v1/vaults?chain=ethereum&protocol=spark",
-    "fetched_at": "2026-06-15T09:38:08.518Z",
+    "fetched_at": "2026-07-14T05:41:45.730Z",
     "provenance": "feed"
    }
   ],
@@ -649,136 +649,136 @@
       "address": "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
       "total_score": 8.72,
       "risk_tier": "Prime",
-      "tvl_usd": 343745693.8341243,
+      "tvl_usd": 349240564.1291211,
       "asset_symbol": "USDC/WETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V3 USDC/WETH 0.3%",
       "address": "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
       "total_score": 8.72,
       "risk_tier": "Prime",
-      "tvl_usd": 249861254.60132676,
+      "tvl_usd": 252991121.87708965,
       "asset_symbol": "USDC/WETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V3 WETH/USDT 0.3%",
       "address": "0x4e68ccd3e89f51c3074ca5072bbac773960dfa36",
       "total_score": 8.53,
       "risk_tier": "Prime",
-      "tvl_usd": 227713082.20251906,
+      "tvl_usd": 238789701.20577723,
       "asset_symbol": "WETH/USDT",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V3 WBTC/WETH 0.3%",
       "address": "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed",
-      "total_score": 8.54,
+      "total_score": 8.51,
       "risk_tier": "Prime",
-      "tvl_usd": 161566499.0088469,
+      "tvl_usd": 155685471.55117035,
       "asset_symbol": "WBTC/WETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V3 WBTC/USDC 0.3%",
       "address": "0x99ac8ca7087fa4a2a1fb6357269965a2014abc35",
-      "total_score": 8.69,
+      "total_score": 8.66,
       "risk_tier": "Prime",
-      "tvl_usd": 136908182.6289732,
+      "tvl_usd": 126312255.18846272,
       "asset_symbol": "WBTC/USDC",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V3 WBTC/WETH 0.05%",
       "address": "0x4585fe77225b41b697c938b018e2ac67ac5a20c0",
-      "total_score": 8.54,
+      "total_score": 8.51,
       "risk_tier": "Prime",
-      "tvl_usd": 102218733.89709395,
+      "tvl_usd": 98006526.16506359,
       "asset_symbol": "WBTC/WETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V3 WETH/USDT 0.05%",
       "address": "0x11b815efb8f581194ae79006d24e0d814b7697f6",
-      "total_score": 8.53,
+      "total_score": 8.51,
       "risk_tier": "Prime",
-      "tvl_usd": 66006699.61304604,
+      "tvl_usd": 85896767.58482595,
       "asset_symbol": "WETH/USDT",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V3 WBTC/USDT 0.3%",
       "address": "0x9db9e0e53058c89e5b94e29621a205198648425b",
-      "total_score": 8.49,
-      "risk_tier": "Prime",
-      "tvl_usd": 54044074.56381135,
+      "total_score": 7.9,
+      "risk_tier": "Core",
+      "tvl_usd": 53483212.933859795,
       "asset_symbol": "WBTC/USDT",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V3 LINK/WETH 0.3%",
       "address": "0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 47824562.85184244,
+      "tvl_usd": 50960295.78550621,
       "asset_symbol": "LINK/WETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
+     },
+     {
+      "name": "Uniswap V3 USDC/USDT 0.01%",
+      "address": "0x3416cf6c708da44db2624d63ea0aaef7113527c6",
+      "total_score": 8.66,
+      "risk_tier": "Prime",
+      "tvl_usd": 46816110.476352,
+      "asset_symbol": "USDC/USDT",
+      "curator_name": null,
+      "protocol_version": "v3",
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V3 DAI/WETH 0.3%",
       "address": "0xc2e9f25be6257c210d7adf0d4cd6e3e881ba25f8",
       "total_score": 8.66,
       "risk_tier": "Prime",
-      "tvl_usd": 41934486.87326717,
+      "tvl_usd": 42723505.90024822,
       "asset_symbol": "DAI/WETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
-     },
-     {
-      "name": "Uniswap V3 USDC/USDT 0.01%",
-      "address": "0x3416cf6c708da44db2624d63ea0aaef7113527c6",
-      "total_score": 8.68,
-      "risk_tier": "Prime",
-      "tvl_usd": 30954626.776041,
-      "asset_symbol": "USDC/USDT",
-      "curator_name": null,
-      "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:51:45.923Z"
+      "last_synced_at": "2026-07-14T04:56:14.613Z"
      },
      {
       "name": "Uniswap V4 ETH/USDC 0.3%",
       "address": "0xdce6394339af00981949f5f3baf27e3610c76326a700af57e4b3e3ae4977f78d",
       "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 28929915.438777205,
+      "tvl_usd": 32099627.755807456,
       "asset_symbol": "ETH/USDC",
       "curator_name": null,
       "protocol_version": "v4",
-      "last_synced_at": "2026-06-15T08:51:53.475Z"
+      "last_synced_at": "2026-07-14T04:56:17.022Z"
      }
     ],
     "source_url": "https://api.philidor.io/v1/vaults?chain=ethereum&protocol=uniswap",
-    "fetched_at": "2026-06-15T09:38:08.518Z",
+    "fetched_at": "2026-07-14T05:41:45.730Z",
     "provenance": "feed"
    }
   ],
@@ -786,143 +786,143 @@
    {
     "feed_key": "philidor",
     "protocol_id": "yearn",
-    "vault_count_total": 69,
+    "vault_count_total": 70,
     "vaults": [
      {
       "name": "USDC-1 yVault",
       "address": "0xbe53a109b494e5c9f97b9cd39fe969be68bf6204",
       "total_score": 7.5,
       "risk_tier": "Core",
-      "tvl_usd": 26370236.523577385,
+      "tvl_usd": 25467825.7034025,
       "asset_symbol": "USDC",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
      },
      {
       "name": "WETH-1 yVault",
       "address": "0xc56413869c6cdf96496f2b1ef801fedbdfa7ddb0",
-      "total_score": 7.47,
+      "total_score": 7.5,
       "risk_tier": "Core",
-      "tvl_usd": 17156732.185877237,
+      "tvl_usd": 16101136.613787258,
       "asset_symbol": "WETH",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
      },
      {
       "name": "DAI-1 yVault",
       "address": "0x028ec7330ff87667b6dfb0d94b954c820195336c",
-      "total_score": 7.94,
+      "total_score": 7.98,
       "risk_tier": "Core",
-      "tvl_usd": 9982409.017625922,
+      "tvl_usd": 9507831.94161262,
       "asset_symbol": "DAI",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
      },
      {
       "name": "USD yVault",
       "address": "0x696d02db93291651ed510704c9b286841d506987",
-      "total_score": 8.41,
+      "total_score": 8.42,
       "risk_tier": "Prime",
-      "tvl_usd": 9201461.182024876,
+      "tvl_usd": 8982861.605339196,
       "asset_symbol": "USDC",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
+     },
+     {
+      "name": "Curve DOLA-sUSDe Factory yVault",
+      "address": "0x1fc80cfcf5b345b904a0fb36d4222196ed9eb8a5",
+      "total_score": 7.73,
+      "risk_tier": "Core",
+      "tvl_usd": 8417196.885914443,
+      "asset_symbol": "DOLA-sUSDe",
+      "curator_name": null,
+      "protocol_version": "v2",
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
      },
      {
       "name": "USDT-1 yVault",
       "address": "0x310b7ea7475a0b449cfd73be81522f1b88efafaa",
-      "total_score": 7.67,
+      "total_score": 7.71,
       "risk_tier": "Core",
-      "tvl_usd": 7310655.468663141,
+      "tvl_usd": 7225437.636082855,
       "asset_symbol": "USDT",
       "curator_name": null,
       "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
-     },
-     {
-      "name": "Spark USDS Compounder",
-      "address": "0xc9f01b5c6048b064e6d925d1c2d7206d4feef8a3",
-      "total_score": 8.5,
-      "risk_tier": "Prime",
-      "tvl_usd": 7266548.170523364,
-      "asset_symbol": "USDS",
-      "curator_name": null,
-      "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
-     },
-     {
-      "name": "USDS-1 yVault",
-      "address": "0x182863131f9a4630ff9e27830d945b1413e347e8",
-      "total_score": 7.5,
-      "risk_tier": "Core",
-      "tvl_usd": 7240243.27238821,
-      "asset_symbol": "USDS",
-      "curator_name": null,
-      "protocol_version": "v3",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
      },
      {
       "name": "WETH yVault",
       "address": "0xa258c4606ca8206d8aa700ce2143d7db854d168c",
       "total_score": 8.67,
       "risk_tier": "Prime",
-      "tvl_usd": 6464111.841191919,
+      "tvl_usd": 6686619.116303984,
       "asset_symbol": "WETH",
       "curator_name": null,
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
+     },
+     {
+      "name": "USDS-1 yVault",
+      "address": "0x182863131f9a4630ff9e27830d945b1413e347e8",
+      "total_score": 7.43,
+      "risk_tier": "Core",
+      "tvl_usd": 6234986.606083021,
+      "asset_symbol": "USDS",
+      "curator_name": null,
+      "protocol_version": "v3",
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
+     },
+     {
+      "name": "Morpho Yearn OG USDC Compounder",
+      "address": "0x0e297de4005883c757c9f09fdf7cf1363c20e626",
+      "total_score": 8.78,
+      "risk_tier": "Prime",
+      "tvl_usd": 6071829.221495357,
+      "asset_symbol": "USDC",
+      "curator_name": null,
+      "protocol_version": "v3",
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
      },
      {
       "name": "Staked Yearn CRV Vault",
       "address": "0x27b5739e22ad9033bcbf192059122d163b60349d",
-      "total_score": 7.85,
+      "total_score": 7.9,
       "risk_tier": "Core",
-      "tvl_usd": 6110932.187631697,
+      "tvl_usd": 5705246.978241399,
       "asset_symbol": "yCRV",
       "curator_name": null,
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
      },
      {
       "name": "USDC yVault",
       "address": "0xa354f35829ae975e850e23e9615b11da1b3dc4de",
       "total_score": 8.97,
       "risk_tier": "Prime",
-      "tvl_usd": 5303834.397694101,
+      "tvl_usd": 5316923.832797006,
       "asset_symbol": "USDC",
       "curator_name": null,
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
      },
      {
       "name": "DAI yVault",
       "address": "0xda816459f1ab5631232fe5e97a05bbbb94970c95",
       "total_score": 8.86,
       "risk_tier": "Prime",
-      "tvl_usd": 5238710.77302319,
+      "tvl_usd": 4953514.493172709,
       "asset_symbol": "DAI",
       "curator_name": null,
       "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
-     },
-     {
-      "name": "Curve DOLA-sUSDe Factory yVault",
-      "address": "0x1fc80cfcf5b345b904a0fb36d4222196ed9eb8a5",
-      "total_score": 7.86,
-      "risk_tier": "Core",
-      "tvl_usd": 5221743.510799897,
-      "asset_symbol": "DOLA-sUSDe",
-      "curator_name": null,
-      "protocol_version": "v2",
-      "last_synced_at": "2026-06-15T08:52:07.235Z"
+      "last_synced_at": "2026-07-14T04:56:32.438Z"
      }
     ],
     "source_url": "https://api.philidor.io/v1/vaults?chain=ethereum&protocol=yearn",
-    "fetched_at": "2026-06-15T09:38:08.518Z",
+    "fetched_at": "2026-07-14T05:41:45.730Z",
     "provenance": "feed"
    }
   ]
