@@ -1,6 +1,6 @@
 {
  "feed_key": "defillama-hacks",
- "fetched_at": "2026-06-16T09:06:36.117Z",
+ "fetched_at": "2026-07-15T05:43:58.441Z",
  "source": "https://api.llama.fi/hacks",
  "ok": true,
  "data": {
@@ -22,7 +22,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -34,7 +34,7 @@
       "date": "2025-03-07",
       "amount_usd": 5000000,
       "name": "1inch",
-      "technique": "Calldata underflow and resolver hijack",
+      "technique": "Calldata Underflow and Resolver Hijack",
       "classification": "Protocol Logic",
       "returned_funds": null,
       "source_url": null
@@ -53,7 +53,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -75,7 +75,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -115,7 +115,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -137,7 +137,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -147,7 +147,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -187,7 +187,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -209,7 +209,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -231,7 +231,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -241,7 +241,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -251,7 +251,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -261,7 +261,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -271,7 +271,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -293,7 +293,7 @@
      "name-pattern"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -303,7 +303,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -313,7 +313,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -323,7 +323,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -333,7 +333,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -343,7 +343,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ],
@@ -355,7 +355,7 @@
       "date": "2025-12-16",
       "amount_usd": 300000,
       "name": "Yearn Finance",
-      "technique": "misconfigured Fulcrum sUSD strategy",
+      "technique": "Misconfigured Fulcrum sUSD Strategy",
       "classification": "Protocol Logic",
       "returned_funds": null,
       "source_url": null
@@ -392,7 +392,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-06-16T09:06:36.117Z",
+    "fetched_at": "2026-07-15T05:43:58.441Z",
     "provenance": "feed"
    }
   ]
