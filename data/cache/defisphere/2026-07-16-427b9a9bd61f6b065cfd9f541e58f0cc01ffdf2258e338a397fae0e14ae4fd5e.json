@@ -1,6 +1,6 @@
 {
  "feed_key": "defisphere",
- "fetched_at": "2026-06-17T08:39:25.688Z",
+ "fetched_at": "2026-07-16T05:57:25.182Z",
  "source": "https://sphere.data.blockanalitica.com/markets/",
  "ok": true,
  "data": {
@@ -21,9 +21,9 @@
       "sphere_protocol": "aave_v3_core",
       "underlying_symbol": "USDT",
       "collateral_symbol": null,
-      "collateral_risk_score": 34.636495,
-      "liquidity_risk_score": 7.86916,
-      "total_supply_usd": 2808748534.1178994
+      "collateral_risk_score": 1.102066,
+      "liquidity_risk_score": 5.862396,
+      "total_supply_usd": 2959774759.6323338
      },
      {
       "pool_id": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
@@ -31,9 +31,9 @@
       "sphere_protocol": "aave_v3_core",
       "underlying_symbol": "USDC",
       "collateral_symbol": null,
-      "collateral_risk_score": 24.972926,
-      "liquidity_risk_score": 23.218806,
-      "total_supply_usd": 2014442906.0734487
+      "collateral_risk_score": 3.198061,
+      "liquidity_risk_score": 22.044826,
+      "total_supply_usd": 2124793794.3742228
      },
      {
       "pool_id": "0x4f5923fc5fd4a93352581b38b7cd26943012decf",
@@ -41,9 +41,9 @@
       "sphere_protocol": "aave_v3_core",
       "underlying_symbol": "USDe",
       "collateral_symbol": null,
-      "collateral_risk_score": 64.323956,
-      "liquidity_risk_score": 8.188112,
-      "total_supply_usd": 376757060.70957875
+      "collateral_risk_score": 34.198637,
+      "liquidity_risk_score": 6.917832,
+      "total_supply_usd": 749549910.8742547
      },
      {
       "pool_id": "0x4579a27af00a62c0eb156349f31b345c08386419",
@@ -53,17 +53,7 @@
       "collateral_symbol": null,
       "collateral_risk_score": 0,
       "liquidity_risk_score": 0,
-      "total_supply_usd": 282762502.46725225
-     },
-     {
-      "pool_id": "0xe3190143eb552456f88464662f0c0c4ac67a77eb",
-      "name": "RLUSD",
-      "sphere_protocol": "aave_v3_horizon",
-      "underlying_symbol": "RLUSD",
-      "collateral_symbol": null,
-      "collateral_risk_score": 0,
-      "liquidity_risk_score": 12.253582,
-      "total_supply_usd": 194392536.35666284
+      "total_supply_usd": 350283767.709314
      },
      {
       "pool_id": "0x00907f9921424583e7ffbfedf84f92b7b2be4977",
@@ -71,9 +61,9 @@
       "sphere_protocol": "aave_v3_core",
       "underlying_symbol": "GHO",
       "collateral_symbol": null,
-      "collateral_risk_score": 0.57344,
-      "liquidity_risk_score": 15.086717,
-      "total_supply_usd": 135291437.19107085
+      "collateral_risk_score": 0.049411,
+      "liquidity_risk_score": 15.613158,
+      "total_supply_usd": 135204950.84006917
      },
      {
       "pool_id": "0x018008bfb33d285247a21d44e50697654f754e63",
@@ -81,19 +71,19 @@
       "sphere_protocol": "aave_v3_core",
       "underlying_symbol": "DAI",
       "collateral_symbol": null,
-      "collateral_risk_score": 15.666499,
-      "liquidity_risk_score": 7.977833,
-      "total_supply_usd": 107065734.20704927
+      "collateral_risk_score": 2.659305,
+      "liquidity_risk_score": 23.937566,
+      "total_supply_usd": 107356358.00818193
      },
      {
-      "pool_id": "0xec4ef66d4fceeba34abb4de69db391bc5476ccc8",
-      "name": "USDtb",
-      "sphere_protocol": "aave_v3_core",
-      "underlying_symbol": "USDtb",
+      "pool_id": "0xe3190143eb552456f88464662f0c0c4ac67a77eb",
+      "name": "RLUSD",
+      "sphere_protocol": "aave_v3_horizon",
+      "underlying_symbol": "RLUSD",
       "collateral_symbol": null,
-      "collateral_risk_score": 76.713871,
-      "liquidity_risk_score": 10.056169,
-      "total_supply_usd": 103099408.71423136
+      "collateral_risk_score": 9.637379,
+      "liquidity_risk_score": 12.318639,
+      "total_supply_usd": 97213588.16355026
      },
      {
       "pool_id": "0x946281a2d0dd6e650d08f74833323d66ae4c8b12",
@@ -101,9 +91,9 @@
       "sphere_protocol": "aave_v3_horizon",
       "underlying_symbol": "GHO",
       "collateral_symbol": null,
-      "collateral_risk_score": 74.929357,
-      "liquidity_risk_score": 67.582908,
-      "total_supply_usd": 59737882.560023166
+      "collateral_risk_score": 75.875937,
+      "liquidity_risk_score": 15.99243,
+      "total_supply_usd": 59839729.59640494
      },
      {
       "pool_id": "0x18efe565a5373f430e2f809b97de30335b3ad96a",
@@ -111,9 +101,19 @@
       "sphere_protocol": "aave_v3_prime",
       "underlying_symbol": "GHO",
       "collateral_symbol": null,
-      "collateral_risk_score": 0.171613,
-      "liquidity_risk_score": 11.213928,
-      "total_supply_usd": 57561540.218187906
+      "collateral_risk_score": 0,
+      "liquidity_risk_score": 11.069685,
+      "total_supply_usd": 58538573.45219863
+     },
+     {
+      "pool_id": "0xaa6e91c82942aeae040303bf96c15a6dbcb82ca0",
+      "name": "EURC",
+      "sphere_protocol": "aave_v3_core",
+      "underlying_symbol": "EURC",
+      "collateral_symbol": null,
+      "collateral_risk_score": 0,
+      "liquidity_risk_score": 8.044431,
+      "total_supply_usd": 43801112.86046245
      },
      {
       "pool_id": "0x7c0477d085ecb607cf8429f3ec91ae5e1e460f4f",
@@ -122,23 +122,23 @@
       "underlying_symbol": "USDG",
       "collateral_symbol": null,
       "collateral_risk_score": 0,
-      "liquidity_risk_score": 25.265079,
-      "total_supply_usd": 51956324.140313536
+      "liquidity_risk_score": 22.418517,
+      "total_supply_usd": 41299888.443668544
      },
      {
-      "pool_id": "0xaa6e91c82942aeae040303bf96c15a6dbcb82ca0",
-      "name": "EURC",
+      "pool_id": "0xec4ef66d4fceeba34abb4de69db391bc5476ccc8",
+      "name": "USDtb",
       "sphere_protocol": "aave_v3_core",
-      "underlying_symbol": "EURC",
+      "underlying_symbol": "USDtb",
       "collateral_symbol": null,
-      "collateral_risk_score": 19.034257,
-      "liquidity_risk_score": 7.345509,
-      "total_supply_usd": 45824366.532582894
+      "collateral_risk_score": 41.50364,
+      "liquidity_risk_score": 11.544364,
+      "total_supply_usd": 24270706.797510244
      }
     ],
-    "market_count_total": 23,
+    "market_count_total": 19,
     "source_url": "https://sphere.blockanalitica.com",
-    "fetched_at": "2026-06-17T08:39:25.688Z",
+    "fetched_at": "2026-07-16T05:57:25.182Z",
     "provenance": "feed"
    }
   ],
@@ -156,9 +156,9 @@
       "sphere_protocol": "compound_v3",
       "underlying_symbol": "USDC",
       "collateral_symbol": null,
-      "collateral_risk_score": 57.565359,
-      "liquidity_risk_score": 20.858804,
-      "total_supply_usd": 326167832.9451653
+      "collateral_risk_score": 5.797914,
+      "liquidity_risk_score": 23.818862,
+      "total_supply_usd": 335549747.66915923
      },
      {
       "pool_id": "0x3afdc9bca9213a35503b077a6072f3d0d5ab0840",
@@ -166,9 +166,9 @@
       "sphere_protocol": "compound_v3",
       "underlying_symbol": "USDT",
       "collateral_symbol": null,
-      "collateral_risk_score": 30.551434,
-      "liquidity_risk_score": 7.584531,
-      "total_supply_usd": 191932742.21638206
+      "collateral_risk_score": 0.00134,
+      "liquidity_risk_score": 7.621307,
+      "total_supply_usd": 192981183.8364269
      },
      {
       "pool_id": "0x5d409e56d886231adaf00c8775665ad0f9897b56",
@@ -176,14 +176,14 @@
       "sphere_protocol": "compound_v3",
       "underlying_symbol": "USDS",
       "collateral_symbol": null,
-      "collateral_risk_score": 2.753701,
-      "liquidity_risk_score": 36.72903,
-      "total_supply_usd": 1941807.899309619
+      "collateral_risk_score": 0.000003,
+      "liquidity_risk_score": 37.241158,
+      "total_supply_usd": 1870208.4774941048
      }
     ],
     "market_count_total": 3,
     "source_url": "https://sphere.blockanalitica.com",
-    "fetched_at": "2026-06-17T08:39:25.688Z",
+    "fetched_at": "2026-07-16T05:57:25.182Z",
     "provenance": "feed"
    }
   ],
@@ -206,9 +206,9 @@
       "sphere_protocol": "liquity_v2",
       "underlying_symbol": "BOLD",
       "collateral_symbol": "wstETH",
-      "collateral_risk_score": 89.923693,
-      "liquidity_risk_score": 14.897615,
-      "total_supply_usd": 8723511.178273445
+      "collateral_risk_score": 61.657664,
+      "liquidity_risk_score": 11.018889,
+      "total_supply_usd": 12000495.603453051
      },
      {
       "pool_id": "0x5721cbbd64fc7ae3ef44a0a3f9a790a9264cf9bf",
@@ -216,9 +216,9 @@
       "sphere_protocol": "liquity_v2",
       "underlying_symbol": "BOLD",
       "collateral_symbol": "WETH",
-      "collateral_risk_score": 90.918343,
-      "liquidity_risk_score": 9.664323,
-      "total_supply_usd": 6060121.295314215
+      "collateral_risk_score": 79.794314,
+      "liquidity_risk_score": 27.132214,
+      "total_supply_usd": 4287070.310659045
      },
      {
       "pool_id": "0xd442e41019b7f5c4dd78f50dc03726c446148695",
@@ -227,18 +227,8 @@
       "underlying_symbol": "BOLD",
       "collateral_symbol": "rETH",
       "collateral_risk_score": 0,
-      "liquidity_risk_score": 89.313017,
-      "total_supply_usd": 5154758.310662079
-     },
-     {
-      "pool_id": "0xb2b2abeb5c357a234363ff5d180912d319e3e19e",
-      "name": "rETH/BOLD",
-      "sphere_protocol": "liquity_v2",
-      "underlying_symbol": "BOLD",
-      "collateral_symbol": "rETH",
-      "collateral_risk_score": null,
-      "liquidity_risk_score": null,
-      "total_supply_usd": null
+      "liquidity_risk_score": 98.053629,
+      "total_supply_usd": 2834897.0815229677
      },
      {
       "pool_id": "0x7bcb64b2c9206a5b699ed43363f6f98d4776cf5a",
@@ -259,11 +249,21 @@
       "collateral_risk_score": null,
       "liquidity_risk_score": null,
       "total_supply_usd": null
+     },
+     {
+      "pool_id": "0xb2b2abeb5c357a234363ff5d180912d319e3e19e",
+      "name": "rETH/BOLD",
+      "sphere_protocol": "liquity_v2",
+      "underlying_symbol": "BOLD",
+      "collateral_symbol": "rETH",
+      "collateral_risk_score": null,
+      "liquidity_risk_score": null,
+      "total_supply_usd": null
      }
     ],
     "market_count_total": 6,
     "source_url": "https://sphere.blockanalitica.com",
-    "fetched_at": "2026-06-17T08:39:25.688Z",
+    "fetched_at": "2026-07-16T05:57:25.182Z",
     "provenance": "feed"
    }
   ],
@@ -281,9 +281,9 @@
       "sphere_protocol": "morpho",
       "underlying_symbol": "USDC",
       "collateral_symbol": "cbBTC",
-      "collateral_risk_score": 0.748008,
-      "liquidity_risk_score": 34.218219,
-      "total_supply_usd": 263112855.7554411
+      "collateral_risk_score": 0.000104,
+      "liquidity_risk_score": 29.195132,
+      "total_supply_usd": 287126226.87431854
      },
      {
       "pool_id": "0x19b3cd7032b8c062e8d44eacad661a0970dd8c55",
@@ -301,19 +301,9 @@
       "sphere_protocol": "morpho",
       "underlying_symbol": "USDT",
       "collateral_symbol": "wstETH",
-      "collateral_risk_score": 13.274885,
-      "liquidity_risk_score": 28.475976,
-      "total_supply_usd": 188831733.41021922
-     },
-     {
-      "pool_id": "0x3a85e619751152991742810df6ec69ce473daef99e28a64ab2340d7b7ccfee49",
-      "name": "WBTC/USDC 86%",
-      "sphere_protocol": "morpho",
-      "underlying_symbol": "USDC",
-      "collateral_symbol": "WBTC",
-      "collateral_risk_score": 0.229189,
-      "liquidity_risk_score": 28.179018,
-      "total_supply_usd": 138901449.8040944
+      "collateral_risk_score": 0.009584,
+      "liquidity_risk_score": 29.976201,
+      "total_supply_usd": 171651080.84888607
      },
      {
       "pool_id": "0x41c41d0c9aadbf4751f5ee215ed5a16954a4b34e1b70fca5393d4b08858fa3fa",
@@ -322,8 +312,18 @@
       "underlying_symbol": "PYUSD",
       "collateral_symbol": "PRIME",
       "collateral_risk_score": null,
-      "liquidity_risk_score": 52.240268,
-      "total_supply_usd": 100726454.86265801
+      "liquidity_risk_score": 55.799523,
+      "total_supply_usd": 124256141.68785098
+     },
+     {
+      "pool_id": "0x3a85e619751152991742810df6ec69ce473daef99e28a64ab2340d7b7ccfee49",
+      "name": "WBTC/USDC 86%",
+      "sphere_protocol": "morpho",
+      "underlying_symbol": "USDC",
+      "collateral_symbol": "WBTC",
+      "collateral_risk_score": 0,
+      "liquidity_risk_score": 27.315054,
+      "total_supply_usd": 115528788.9166597
      },
      {
       "pool_id": "0xbeef01735c132ada46aa9aa4c54623caa92a64cb",
@@ -333,27 +333,7 @@
       "collateral_symbol": null,
       "collateral_risk_score": null,
       "liquidity_risk_score": 0,
-      "total_supply_usd": 97180403.919279
-     },
-     {
-      "pool_id": "0x88a18b2f4d94e7ad27a381b15531c06abf05a7c99dd5d3c3679875fed6f7e742",
-      "name": "sUSDe/USDtb 91%",
-      "sphere_protocol": "morpho",
-      "underlying_symbol": "USDtb",
-      "collateral_symbol": "sUSDe",
-      "collateral_risk_score": 0,
-      "liquidity_risk_score": 50.835909,
-      "total_supply_usd": 91454068.47072606
-     },
-     {
-      "pool_id": "0x8c106eedad96553e64287a5a6839c3cc78afa3d0",
-      "name": "Gauntlet USDC Prime",
-      "sphere_protocol": "morpho",
-      "underlying_symbol": "USDC",
-      "collateral_symbol": null,
-      "collateral_risk_score": null,
-      "liquidity_risk_score": 0,
-      "total_supply_usd": 87883632.962746
+      "total_supply_usd": 95350353.010754
      },
      {
       "pool_id": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
@@ -363,17 +343,7 @@
       "collateral_symbol": null,
       "collateral_risk_score": null,
       "liquidity_risk_score": 0,
-      "total_supply_usd": 87415275.858192
-     },
-     {
-      "pool_id": "0xa921ef34e2fc7a27ccc50ae7e4b154e16c9799d3387076c421423ef52ac4df99",
-      "name": "WBTC/USDT 86%",
-      "sphere_protocol": "morpho",
-      "underlying_symbol": "USDT",
-      "collateral_symbol": "WBTC",
-      "collateral_risk_score": 7.364984,
-      "liquidity_risk_score": 21.743967,
-      "total_supply_usd": 76195476.37580943
+      "total_supply_usd": 88647918.045298
      },
      {
       "pool_id": "0xc9629945524f3fde56c7e8854a6c3d48e76b9d97236abbe73c750fcc7aeb8501",
@@ -382,23 +352,53 @@
       "underlying_symbol": "PYUSD",
       "collateral_symbol": "syrupUSDC",
       "collateral_risk_score": 0,
-      "liquidity_risk_score": 62.439543,
-      "total_supply_usd": 75104121.48995964
+      "liquidity_risk_score": 64.759903,
+      "total_supply_usd": 74516531.12849349
      },
      {
-      "pool_id": "0x23f5e9c35820f4bab695ac1f19c203cc3f8e1e11",
-      "name": "sky.money USDT Savings",
+      "pool_id": "0x8c106eedad96553e64287a5a6839c3cc78afa3d0",
+      "name": "Gauntlet USDC Prime",
+      "sphere_protocol": "morpho",
+      "underlying_symbol": "USDC",
+      "collateral_symbol": null,
+      "collateral_risk_score": null,
+      "liquidity_risk_score": 0,
+      "total_supply_usd": 73116278.782845
+     },
+     {
+      "pool_id": "0xbeef003c68896c7d2c3c60d363e8d71a49ab2bf9",
+      "name": "Steakhouse Prime USDT",
       "sphere_protocol": "morpho",
       "underlying_symbol": "USDT",
       "collateral_symbol": null,
       "collateral_risk_score": null,
       "liquidity_risk_score": 0,
-      "total_supply_usd": 69757448.080197
+      "total_supply_usd": 70729578.254308
+     },
+     {
+      "pool_id": "0x3274643db77a064abd3bc851de77556a4ad2e2f502f4f0c80845fa8f909ecf0b",
+      "name": "sUSDS/USDT 96%",
+      "sphere_protocol": "morpho",
+      "underlying_symbol": "USDT",
+      "collateral_symbol": "sUSDS",
+      "collateral_risk_score": 9.99936,
+      "liquidity_risk_score": 42.926211,
+      "total_supply_usd": 63811152.44606469
+     },
+     {
+      "pool_id": "0xbeef088055857739c12cd3765f20b7679def0f51",
+      "name": "Steakhouse Prime USDC",
+      "sphere_protocol": "morpho",
+      "underlying_symbol": "USDC",
+      "collateral_symbol": null,
+      "collateral_risk_score": null,
+      "liquidity_risk_score": 0,
+      "total_supply_usd": 63401124.53099
      }
     ],
-    "market_count_total": 265,
+    "market_count_total": 178,
     "source_url": "https://sphere.blockanalitica.com",
-    "fetched_at": "2026-06-17T08:39:25.688Z",
+    "fetched_at": "2026-07-16T05:57:25.182Z",
     "provenance": "feed"
    }
   ],
@@ -413,24 +413,24 @@
     ],
     "markets": [
      {
-      "pool_id": "0xe7df13b8e3d6740fe17cbe928c7334243d86c92f",
-      "name": "USDT",
-      "sphere_protocol": "sparklend",
-      "underlying_symbol": "USDT",
-      "collateral_symbol": null,
-      "collateral_risk_score": 14.683905,
-      "liquidity_risk_score": 20.746574,
-      "total_supply_usd": 617758804.7298408
-     },
-     {
       "pool_id": "0xc02ab1a5eaa8d1b114ef786d9bde108cd4364359",
       "name": "USDS",
       "sphere_protocol": "sparklend",
       "underlying_symbol": "USDS",
       "collateral_symbol": null,
-      "collateral_risk_score": 71.043709,
-      "liquidity_risk_score": 14.638736,
-      "total_supply_usd": 396541012.50905037
+      "collateral_risk_score": 19.315218,
+      "liquidity_risk_score": 14.214126,
+      "total_supply_usd": 611224388.5556594
+     },
+     {
+      "pool_id": "0xe7df13b8e3d6740fe17cbe928c7334243d86c92f",
+      "name": "USDT",
+      "sphere_protocol": "sparklend",
+      "underlying_symbol": "USDT",
+      "collateral_symbol": null,
+      "collateral_risk_score": 0.000805,
+      "liquidity_risk_score": 27.478347,
+      "total_supply_usd": 425706031.2410598
      },
      {
       "pool_id": "0x4dedf26112b3ec8ec46e7e31ea5e123490b05b8b",
@@ -438,9 +438,9 @@
       "sphere_protocol": "sparklend",
       "underlying_symbol": "DAI",
       "collateral_symbol": null,
-      "collateral_risk_score": 6.597512,
-      "liquidity_risk_score": 13.321185,
-      "total_supply_usd": 277780556.99281657
+      "collateral_risk_score": 0.000137,
+      "liquidity_risk_score": 13.396075,
+      "total_supply_usd": 302752822.7290542
      },
      {
       "pool_id": "0x779224df1c756b4edd899854f32a53e8c2b2ce5d",
@@ -448,9 +448,9 @@
       "sphere_protocol": "sparklend",
       "underlying_symbol": "PYUSD",
       "collateral_symbol": null,
-      "collateral_risk_score": 4.468654,
-      "liquidity_risk_score": 2.710044,
-      "total_supply_usd": 100000975.09063363
+      "collateral_risk_score": 0.004163,
+      "liquidity_risk_score": 2.074316,
+      "total_supply_usd": 100000919.87251003
      },
      {
       "pool_id": "0x377c3bd93f2a2984e1e7be6a5c22c525ed4a4815",
@@ -458,9 +458,9 @@
       "sphere_protocol": "sparklend",
       "underlying_symbol": "USDC",
       "collateral_symbol": null,
-      "collateral_risk_score": 63.895179,
-      "liquidity_risk_score": 28.599739,
-      "total_supply_usd": 30802545.188017108
+      "collateral_risk_score": 0,
+      "liquidity_risk_score": 31.455146,
+      "total_supply_usd": 28127412.361647613
      },
      {
       "pool_id": "0x6715bc100a183cc65502f05845b589c1919ca3d3",
@@ -470,12 +470,12 @@
       "collateral_symbol": null,
       "collateral_risk_score": 0,
       "liquidity_risk_score": 0,
-      "total_supply_usd": 3419849.5086217877
+      "total_supply_usd": 3286028.6807876
      }
     ],
     "market_count_total": 6,
     "source_url": "https://sphere.blockanalitica.com",
-    "fetched_at": "2026-06-17T08:39:25.688Z",
+    "fetched_at": "2026-07-16T05:57:25.182Z",
     "provenance": "feed"
    }
   ],
