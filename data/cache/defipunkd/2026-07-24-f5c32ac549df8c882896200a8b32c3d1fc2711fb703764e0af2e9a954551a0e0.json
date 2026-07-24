@@ -1,6 +1,6 @@
 {
  "feed_key": "defipunkd",
- "fetched_at": "2026-06-25T06:57:45.828Z",
+ "fetched_at": "2026-07-24T06:05:33.499Z",
  "source": "https://raw.githubusercontent.com/guil-lambert/defipunkd/main/data/assessments",
  "ok": true,
  "data": {
@@ -48,7 +48,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/aave",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    },
    {
@@ -92,7 +92,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/aave-v3",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
@@ -117,7 +117,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/balancer-v3",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
@@ -165,7 +165,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/curve-dex",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    },
    {
@@ -195,7 +195,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/curve-llamalend",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    },
    {
@@ -211,7 +211,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/crvusd",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
@@ -260,7 +260,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/lido",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
@@ -306,7 +306,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/liquity-v1",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
@@ -325,7 +325,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/morpho",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    },
    {
@@ -355,7 +355,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/morpho-blue",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
@@ -395,7 +395,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/pendle",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
@@ -434,7 +434,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/rocket-pool",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
@@ -466,7 +466,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/sparklend",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
@@ -512,7 +512,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/uniswap-v4",
-    "fetched_at": "2026-06-25T06:57:45.828Z",
+    "fetched_at": "2026-07-24T06:05:33.499Z",
     "provenance": "feed"
    }
   ],
