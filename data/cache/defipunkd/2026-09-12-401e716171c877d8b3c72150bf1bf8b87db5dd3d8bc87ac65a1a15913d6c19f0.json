@@ -1,6 +1,6 @@
 {
  "feed_key": "defipunkd",
- "fetched_at": "2026-08-13T05:09:19.653Z",
+ "fetched_at": "2026-09-12T07:58:05.064Z",
  "source": "https://raw.githubusercontent.com/guil-lambert/defipunkd/main/data/assessments",
  "ok": true,
  "data": {
@@ -48,7 +48,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/aave",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    },
    {
@@ -92,7 +92,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/aave-v3",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
@@ -117,7 +117,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/balancer-v3",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
@@ -165,7 +165,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/curve-dex",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    },
    {
@@ -195,7 +195,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/curve-llamalend",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    },
    {
@@ -211,7 +211,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/crvusd",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
@@ -260,7 +260,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/lido",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
@@ -306,7 +306,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/liquity-v1",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
@@ -325,7 +325,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/morpho",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    },
    {
@@ -355,7 +355,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/morpho-blue",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
@@ -395,7 +395,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/pendle",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
@@ -407,34 +407,41 @@
      {
       "slice": "control",
       "consensus_grade": "orange",
-      "consensus_strength": "weak",
-      "short_headline": "oDAO controls T1 upgrades, timelock unverified",
-      "merged_at": "2026-06-12T10:11:32.857Z"
+      "consensus_strength": "strong",
+      "short_headline": "oDAO controls T1 upgrades behind 7-day delay",
+      "merged_at": "2026-09-08T10:37:36.284Z"
      },
      {
       "slice": "ability-to-exit",
       "consensus_grade": "green",
-      "consensus_strength": "weak",
-      "short_headline": "Permissionless rETH burn limited by collateral depth",
-      "merged_at": "2026-05-26T09:55:23.299Z"
+      "consensus_strength": "strong",
+      "short_headline": "Permissionless rETH burn, liquidity-gated only",
+      "merged_at": "2026-09-08T10:37:36.285Z"
+     },
+     {
+      "slice": "autonomy",
+      "consensus_grade": "orange",
+      "consensus_strength": "strong",
+      "short_headline": "oDAO committee sets rETH exchange rate",
+      "merged_at": "2026-09-08T10:37:36.285Z"
      },
      {
       "slice": "open-access",
       "consensus_grade": "green",
       "consensus_strength": "strong",
-      "short_headline": "Permissionless contracts, multiple independent paths",
-      "merged_at": "2026-05-26T09:55:23.300Z"
+      "short_headline": "Permissionless contracts, independent DEX and CLI paths",
+      "merged_at": "2026-09-08T10:37:36.285Z"
      },
      {
       "slice": "verifiability",
       "consensus_grade": "green",
-      "consensus_strength": "weak",
-      "short_headline": "Verified source, audited by multiple top firms",
-      "merged_at": "2026-05-26T09:55:23.300Z"
+      "consensus_strength": "strong",
+      "short_headline": "Verified source, public repo, multiple audits",
+      "merged_at": "2026-09-08T10:37:36.286Z"
      }
     ],
     "source_url": "https://defipunkd.com/protocol/rocket-pool",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
@@ -466,7 +473,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/sparklend",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
@@ -512,7 +519,7 @@
      }
     ],
     "source_url": "https://defipunkd.com/protocol/uniswap-v4",
-    "fetched_at": "2026-08-13T05:09:19.653Z",
+    "fetched_at": "2026-09-12T07:58:05.064Z",
     "provenance": "feed"
    }
   ],
