@@ -1,6 +1,6 @@
 {
  "feed_key": "defillama-hacks",
- "fetched_at": "2026-08-23T04:04:35.091Z",
+ "fetched_at": "2026-09-22T08:37:38.698Z",
  "source": "https://api.llama.fi/hacks",
  "ok": true,
  "data": {
@@ -22,7 +22,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -53,7 +53,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -85,7 +85,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -93,6 +93,15 @@
    {
     "feed_key": "defillama-hacks",
     "events": [
+     {
+      "date": "2026-08-30",
+      "amount_usd": 234000,
+      "name": "Balancer V1",
+      "technique": "Rounding Error",
+      "classification": "Token & Share Accounting",
+      "returned_funds": null,
+      "source_url": null
+     },
      {
       "date": "2025-11-03",
       "amount_usd": 128000000,
@@ -135,7 +144,7 @@
      "name-pattern"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -157,7 +166,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -198,7 +207,7 @@
      "name-pattern"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -248,7 +257,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -270,7 +279,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -292,7 +301,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -302,7 +311,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -312,7 +321,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -322,7 +331,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -332,7 +341,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -354,7 +363,7 @@
      "name-pattern"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -364,7 +373,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -374,7 +383,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -396,7 +405,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -406,7 +415,7 @@
     "events": [],
     "matched_by": [],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -438,7 +447,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ],
@@ -487,7 +496,7 @@
      "defillama-id"
     ],
     "source_url": "https://defillama.com/hacks",
-    "fetched_at": "2026-08-23T04:04:35.091Z",
+    "fetched_at": "2026-09-22T08:37:38.698Z",
     "provenance": "feed"
    }
   ]
